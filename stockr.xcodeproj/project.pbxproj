@@ -9,23 +9,47 @@
 /* Begin PBXBuildFile section */
 		FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742425725E8300236A79 /* AppDelegate.swift */; };
 		FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742625725E8300236A79 /* SceneDelegate.swift */; };
-		FF2E742925725E8300236A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742825725E8300236A79 /* ViewController.swift */; };
 		FF2E742C25725E8300236A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E742A25725E8300236A79 /* Main.storyboard */; };
 		FF2E742F25725E8300236A79 /* stockr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742D25725E8300236A79 /* stockr.xcdatamodeld */; };
 		FF2E743125725E8500236A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2E743025725E8500236A79 /* Assets.xcassets */; };
 		FF2E743425725E8500236A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E743225725E8500236A79 /* LaunchScreen.storyboard */; };
+		FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */; };
+		FF2E744B257267DB00236A79 /* CompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E744A257267DB00236A79 /* CompanyCard.xib */; };
+		FF2E744F2572684A00236A79 /* CompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E744E2572684A00236A79 /* CompanyCard.swift */; };
+		FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A5257269BA00236A79 /* Manrope-Medium.ttf */; };
+		FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A6257269BA00236A79 /* Manrope-SemiBold.ttf */; };
+		FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A7257269BA00236A79 /* Manrope-ExtraBold.ttf */; };
+		FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A8257269BA00236A79 /* Manrope-Regular.ttf */; };
+		FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A9257269BA00236A79 /* Manrope-ExtraLight.ttf */; };
+		FF2E74C8257269BA00236A79 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74AA257269BA00236A79 /* Manrope-Light.ttf */; };
+		FF2E74C9257269BA00236A79 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74AB257269BA00236A79 /* Manrope-Bold.ttf */; };
+		FF2E74DA257291A400236A79 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E74D9257291A400236A79 /* Styles.swift */; };
+		FF2E74DE2572983400236A79 /* YearRange.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74DD2572983400236A79 /* YearRange.xib */; };
+		FF2E74E12572984D00236A79 /* YearRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E74E02572984D00236A79 /* YearRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF2E742125725E8300236A79 /* stockr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2E742425725E8300236A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2E742625725E8300236A79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF2E742825725E8300236A79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF2E742B25725E8300236A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF2E742E25725E8300236A79 /* stockr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = stockr.xcdatamodel; sourceTree = "<group>"; };
 		FF2E743025725E8500236A79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2E743325725E8500236A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2E743525725E8500236A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeShowViewController.swift; sourceTree = "<group>"; };
+		FF2E744A257267DB00236A79 /* CompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCard.xib; sourceTree = "<group>"; };
+		FF2E744E2572684A00236A79 /* CompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCard.swift; sourceTree = "<group>"; };
+		FF2E74A5257269BA00236A79 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		FF2E74A6257269BA00236A79 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		FF2E74A7257269BA00236A79 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FF2E74A8257269BA00236A79 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		FF2E74A9257269BA00236A79 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FF2E74AA257269BA00236A79 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		FF2E74AB257269BA00236A79 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		FF2E74D9257291A400236A79 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		FF2E74DD2572983400236A79 /* YearRange.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YearRange.xib; sourceTree = "<group>"; };
+		FF2E74E02572984D00236A79 /* YearRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +82,76 @@
 		FF2E742325725E8300236A79 /* stockr */ = {
 			isa = PBXGroup;
 			children = (
+				FF2E74D9257291A400236A79 /* Styles.swift */,
+				FF2E743D257266D200236A79 /* SwipeShow */,
 				FF2E742425725E8300236A79 /* AppDelegate.swift */,
 				FF2E742625725E8300236A79 /* SceneDelegate.swift */,
-				FF2E742825725E8300236A79 /* ViewController.swift */,
 				FF2E742A25725E8300236A79 /* Main.storyboard */,
 				FF2E743025725E8500236A79 /* Assets.xcassets */,
 				FF2E743225725E8500236A79 /* LaunchScreen.storyboard */,
 				FF2E743525725E8500236A79 /* Info.plist */,
 				FF2E742D25725E8300236A79 /* stockr.xcdatamodeld */,
+				FF2E7492257269BA00236A79 /* fonts */,
 			);
 			path = stockr;
+			sourceTree = "<group>";
+		};
+		FF2E743D257266D200236A79 /* SwipeShow */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */,
+				FF2E74412572678A00236A79 /* Cards */,
+				FF2E74D725728E6000236A79 /* Components */,
+			);
+			path = SwipeShow;
+			sourceTree = "<group>";
+		};
+		FF2E74412572678A00236A79 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E7449257267C700236A79 /* CompanyCard */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		FF2E7449257267C700236A79 /* CompanyCard */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E744A257267DB00236A79 /* CompanyCard.xib */,
+				FF2E744E2572684A00236A79 /* CompanyCard.swift */,
+			);
+			path = CompanyCard;
+			sourceTree = "<group>";
+		};
+		FF2E7492257269BA00236A79 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E74A4257269BA00236A79 /* ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		FF2E74A4257269BA00236A79 /* ttf */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E74A5257269BA00236A79 /* Manrope-Medium.ttf */,
+				FF2E74A6257269BA00236A79 /* Manrope-SemiBold.ttf */,
+				FF2E74A7257269BA00236A79 /* Manrope-ExtraBold.ttf */,
+				FF2E74A8257269BA00236A79 /* Manrope-Regular.ttf */,
+				FF2E74A9257269BA00236A79 /* Manrope-ExtraLight.ttf */,
+				FF2E74AA257269BA00236A79 /* Manrope-Light.ttf */,
+				FF2E74AB257269BA00236A79 /* Manrope-Bold.ttf */,
+			);
+			path = ttf;
+			sourceTree = "<group>";
+		};
+		FF2E74D725728E6000236A79 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E74DD2572983400236A79 /* YearRange.xib */,
+				FF2E74E02572984D00236A79 /* YearRange.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +211,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2E74C9257269BA00236A79 /* Manrope-Bold.ttf in Resources */,
 				FF2E743425725E8500236A79 /* LaunchScreen.storyboard in Resources */,
+				FF2E74C8257269BA00236A79 /* Manrope-Light.ttf in Resources */,
+				FF2E744B257267DB00236A79 /* CompanyCard.xib in Resources */,
 				FF2E743125725E8500236A79 /* Assets.xcassets in Resources */,
+				FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */,
+				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
+				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
+				FF2E74DE2572983400236A79 /* YearRange.xib in Resources */,
+				FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */,
+				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2E742925725E8300236A79 /* ViewController.swift in Sources */,
+				FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */,
+				FF2E744F2572684A00236A79 /* CompanyCard.swift in Sources */,
+				FF2E74E12572984D00236A79 /* YearRange.swift in Sources */,
 				FF2E742F25725E8300236A79 /* stockr.xcdatamodeld in Sources */,
+				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
 			);
