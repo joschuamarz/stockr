@@ -46,6 +46,9 @@ class FirstCompanyCard: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         
+        for box in boxViews {
+            box.layer.cornerRadius = 5
+        }
         
         contentView.layer.cornerRadius = 20
         trashButton.layer.cornerRadius = trashButton.frame.width/2

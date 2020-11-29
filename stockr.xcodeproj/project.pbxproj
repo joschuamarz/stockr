@@ -41,6 +41,10 @@
 		FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E752E25739CB800236A79 /* SecondCompanyCard.xib */; };
 		FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E753125739CCA00236A79 /* SecondCompanyCard.swift */; };
 		FF2E75352573A09400236A79 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75342573A09400236A79 /* Stock.swift */; };
+		FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75382573AE7A00236A79 /* Extensions.swift */; };
+		FF2E753E2573B40D00236A79 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */; };
+		FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */; };
+		FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B42573C843005CFC50 /* LegalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		FF2E752E25739CB800236A79 /* SecondCompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCompanyCard.xib; sourceTree = "<group>"; };
 		FF2E753125739CCA00236A79 /* SecondCompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCompanyCard.swift; sourceTree = "<group>"; };
 		FF2E75342573A09400236A79 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		FF2E75382573AE7A00236A79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewCell.swift; sourceTree = "<group>"; };
+		FFDD30B42573C843005CFC50 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +122,9 @@
 			children = (
 				FF2E74EF2572CAB800236A79 /* CoreDataProperties */,
 				FF2E74EA2572BC2E00236A79 /* Manager */,
-				FF2E74D9257291A400236A79 /* Styles.swift */,
 				FF2E743D257266D200236A79 /* SwipeShow */,
+				FF2E753C2573B3F300236A79 /* Watchlist */,
+				FFDD30B32573C817005CFC50 /* Legal */,
 				FF2E742425725E8300236A79 /* AppDelegate.swift */,
 				FF2E742625725E8300236A79 /* SceneDelegate.swift */,
 				FF2E742A25725E8300236A79 /* Main.storyboard */,
@@ -124,6 +133,8 @@
 				FF2E743525725E8500236A79 /* Info.plist */,
 				FF2E742D25725E8300236A79 /* stockr.xcdatamodeld */,
 				FF2E7492257269BA00236A79 /* fonts */,
+				FF2E75382573AE7A00236A79 /* Extensions.swift */,
+				FF2E74D9257291A400236A79 /* Styles.swift */,
 			);
 			path = stockr;
 			sourceTree = "<group>";
@@ -247,6 +258,23 @@
 			path = SecondCompanyCard;
 			sourceTree = "<group>";
 		};
+		FF2E753C2573B3F300236A79 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */,
+				FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		FFDD30B32573C817005CFC50 /* Legal */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30B42573C843005CFC50 /* LegalViewController.swift */,
+			);
+			path = Legal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,6 +360,7 @@
 				FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */,
 				FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */,
 				FF2E75352573A09400236A79 /* Stock.swift in Sources */,
+				FF2E753E2573B40D00236A79 /* WatchlistViewController.swift in Sources */,
 				FF2E75062572CBA100236A79 /* LoadedStock+CoreDataProperties.swift in Sources */,
 				FF2E750B2572CBB200236A79 /* SwipedStock+CoreDataProperties.swift in Sources */,
 				FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */,
@@ -343,10 +372,13 @@
 				FF2E750A2572CBB200236A79 /* SwipedStock+CoreDataClass.swift in Sources */,
 				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
 				FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */,
+				FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */,
 				FF2E75112572D1E600236A79 /* ApiManager.swift in Sources */,
+				FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
 				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
+				FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */,
 				FF2E751D2572F15600236A79 /* DownloadCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

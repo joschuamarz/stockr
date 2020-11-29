@@ -32,7 +32,7 @@ protocol Stock {
 
 extension String {
     func getRounded(to places: Int) -> String {
-        let value = Double(self) ?? 0.0
+        let value = Double(self.replacingOccurrences(of: ",", with: ".")) ?? 0.0
         let divisor = pow(10.0, Double(places))
         let result = (value * divisor).rounded() / divisor
         

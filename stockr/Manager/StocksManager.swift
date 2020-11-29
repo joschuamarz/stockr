@@ -15,8 +15,8 @@ class StocksManager {
         loadedStocks = LoadedStocksManager().fetchLoadedStocks()
         swipedStocks = SwipedStocksManager().fetchSwipedStocks()
         
-        getUnswipedStock()
-        getWatchedStocks()
+        unswipedStocks = getUnswipedStock()
+        watchedStocks = getWatchedStocks()
     
     }
     
@@ -75,20 +75,26 @@ class StocksManager {
         }
     }
     
-    func getUnswipedStock() {
+    func getUnswipedStock() -> [LoadedStock] {
+        var stocks = [LoadedStock]()
         for stock in loadedStocks {
             if !SwipedStocksManager().contains(symbol: stock.symbol) {
-                unswipedStocks.append(stock)
+                stocks.append(stock)
             }
         }
+        
+        return stocks
     }
     
-    func getWatchedStocks() {
-        for stock in swipedStocks {
+    func getWatchedStocks() -> [SwipedStock] {
+        var stocks = [SwipedStock]()
+        for stock in SwipedStocksManager().fetchSwipedStocks() {
             if stock.watched {
-                watchedStocks.append(stock)
+                stocks.append(stock)
             }
         }
+        
+        return stocks
     }
    
 }
