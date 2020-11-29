@@ -59,6 +59,12 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
         return true
     }
     
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        filteredStocks = watchedStocks
+        stocksTableView.reloadData()
+        return true
+    }
+    
     @IBAction func didChange(_ sender: Any) {
         let word = searchTextField.text ?? ""
         

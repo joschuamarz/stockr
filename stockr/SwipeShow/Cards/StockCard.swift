@@ -93,4 +93,9 @@ class StockCard: UIView {
     @IBAction func addButtonTapped(_ sender: Any) {
         delegate?.addButtonTapped()
     }
+    
+    @IBAction func pageControlChanged(_ sender: UIPageControl) {
+        currentPage = sender.currentPage
+        setCurrentPage()
+    }
 }

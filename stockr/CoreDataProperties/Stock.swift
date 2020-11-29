@@ -36,11 +36,17 @@ extension String {
         let divisor = pow(10.0, Double(places))
         let result = (value * divisor).rounded() / divisor
         
-        return "\(result)"
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: result)) ?? "err"
     }
     
     func getSeperated() -> String {
-        let value = Int(self) ?? 0
+        let value = Int(Double(self) ?? 0)
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.groupingSeparator = "."
@@ -54,6 +60,13 @@ extension String {
         let percentage = value*100
         let divisor = pow(10.0, Double(2))
         let result = (percentage * divisor).rounded() / divisor
-        return "\(result)"
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: result)) ?? "err"
     }
 }

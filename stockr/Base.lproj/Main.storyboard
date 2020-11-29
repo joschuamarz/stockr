@@ -75,13 +75,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier werden all Deine gespeicherten Unternehmen aufgelistet. Schau sie Dir in Ruhe nochmal an." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfk-F7-XMW">
-                                <rect key="frame" x="31" y="82.5" width="258" height="61.5"/>
+                                <rect key="frame" x="31" y="82.5" width="258" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Suchen" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="agW-OP-Oz8" customClass="SearchTextField" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="164" width="258" height="40"/>
+                                <rect key="frame" x="31" y="155" width="258" height="40"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LZa-0N-5QY"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-jx-ReJ">
-                                <rect key="frame" x="31" y="219" width="258" height="290"/>
+                                <rect key="frame" x="31" y="210" width="258" height="299"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -268,37 +268,18 @@
                     <navigationItem key="navigationItem" id="pd7-2S-7wm">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="5bc-Te-dAh"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="IY1-yv-KeC" kind="show" id="3jt-p8-XAI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ey-fg-arU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1693" y="298"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="NYN-iU-57v">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="IY1-yv-KeC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ToP-ll-SNE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="eIK-bG-iaV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xuP-xl-dsk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e3B-Z7-QZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2589" y="5"/>
-        </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="s18-FJ-NGo">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzm-zf-96e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="a51-ZE-5dj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="lock.shield" catalog="system" id="McF-Wq-JWO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="nil" id="6La-sj-p7X">
+                    <tabBarItem key="tabBarItem" title="" image="lock.shield" catalog="system" id="McF-Wq-JWO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6La-sj-p7X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,15 +317,11 @@
         <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
-        <image name="nil" width="128" height="128"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <namedColor name="background">
             <color red="0.067000001668930054" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

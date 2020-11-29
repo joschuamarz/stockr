@@ -62,8 +62,8 @@ class FirstCompanyCard: UIView {
         
         //PRICE??
         
-        yearLowLabel.text = stock.getYearLow() + "€"
-        yearHighLabel.text = stock.getYearHigh() + "€"
+        yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
+        yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
         
         if let yearLow = Double(stock.getYearLow()) {
             if let yearHigh = Double(stock.getYearHigh()) {
@@ -73,8 +73,8 @@ class FirstCompanyCard: UIView {
             }
         }
         
-        avg_50_day_label.text = stock.getAvg50Day() + "€"
-        avg_200_day_label.text = stock.getAvg200Day() + "€"
+        avg_50_day_label.text = stock.getAvg50Day().getRounded(to: 2) + "€"
+        avg_200_day_label.text = stock.getAvg200Day().getRounded(to: 2) + "€"
         
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
