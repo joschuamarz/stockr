@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LoadedStock" representedClassName="LoadedStock" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String"/>
+        <attribute name="dividend_yield" optional="YES" attributeType="String"/>
+        <attribute name="ebitda" optional="YES" attributeType="String"/>
+        <attribute name="employees" optional="YES" attributeType="String"/>
+        <attribute name="enabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="exchange" optional="YES" attributeType="String"/>
+        <attribute name="industry" optional="YES" attributeType="String"/>
+        <attribute name="isin" optional="YES" attributeType="String"/>
+        <attribute name="last_api_sync_at" optional="YES" attributeType="String"/>
+        <attribute name="market_capitalization" optional="YES" attributeType="String"/>
+        <attribute name="moving_avg_50_day" optional="YES" attributeType="String"/>
+        <attribute name="moving_avg_200_day" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pe_ratio" optional="YES" attributeType="String"/>
+        <attribute name="sector" optional="YES" attributeType="String"/>
+        <attribute name="symbol" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="year_high" optional="YES" attributeType="String"/>
+        <attribute name="year_low" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SwipedStock" representedClassName="SwipedStock" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String"/>
+        <attribute name="dividend_yield" optional="YES" attributeType="String"/>
+        <attribute name="ebitda" optional="YES" attributeType="String"/>
+        <attribute name="employees" optional="YES" attributeType="String"/>
+        <attribute name="enabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="exchange" optional="YES" attributeType="String"/>
+        <attribute name="industry" optional="YES" attributeType="String"/>
+        <attribute name="isin" optional="YES" attributeType="String"/>
+        <attribute name="last_api_sync_at" optional="YES" attributeType="String"/>
+        <attribute name="market_capitalization" optional="YES" attributeType="String"/>
+        <attribute name="moving_avg_50_day" optional="YES" attributeType="String"/>
+        <attribute name="moving_avg_200_day" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pe_ratio" optional="YES" attributeType="String"/>
+        <attribute name="sector" optional="YES" attributeType="String"/>
+        <attribute name="symbol" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="watched" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="year_high" optional="YES" attributeType="String"/>
+        <attribute name="year_low" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SwipedStock" positionX="-63" positionY="-18" width="128" height="358"/>
+        <element name="LoadedStock" positionX="-54" positionY="-9" width="128" height="343"/>
+    </elements>
 </model>

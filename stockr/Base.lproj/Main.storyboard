@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQt-At-Iew">
-                                <rect key="frame" x="44" y="37" width="232" height="474"/>
+                                <rect key="frame" x="30" y="37" width="260" height="474"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBR-fK-kGu">
@@ -26,18 +27,18 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7c4-zg-QaC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="wQt-At-Iew" firstAttribute="top" secondItem="7c4-zg-QaC" secondAttribute="top" constant="37" id="BCI-R5-xbR"/>
                             <constraint firstItem="7c4-zg-QaC" firstAttribute="bottom" secondItem="wQt-At-Iew" secondAttribute="bottom" constant="8" id="R8E-Dg-Ac9"/>
                             <constraint firstItem="qBR-fK-kGu" firstAttribute="top" secondItem="7c4-zg-QaC" secondAttribute="top" constant="25" id="SQP-3D-VV5"/>
                             <constraint firstItem="wQt-At-Iew" firstAttribute="centerX" secondItem="7c4-zg-QaC" secondAttribute="centerX" id="UFR-oL-jqG"/>
                             <constraint firstItem="qBR-fK-kGu" firstAttribute="centerX" secondItem="7c4-zg-QaC" secondAttribute="centerX" id="f6j-zM-36C"/>
-                            <constraint firstItem="wQt-At-Iew" firstAttribute="leading" secondItem="7c4-zg-QaC" secondAttribute="leading" constant="44" id="gEK-xB-uVH"/>
+                            <constraint firstItem="wQt-At-Iew" firstAttribute="leading" secondItem="7c4-zg-QaC" secondAttribute="leading" constant="30" id="gEK-xB-uVH"/>
                             <constraint firstItem="7c4-zg-QaC" firstAttribute="trailing" secondItem="qBR-fK-kGu" secondAttribute="trailing" constant="19" id="kBD-5W-28D"/>
                             <constraint firstItem="qBR-fK-kGu" firstAttribute="leading" secondItem="7c4-zg-QaC" secondAttribute="leading" constant="19" id="ow3-hd-XvN"/>
                             <constraint firstItem="7c4-zg-QaC" firstAttribute="bottom" secondItem="qBR-fK-kGu" secondAttribute="bottom" constant="20" id="qll-wA-0QR"/>
-                            <constraint firstItem="7c4-zg-QaC" firstAttribute="trailing" secondItem="wQt-At-Iew" secondAttribute="trailing" constant="44" id="tHv-0p-d38"/>
+                            <constraint firstItem="7c4-zg-QaC" firstAttribute="trailing" secondItem="wQt-At-Iew" secondAttribute="trailing" constant="30" id="tHv-0p-d38"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="arrow.left.arrow.right" catalog="system" id="Suv-ML-sRh"/>
@@ -88,6 +89,9 @@
     </scenes>
     <resources>
         <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
+        <namedColor name="background">
+            <color red="0.067000001668930054" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

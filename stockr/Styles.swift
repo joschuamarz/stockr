@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable
+
 class Headline: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,7 +16,7 @@ class Headline: UILabel {
     }
 }
 
-@IBDesignable
+
 class CompanyInformation: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,7 @@ class CompanyInformation: UILabel {
     }
 }
 
-@IBDesignable
+
 class PriceInformation: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +36,7 @@ class PriceInformation: UILabel {
     }
 }
 
-@IBDesignable
+
 class Price: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()

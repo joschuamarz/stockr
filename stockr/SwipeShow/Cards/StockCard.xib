@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StockCard" customModule="stockr" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="Zer-Dt-PSU" id="hJS-cG-vU1"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="j1g-Eo-qaJ"/>
+                <outlet property="firstCard" destination="Gfw-U3-wJo" id="Cc8-S9-puG"/>
+                <outlet property="pageControl" destination="P1N-5s-qyP" id="hcj-6F-GNn"/>
+                <outlet property="secondCard" destination="LoS-Bi-YwQ" id="8Du-5O-LMI"/>
+                <outlet property="thirdCard" destination="XRt-sc-tfl" id="FsK-CF-41q"/>
+                <outlet property="trashButton" destination="Llk-5x-Td1" id="do3-ev-u1U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfw-U3-wJo" customClass="FirstCompanyCard" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-Bi-YwQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRt-sc-tfl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llk-5x-Td1">
+                    <rect key="frame" x="73.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="QUG-BC-5Wu"/>
+                        <constraint firstAttribute="width" secondItem="Llk-5x-Td1" secondAttribute="height" multiplier="1:1" id="v4S-vB-R7N"/>
+                    </constraints>
+                    <color key="tintColor" name="red"/>
+                    <state key="normal">
+                        <imageReference key="image" image="trash" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="small"/>
+                    </state>
+                    <connections>
+                        <action selector="trashButtonTapped:" destination="-1" eventType="touchUpInside" id="QvC-FF-209"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-Dt-PSU">
+                    <rect key="frame" x="280.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="7j9-AG-bpo"/>
+                        <constraint firstAttribute="height" constant="60" id="xmL-OL-UI0"/>
+                    </constraints>
+                    <color key="tintColor" name="green"/>
+                    <state key="normal">
+                        <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="small"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="ZA2-FF-XIl"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="P1N-5s-qyP">
+                    <rect key="frame" x="103.5" y="834" width="207" height="28"/>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="cardColor"/>
+            <constraints>
+                <constraint firstItem="LoS-Bi-YwQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0iS-Jb-IGv"/>
+                <constraint firstItem="Zer-Dt-PSU" firstAttribute="centerY" secondItem="Llk-5x-Td1" secondAttribute="centerY" id="0pd-Sm-r6S"/>
+                <constraint firstItem="Gfw-U3-wJo" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="1gh-B0-ZiW"/>
+                <constraint firstItem="P1N-5s-qyP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="3Hk-WA-A2y"/>
+                <constraint firstItem="Gfw-U3-wJo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7lm-Nq-Tv8"/>
+                <constraint firstItem="Gfw-U3-wJo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="98N-dt-n7i"/>
+                <constraint firstItem="Llk-5x-Td1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.5" id="9qn-Go-iHA"/>
+                <constraint firstAttribute="top" secondItem="LoS-Bi-YwQ" secondAttribute="top" id="9tR-mT-ded"/>
+                <constraint firstAttribute="bottom" secondItem="P1N-5s-qyP" secondAttribute="bottom" constant="34" id="AHQ-cs-hg9"/>
+                <constraint firstAttribute="trailing" secondItem="LoS-Bi-YwQ" secondAttribute="trailing" id="AhC-90-MkG"/>
+                <constraint firstItem="LoS-Bi-YwQ" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="E6f-Ok-72J"/>
+                <constraint firstItem="Zer-Dt-PSU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.5" id="Ioz-YX-xsx"/>
+                <constraint firstItem="XRt-sc-tfl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jcf-x2-E41"/>
+                <constraint firstAttribute="bottom" secondItem="XRt-sc-tfl" secondAttribute="bottom" id="Og6-kI-TsM"/>
+                <constraint firstItem="Llk-5x-Td1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.8" id="fef-pe-lGJ"/>
+                <constraint firstAttribute="bottom" secondItem="Gfw-U3-wJo" secondAttribute="bottom" id="jai-d6-gJn"/>
+                <constraint firstAttribute="trailing" secondItem="XRt-sc-tfl" secondAttribute="trailing" id="njX-ES-FtZ"/>
+                <constraint firstItem="XRt-sc-tfl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qDW-2P-P2B"/>
+                <constraint firstItem="P1N-5s-qyP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="s6v-O9-b6C"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="98"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <namedColor name="background">
+            <color red="0.067000001668930054" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="cardColor">
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

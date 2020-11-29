@@ -20,60 +20,58 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompanyCard" customModule="stockr" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstCompanyCard" customModule="stockr" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="n5t-Gj-6AA" id="XyA-Dl-VHs"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="7Yj-Na-Bgf"/>
+                <outlet property="nameLabel" destination="IPd-XN-IVL" id="Ix2-07-oie"/>
                 <outlet property="trashButton" destination="4RI-qi-fzq" id="CG0-0M-85v"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="dark" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="412" height="740"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-l5-rT3">
-                    <rect key="frame" x="175" y="104" width="62.5" height="16.5"/>
+                    <rect key="frame" x="175.5" y="140" width="63.5" height="14"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahrestief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-Xf-idu" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="200" width="49.5" height="14"/>
+                    <rect key="frame" x="31" y="259.5" width="43.5" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43,54€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0K-hk-FuB" customClass="Price" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="216" width="52.5" height="22"/>
+                    <rect key="frame" x="31" y="273.5" width="49" height="19"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahreshoch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-mF-1at" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="324" y="200" width="57" height="14"/>
+                    <rect key="frame" x="331" y="259.5" width="52" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-p4-lRg" customClass="YearRange" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="258" width="350" height="2"/>
+                    <rect key="frame" x="31" y="312.5" width="352" height="2"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="6hc-QU-ocJ"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73,54€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-dr-vOk" customClass="Price" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="329.5" y="216" width="51.5" height="22"/>
+                    <rect key="frame" x="334" y="273.5" width="49" height="19"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="E3K-RJ-Ici">
-                    <rect key="frame" x="143" y="712.5" width="126" height="27.5"/>
-                </pageControl>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RI-qi-fzq">
-                    <rect key="frame" x="73" y="636" width="60" height="60"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RI-qi-fzq">
+                    <rect key="frame" x="73.5" y="776.5" width="60" height="60"/>
                     <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="pKc-cB-YI7"/>
@@ -85,8 +83,8 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="small"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5t-Gj-6AA">
-                    <rect key="frame" x="279" y="636" width="60" height="60"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5t-Gj-6AA">
+                    <rect key="frame" x="280.5" y="776.5" width="60" height="60"/>
                     <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="0J3-cO-Ucn"/>
@@ -99,19 +97,19 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BHl-Yb-7PD">
-                    <rect key="frame" x="31" y="420.5" width="350" height="158.5"/>
+                    <rect key="frame" x="31" y="532" width="352" height="146"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-Ve-dzo">
-                            <rect key="frame" x="0.0" y="0.0" width="350" height="16.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KGV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-vx-zJh" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.29" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-5C-87a" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="175" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -119,23 +117,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqR-Hs-Dpf">
-                            <rect key="frame" x="0.0" y="25.5" width="350" height="1"/>
+                            <rect key="frame" x="0.0" y="23" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="rA4-av-y5x"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nSP-Hh-snI">
-                            <rect key="frame" x="0.0" y="35.5" width="350" height="16.5"/>
+                            <rect key="frame" x="0.0" y="33" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dividendenrendite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-bF-G3A" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.85%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wud-u8-RVk" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="175" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -143,23 +141,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUH-Oh-a2m">
-                            <rect key="frame" x="0.0" y="61" width="350" height="1"/>
+                            <rect key="frame" x="0.0" y="56" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="9Bf-Rt-Siv"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VSg-zg-01A">
-                            <rect key="frame" x="0.0" y="71" width="350" height="16.5"/>
+                            <rect key="frame" x="0.0" y="66" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reingewinn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYb-4x-VmN" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55.400.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-Tq-FLM" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="175" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -167,23 +165,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3w-kR-TaY">
-                            <rect key="frame" x="0.0" y="96.5" width="350" height="1"/>
+                            <rect key="frame" x="0.0" y="89" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="ANg-8J-s7M"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bL1-zB-o6f">
-                            <rect key="frame" x="0.0" y="106.5" width="350" height="16.5"/>
+                            <rect key="frame" x="0.0" y="99" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EBITDA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-NI-NLT" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73.800.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU3-9H-eDX" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="175" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -191,23 +189,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vom-42-P4X">
-                            <rect key="frame" x="0.0" y="132" width="350" height="1"/>
+                            <rect key="frame" x="0.0" y="122" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="JfF-aE-2ut"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-pu-BcM">
-                            <rect key="frame" x="0.0" y="142" width="350" height="16.5"/>
+                            <rect key="frame" x="0.0" y="132" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marktkapitalisierung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-os-wJ5" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000.000.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdv-MX-FUp" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="175" y="0.0" width="175" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -217,16 +215,16 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-C0-pVt">
-                    <rect key="frame" x="31" y="326.5" width="170" height="53"/>
+                    <rect key="frame" x="31" y="381" width="171" height="53"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50-Tage ø" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-i6-x2p" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="60.5" y="10" width="49" height="12"/>
+                            <rect key="frame" x="61" y="10" width="49" height="12"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,94€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDi-kn-XBd" customClass="Price" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="60.5" y="24" width="49" height="19"/>
+                            <rect key="frame" x="61" y="24" width="49" height="19"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -242,16 +240,16 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7W-BX-oFy">
-                    <rect key="frame" x="211" y="326.5" width="170" height="53"/>
+                    <rect key="frame" x="212" y="381" width="171" height="53"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200-Tage ø" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIy-R3-ILf" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="57.5" y="10" width="55.5" height="12"/>
+                            <rect key="frame" x="58" y="10" width="55.5" height="12"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="74,10€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiR-jq-FTH" customClass="Price" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="60.5" y="24" width="49" height="19"/>
+                            <rect key="frame" x="61" y="24" width="49" height="19"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -267,13 +265,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-XN-IVL">
-                    <rect key="frame" x="147" y="66" width="118" height="33"/>
+                    <rect key="frame" x="150.5" y="107" width="113" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51,34€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-MT-4al">
-                    <rect key="frame" x="170" y="140.5" width="72" height="33"/>
+                    <rect key="frame" x="170.5" y="174" width="73.5" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -299,96 +297,37 @@
                 <constraint firstItem="BHl-Yb-7PD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="TQF-f6-7id"/>
                 <constraint firstItem="DJD-C0-pVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="TTw-pA-XAD"/>
                 <constraint firstItem="n5t-Gj-6AA" firstAttribute="centerY" secondItem="4RI-qi-fzq" secondAttribute="centerY" id="Tc5-IS-Oc1"/>
-                <constraint firstItem="E3K-RJ-Ici" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y5p-B0-TPP"/>
-                <constraint firstItem="E3K-RJ-Ici" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.306306" id="a9l-Vw-JnH"/>
                 <constraint firstItem="n7W-BX-oFy" firstAttribute="width" secondItem="DJD-C0-pVt" secondAttribute="width" id="efi-JQ-4ef"/>
                 <constraint firstItem="MSY-p4-lRg" firstAttribute="top" secondItem="t0K-hk-FuB" secondAttribute="bottom" constant="20" id="f7p-wd-ySR"/>
                 <constraint firstItem="Lt2-l5-rT3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fCR-Ql-QUD"/>
                 <constraint firstItem="MSY-p4-lRg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.7" id="hbf-ex-qDd"/>
-                <constraint firstItem="DJD-C0-pVt" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.9" id="hx7-aG-N08"/>
+                <constraint firstItem="DJD-C0-pVt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.9" constant="4.3000000000000114" id="hx7-aG-N08"/>
                 <constraint firstItem="MSY-p4-lRg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="31" id="iP2-fe-fbU"/>
                 <constraint firstItem="n7W-BX-oFy" firstAttribute="leading" secondItem="DJD-C0-pVt" secondAttribute="trailing" constant="10" id="kF7-DX-luE"/>
                 <constraint firstItem="ELq-Xf-idu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="prN-d4-gWM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e3k-dr-vOk" secondAttribute="trailing" constant="31" id="qE8-I6-rdm"/>
                 <constraint firstItem="4RI-qi-fzq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.8" id="s8e-S8-j8h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BHl-Yb-7PD" secondAttribute="trailing" constant="31" id="snf-9n-b5S"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E3K-RJ-Ici" secondAttribute="bottom" id="tBK-dQ-mEz"/>
                 <constraint firstItem="t0K-hk-FuB" firstAttribute="top" secondItem="ELq-Xf-idu" secondAttribute="bottom" constant="2" id="uuE-SD-RDB"/>
                 <constraint firstItem="oHX-mF-1at" firstAttribute="centerY" secondItem="ELq-Xf-idu" secondAttribute="centerY" id="wJj-rg-uO8"/>
             </constraints>
             <point key="canvasLocation" x="18.840579710144929" y="16.741071428571427"/>
         </view>
     </objects>
-    <designables>
-        <designable name="1YQ-bF-G3A">
-            <size key="intrinsicContentSize" width="104" height="16.5"/>
-        </designable>
-        <designable name="ELq-Xf-idu">
-            <size key="intrinsicContentSize" width="49.5" height="14"/>
-        </designable>
-        <designable name="GIy-R3-ILf">
-            <size key="intrinsicContentSize" width="55.5" height="12"/>
-        </designable>
-        <designable name="GiR-jq-FTH">
-            <size key="intrinsicContentSize" width="49" height="19"/>
-        </designable>
-        <designable name="Mal-i6-x2p">
-            <size key="intrinsicContentSize" width="49" height="12"/>
-        </designable>
-        <designable name="NQD-os-wJ5">
-            <size key="intrinsicContentSize" width="116" height="16.5"/>
-        </designable>
-        <designable name="Wud-u8-RVk">
-            <size key="intrinsicContentSize" width="36" height="16.5"/>
-        </designable>
-        <designable name="aDi-kn-XBd">
-            <size key="intrinsicContentSize" width="49" height="19"/>
-        </designable>
-        <designable name="aYb-4x-VmN">
-            <size key="intrinsicContentSize" width="66" height="16.5"/>
-        </designable>
-        <designable name="bdv-MX-FUp">
-            <size key="intrinsicContentSize" width="98" height="16.5"/>
-        </designable>
-        <designable name="e3k-dr-vOk">
-            <size key="intrinsicContentSize" width="51.5" height="22"/>
-        </designable>
-        <designable name="fYr-5C-87a">
-            <size key="intrinsicContentSize" width="32" height="16.5"/>
-        </designable>
-        <designable name="flZ-NI-NLT">
-            <size key="intrinsicContentSize" width="40.5" height="16.5"/>
-        </designable>
-        <designable name="oHX-mF-1at">
-            <size key="intrinsicContentSize" width="57" height="14"/>
-        </designable>
-        <designable name="p6C-Tq-FLM">
-            <size key="intrinsicContentSize" width="73.5" height="16.5"/>
-        </designable>
-        <designable name="q7j-vx-zJh">
-            <size key="intrinsicContentSize" width="23" height="16.5"/>
-        </designable>
-        <designable name="rU3-9H-eDX">
-            <size key="intrinsicContentSize" width="72" height="16.5"/>
-        </designable>
-        <designable name="t0K-hk-FuB">
-            <size key="intrinsicContentSize" width="52.5" height="22"/>
-        </designable>
-    </designables>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="background">
-            <color red="0.066708803179999998" green="0.070584766569999999" blue="0.070588387550000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.067000001668930054" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="cardColor">
-            <color red="0.043137900530000002" green="0.043136134739999998" blue="0.043137334290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="green">
-            <color red="0.3641511798" green="0.77383333440000002" blue="0.30184340479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
-            <color red="0.76129060979999996" green="0.2057103217" blue="0.14111185070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

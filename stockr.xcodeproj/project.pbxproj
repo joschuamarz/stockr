@@ -14,8 +14,8 @@
 		FF2E743125725E8500236A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2E743025725E8500236A79 /* Assets.xcassets */; };
 		FF2E743425725E8500236A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E743225725E8500236A79 /* LaunchScreen.storyboard */; };
 		FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */; };
-		FF2E744B257267DB00236A79 /* CompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E744A257267DB00236A79 /* CompanyCard.xib */; };
-		FF2E744F2572684A00236A79 /* CompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E744E2572684A00236A79 /* CompanyCard.swift */; };
+		FF2E744B257267DB00236A79 /* FirstCompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E744A257267DB00236A79 /* FirstCompanyCard.xib */; };
+		FF2E744F2572684A00236A79 /* FirstCompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E744E2572684A00236A79 /* FirstCompanyCard.swift */; };
 		FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A5257269BA00236A79 /* Manrope-Medium.ttf */; };
 		FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A6257269BA00236A79 /* Manrope-SemiBold.ttf */; };
 		FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74A7257269BA00236A79 /* Manrope-ExtraBold.ttf */; };
@@ -26,6 +26,18 @@
 		FF2E74DA257291A400236A79 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E74D9257291A400236A79 /* Styles.swift */; };
 		FF2E74DE2572983400236A79 /* YearRange.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E74DD2572983400236A79 /* YearRange.xib */; };
 		FF2E74E12572984D00236A79 /* YearRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E74E02572984D00236A79 /* YearRange.swift */; };
+		FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E74EB2572BC4200236A79 /* StocksManager.swift */; };
+		FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75032572CBA100236A79 /* LoadedStock+CoreDataClass.swift */; };
+		FF2E75062572CBA100236A79 /* LoadedStock+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75042572CBA100236A79 /* LoadedStock+CoreDataProperties.swift */; };
+		FF2E750A2572CBB200236A79 /* SwipedStock+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75082572CBB200236A79 /* SwipedStock+CoreDataClass.swift */; };
+		FF2E750B2572CBB200236A79 /* SwipedStock+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75092572CBB200236A79 /* SwipedStock+CoreDataProperties.swift */; };
+		FF2E750E2572D0B800236A79 /* LoadedStocksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E750D2572D0B800236A79 /* LoadedStocksManager.swift */; };
+		FF2E75112572D1E600236A79 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75102572D1E600236A79 /* ApiManager.swift */; };
+		FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75132572D34900236A79 /* SwipedStocksManager.swift */; };
+		FF2E751A2572F14100236A79 /* DownloadCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E75192572F14100236A79 /* DownloadCard.xib */; };
+		FF2E751D2572F15600236A79 /* DownloadCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E751C2572F15600236A79 /* DownloadCard.swift */; };
+		FF2E75202572F95B00236A79 /* StockCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E751F2572F95B00236A79 /* StockCard.swift */; };
+		FF2E75282572F98F00236A79 /* StockCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E75272572F98F00236A79 /* StockCard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +50,8 @@
 		FF2E743325725E8500236A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2E743525725E8500236A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeShowViewController.swift; sourceTree = "<group>"; };
-		FF2E744A257267DB00236A79 /* CompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCard.xib; sourceTree = "<group>"; };
-		FF2E744E2572684A00236A79 /* CompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCard.swift; sourceTree = "<group>"; };
+		FF2E744A257267DB00236A79 /* FirstCompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCompanyCard.xib; sourceTree = "<group>"; };
+		FF2E744E2572684A00236A79 /* FirstCompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompanyCard.swift; sourceTree = "<group>"; };
 		FF2E74A5257269BA00236A79 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		FF2E74A6257269BA00236A79 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		FF2E74A7257269BA00236A79 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -50,6 +62,18 @@
 		FF2E74D9257291A400236A79 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		FF2E74DD2572983400236A79 /* YearRange.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YearRange.xib; sourceTree = "<group>"; };
 		FF2E74E02572984D00236A79 /* YearRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearRange.swift; sourceTree = "<group>"; };
+		FF2E74EB2572BC4200236A79 /* StocksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksManager.swift; sourceTree = "<group>"; };
+		FF2E75032572CBA100236A79 /* LoadedStock+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadedStock+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		FF2E75042572CBA100236A79 /* LoadedStock+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadedStock+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		FF2E75082572CBB200236A79 /* SwipedStock+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipedStock+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		FF2E75092572CBB200236A79 /* SwipedStock+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipedStock+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		FF2E750D2572D0B800236A79 /* LoadedStocksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedStocksManager.swift; sourceTree = "<group>"; };
+		FF2E75102572D1E600236A79 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		FF2E75132572D34900236A79 /* SwipedStocksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipedStocksManager.swift; sourceTree = "<group>"; };
+		FF2E75192572F14100236A79 /* DownloadCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCard.xib; sourceTree = "<group>"; };
+		FF2E751C2572F15600236A79 /* DownloadCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCard.swift; sourceTree = "<group>"; };
+		FF2E751F2572F95B00236A79 /* StockCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCard.swift; sourceTree = "<group>"; };
+		FF2E75272572F98F00236A79 /* StockCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockCard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,8 @@
 		FF2E742325725E8300236A79 /* stockr */ = {
 			isa = PBXGroup;
 			children = (
+				FF2E74EF2572CAB800236A79 /* CoreDataProperties */,
+				FF2E74EA2572BC2E00236A79 /* Manager */,
 				FF2E74D9257291A400236A79 /* Styles.swift */,
 				FF2E743D257266D200236A79 /* SwipeShow */,
 				FF2E742425725E8300236A79 /* AppDelegate.swift */,
@@ -109,6 +135,9 @@
 		FF2E74412572678A00236A79 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				FF2E751F2572F95B00236A79 /* StockCard.swift */,
+				FF2E75272572F98F00236A79 /* StockCard.xib */,
+				FF2E75182572F12800236A79 /* DownloadCard */,
 				FF2E7449257267C700236A79 /* CompanyCard */,
 			);
 			path = Cards;
@@ -117,8 +146,8 @@
 		FF2E7449257267C700236A79 /* CompanyCard */ = {
 			isa = PBXGroup;
 			children = (
-				FF2E744A257267DB00236A79 /* CompanyCard.xib */,
-				FF2E744E2572684A00236A79 /* CompanyCard.swift */,
+				FF2E744A257267DB00236A79 /* FirstCompanyCard.xib */,
+				FF2E744E2572684A00236A79 /* FirstCompanyCard.swift */,
 			);
 			path = CompanyCard;
 			sourceTree = "<group>";
@@ -152,6 +181,53 @@
 				FF2E74E02572984D00236A79 /* YearRange.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FF2E74EA2572BC2E00236A79 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E74EB2572BC4200236A79 /* StocksManager.swift */,
+				FF2E75102572D1E600236A79 /* ApiManager.swift */,
+				FF2E750D2572D0B800236A79 /* LoadedStocksManager.swift */,
+				FF2E75132572D34900236A79 /* SwipedStocksManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FF2E74EF2572CAB800236A79 /* CoreDataProperties */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E74F12572CB0A00236A79 /* SwipedStocks */,
+				FF2E74F02572CAC600236A79 /* LoadedStocks */,
+			);
+			path = CoreDataProperties;
+			sourceTree = "<group>";
+		};
+		FF2E74F02572CAC600236A79 /* LoadedStocks */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E75032572CBA100236A79 /* LoadedStock+CoreDataClass.swift */,
+				FF2E75042572CBA100236A79 /* LoadedStock+CoreDataProperties.swift */,
+			);
+			path = LoadedStocks;
+			sourceTree = "<group>";
+		};
+		FF2E74F12572CB0A00236A79 /* SwipedStocks */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E75082572CBB200236A79 /* SwipedStock+CoreDataClass.swift */,
+				FF2E75092572CBB200236A79 /* SwipedStock+CoreDataProperties.swift */,
+			);
+			path = SwipedStocks;
+			sourceTree = "<group>";
+		};
+		FF2E75182572F12800236A79 /* DownloadCard */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E751C2572F15600236A79 /* DownloadCard.swift */,
+				FF2E75192572F14100236A79 /* DownloadCard.xib */,
+			);
+			path = DownloadCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +289,11 @@
 			files = (
 				FF2E74C9257269BA00236A79 /* Manrope-Bold.ttf in Resources */,
 				FF2E743425725E8500236A79 /* LaunchScreen.storyboard in Resources */,
+				FF2E75282572F98F00236A79 /* StockCard.xib in Resources */,
 				FF2E74C8257269BA00236A79 /* Manrope-Light.ttf in Resources */,
-				FF2E744B257267DB00236A79 /* CompanyCard.xib in Resources */,
+				FF2E744B257267DB00236A79 /* FirstCompanyCard.xib in Resources */,
 				FF2E743125725E8500236A79 /* Assets.xcassets in Resources */,
+				FF2E751A2572F14100236A79 /* DownloadCard.xib in Resources */,
 				FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */,
 				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
 				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
@@ -233,13 +311,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */,
+				FF2E75062572CBA100236A79 /* LoadedStock+CoreDataProperties.swift in Sources */,
+				FF2E750B2572CBB200236A79 /* SwipedStock+CoreDataProperties.swift in Sources */,
 				FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */,
-				FF2E744F2572684A00236A79 /* CompanyCard.swift in Sources */,
+				FF2E750E2572D0B800236A79 /* LoadedStocksManager.swift in Sources */,
+				FF2E744F2572684A00236A79 /* FirstCompanyCard.swift in Sources */,
 				FF2E74E12572984D00236A79 /* YearRange.swift in Sources */,
 				FF2E742F25725E8300236A79 /* stockr.xcdatamodeld in Sources */,
+				FF2E75202572F95B00236A79 /* StockCard.swift in Sources */,
+				FF2E750A2572CBB200236A79 /* SwipedStock+CoreDataClass.swift in Sources */,
 				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
+				FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */,
+				FF2E75112572D1E600236A79 /* ApiManager.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
+				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
+				FF2E751D2572F15600236A79 /* DownloadCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
