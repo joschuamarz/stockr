@@ -12,14 +12,14 @@ class StockCard: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var firstCard: FirstCompanyCard!
-    @IBOutlet weak var secondCard: UIView!
+    @IBOutlet weak var secondCard: SecondCompanyCard!
     @IBOutlet weak var thirdCard: UIView!
     @IBOutlet weak var trashButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     
     var isInitialLayout = true
     var currentPage = 0
-    var stock: LoadedStock?
+    var stock: Stock?
     
     var delegate: StockCardDelegate?
     
@@ -47,14 +47,12 @@ class StockCard: UIView {
         setGestures()
         setCurrentPage()
         
-        if let stock = stock {
-            firstCard.setStock(stock)
-        }
     }
     
-    func setStock(_ stock: LoadedStock) {
+    func setStock(_ stock: Stock) {
         self.stock = stock
         firstCard.setStock(stock)
+        secondCard.setStock(stock)
     }
     
  

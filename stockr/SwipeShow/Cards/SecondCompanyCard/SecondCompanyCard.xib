@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Manrope-Bold.ttf">
+            <string>Manrope-Bold</string>
+        </array>
+        <array key="Manrope-Medium.ttf">
+            <string>Manrope-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondCompanyCard" customModule="stockr" customModuleProvider="target">
+            <connections>
+                <outlet property="branchLabel" destination="EuV-bz-iSo" id="Qb0-8t-cD1"/>
+                <outlet property="contentView" destination="yIF-cU-rpq" id="6Y1-VK-Zyg"/>
+                <outlet property="countryLabel" destination="GX7-Ec-x0v" id="Zi0-e7-30d"/>
+                <outlet property="exchangeLabel" destination="lrx-pa-LRA" id="UWy-sB-WEj"/>
+                <outlet property="isinLabel" destination="q3z-0e-pgn" id="Qrj-kK-R0T"/>
+                <outlet property="nameLabel" destination="wJC-cv-KlH" id="wFO-hl-lMS"/>
+                <outlet property="regionImageView" destination="4Qy-Bn-iL1" id="BWD-7l-suB"/>
+                <outlet property="regionLabel" destination="JuC-Jk-dSN" id="a0B-yC-A5a"/>
+                <outlet property="sectorLabel" destination="olM-en-7wp" id="I5w-Op-VqN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yIF-cU-rpq">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3z-0e-pgn" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="176" y="133.5" width="62.5" height="16.5"/>
+                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-fU-GGb">
+                    <rect key="frame" x="73.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="2UO-y6-8hj"/>
+                        <constraint firstAttribute="height" constant="60" id="8eP-gG-qLC"/>
+                    </constraints>
+                    <color key="tintColor" name="red"/>
+                    <state key="normal">
+                        <imageReference key="image" image="trash" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="small"/>
+                    </state>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rut-Na-hLv">
+                    <rect key="frame" x="280.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="SX4-1g-pJx"/>
+                        <constraint firstAttribute="height" constant="60" id="q65-pJ-Ltv"/>
+                    </constraints>
+                    <color key="tintColor" name="green"/>
+                    <state key="normal">
+                        <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="small"/>
+                    </state>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qvz-If-l3N">
+                    <rect key="frame" x="31" y="525.5" width="352" height="158.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-BB-gMF">
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-nf-HA5" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nordamerika" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-Jk-dSN" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-RY-38f">
+                            <rect key="frame" x="0.0" y="25.5" width="352" height="1"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="bhZ-8Q-kDn"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-Gk-xgc">
+                            <rect key="frame" x="0.0" y="35.5" width="352" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Land" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5d-VFT" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX7-Ec-x0v" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-gu-uqS">
+                            <rect key="frame" x="0.0" y="61" width="352" height="1"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="aSQ-jM-ani"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="luI-Cu-VXE">
+                            <rect key="frame" x="0.0" y="71" width="352" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Index" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAY-Fc-epY" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S&amp;P 500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-pa-LRA" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14g-WC-Dtt">
+                            <rect key="frame" x="0.0" y="96.5" width="352" height="1"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="T2s-OI-sKH"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iIF-tW-1DZ">
+                            <rect key="frame" x="0.0" y="106.5" width="352" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sektor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBI-8D-1vA" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konsumgüter" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olM-en-7wp" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-j0-tB6">
+                            <rect key="frame" x="0.0" y="132" width="352" height="1"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="DGo-gI-erA"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kfa-eo-wna">
+                            <rect key="frame" x="0.0" y="142" width="352" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Branche" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-l1-tQK" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getränke / Tabak" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-bz-iSo" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJC-cv-KlH">
+                    <rect key="frame" x="31" y="95.5" width="352" height="33"/>
+                    <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="network" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Qy-Bn-iL1">
+                    <rect key="frame" x="87" y="216.5" width="240" height="239"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Qy-Bn-iL1" secondAttribute="height" multiplier="1:1" id="aoJ-5I-RIn"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7S0-22-fvG"/>
+            <color key="backgroundColor" name="cardColor"/>
+            <constraints>
+                <constraint firstItem="wJC-cv-KlH" firstAttribute="leading" secondItem="7S0-22-fvG" secondAttribute="leading" constant="31" id="2ov-Xm-UQM"/>
+                <constraint firstItem="4Qy-Bn-iL1" firstAttribute="centerY" secondItem="yIF-cU-rpq" secondAttribute="centerY" multiplier="0.75" id="6Sv-zL-6pK"/>
+                <constraint firstItem="qvz-If-l3N" firstAttribute="leading" secondItem="7S0-22-fvG" secondAttribute="leading" constant="31" id="7it-Jc-RRK"/>
+                <constraint firstItem="wJC-cv-KlH" firstAttribute="centerY" secondItem="yIF-cU-rpq" secondAttribute="centerY" multiplier="0.25" id="A1j-85-gjO"/>
+                <constraint firstItem="7S0-22-fvG" firstAttribute="trailing" secondItem="qvz-If-l3N" secondAttribute="trailing" constant="31" id="DRS-Pv-OuT"/>
+                <constraint firstItem="Rut-Na-hLv" firstAttribute="centerY" secondItem="0ga-fU-GGb" secondAttribute="centerY" id="FI1-Ld-zJ8"/>
+                <constraint firstItem="wJC-cv-KlH" firstAttribute="centerX" secondItem="7S0-22-fvG" secondAttribute="centerX" id="Lak-jd-fQx"/>
+                <constraint firstItem="0ga-fU-GGb" firstAttribute="centerY" secondItem="yIF-cU-rpq" secondAttribute="centerY" multiplier="1.8" id="NBi-eV-UYg"/>
+                <constraint firstItem="0ga-fU-GGb" firstAttribute="centerX" secondItem="yIF-cU-rpq" secondAttribute="centerX" multiplier="0.5" id="XAv-c4-Eob"/>
+                <constraint firstItem="4Qy-Bn-iL1" firstAttribute="width" secondItem="yIF-cU-rpq" secondAttribute="width" multiplier="0.57971" id="Y0k-ia-VZ9"/>
+                <constraint firstItem="q3z-0e-pgn" firstAttribute="centerX" secondItem="7S0-22-fvG" secondAttribute="centerX" id="aX4-Cy-A8N"/>
+                <constraint firstItem="Rut-Na-hLv" firstAttribute="centerX" secondItem="yIF-cU-rpq" secondAttribute="centerX" multiplier="1.5" id="mQc-F0-K8G"/>
+                <constraint firstItem="4Qy-Bn-iL1" firstAttribute="centerX" secondItem="yIF-cU-rpq" secondAttribute="centerX" id="mm6-Zy-2cQ"/>
+                <constraint firstItem="7S0-22-fvG" firstAttribute="trailing" secondItem="wJC-cv-KlH" secondAttribute="trailing" constant="31" id="oN4-T5-Aej"/>
+                <constraint firstItem="qvz-If-l3N" firstAttribute="centerY" secondItem="yIF-cU-rpq" secondAttribute="centerY" multiplier="1.35" id="pii-Nz-HmL"/>
+                <constraint firstItem="q3z-0e-pgn" firstAttribute="top" secondItem="wJC-cv-KlH" secondAttribute="bottom" constant="5" id="ydT-rS-R81"/>
+            </constraints>
+            <point key="canvasLocation" x="18.840579710144929" y="16.741071428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="network" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <namedColor name="background">
+            <color red="0.067000001668930054" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="cardColor">
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

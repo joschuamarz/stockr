@@ -16,7 +16,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="j1g-Eo-qaJ"/>
                 <outlet property="firstCard" destination="Gfw-U3-wJo" id="Cc8-S9-puG"/>
                 <outlet property="pageControl" destination="P1N-5s-qyP" id="hcj-6F-GNn"/>
-                <outlet property="secondCard" destination="LoS-Bi-YwQ" id="8Du-5O-LMI"/>
+                <outlet property="secondCard" destination="LoS-Bi-YwQ" id="sOz-er-sI6"/>
                 <outlet property="thirdCard" destination="XRt-sc-tfl" id="FsK-CF-41q"/>
                 <outlet property="trashButton" destination="Llk-5x-Td1" id="do3-ev-u1U"/>
             </connections>
@@ -30,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-Bi-YwQ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-Bi-YwQ" customClass="SecondCompanyCard" customModule="stockr" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
                 </view>

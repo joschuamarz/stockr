@@ -23,9 +23,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstCompanyCard" customModule="stockr" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="n5t-Gj-6AA" id="XyA-Dl-VHs"/>
+                <outlet property="avg_200_day_label" destination="GiR-jq-FTH" id="lho-x7-hAs"/>
+                <outlet property="avg_50_day_label" destination="aDi-kn-XBd" id="4dW-3g-41K"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="7Yj-Na-Bgf"/>
+                <outlet property="dividendYieldLabel" destination="Wud-u8-RVk" id="v4a-Eh-pXC"/>
+                <outlet property="ebitdaLabel" destination="rU3-9H-eDX" id="6aG-2m-nuW"/>
+                <outlet property="isinLabel" destination="Lt2-l5-rT3" id="LuS-OD-5ik"/>
+                <outlet property="kgvLabel" destination="fYr-5C-87a" id="FeG-Ty-Ix5"/>
+                <outlet property="marktCapitalizationLabel" destination="bdv-MX-FUp" id="i1m-vw-wqa"/>
                 <outlet property="nameLabel" destination="IPd-XN-IVL" id="Ix2-07-oie"/>
+                <outlet property="netProfitLabel" destination="p6C-Tq-FLM" id="MPg-ea-vOK"/>
+                <outlet property="priceLabel" destination="d4R-MT-4al" id="XC1-CS-D61"/>
                 <outlet property="trashButton" destination="4RI-qi-fzq" id="CG0-0M-85v"/>
+                <outlet property="yearHighLabel" destination="e3k-dr-vOk" id="EmO-kh-YlW"/>
+                <outlet property="yearLowLabel" destination="t0K-hk-FuB" id="5ho-jo-jar"/>
+                <outlet property="yearRange" destination="MSY-p4-lRg" id="vlk-5P-UlN"/>
+                <outletCollection property="boxViews" destination="DJD-C0-pVt" collectionClass="NSMutableArray" id="Uiv-xK-aPW"/>
+                <outletCollection property="boxViews" destination="n7W-BX-oFy" collectionClass="NSMutableArray" id="gGg-lK-dcP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,8 +47,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-l5-rT3">
-                    <rect key="frame" x="175.5" y="140" width="63.5" height="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-l5-rT3" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="175.5" y="131" width="63.5" height="14"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -264,14 +278,14 @@
                         <constraint firstItem="GIy-R3-ILf" firstAttribute="top" secondItem="n7W-BX-oFy" secondAttribute="top" constant="10" id="wzb-lu-0Le"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-XN-IVL">
-                    <rect key="frame" x="150.5" y="107" width="113" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-XN-IVL">
+                    <rect key="frame" x="31" y="98" width="352" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51,34€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-MT-4al">
-                    <rect key="frame" x="170.5" y="174" width="73.5" height="28"/>
+                    <rect key="frame" x="170.5" y="165" width="73.5" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -291,12 +305,12 @@
                 <constraint firstItem="e3k-dr-vOk" firstAttribute="centerY" secondItem="t0K-hk-FuB" secondAttribute="centerY" id="HI6-ah-vjF"/>
                 <constraint firstItem="Lt2-l5-rT3" firstAttribute="top" secondItem="IPd-XN-IVL" secondAttribute="bottom" constant="5" id="M70-uu-RU6"/>
                 <constraint firstItem="d4R-MT-4al" firstAttribute="top" secondItem="Lt2-l5-rT3" secondAttribute="bottom" constant="20" id="Mwj-MM-B6O"/>
-                <constraint firstItem="d4R-MT-4al" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.4" constant="9" id="MzZ-dp-NFH"/>
                 <constraint firstItem="n5t-Gj-6AA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.5" id="PD8-nZ-NIk"/>
                 <constraint firstItem="d4R-MT-4al" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="RBo-Mp-MNk"/>
                 <constraint firstItem="BHl-Yb-7PD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="TQF-f6-7id"/>
                 <constraint firstItem="DJD-C0-pVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="TTw-pA-XAD"/>
                 <constraint firstItem="n5t-Gj-6AA" firstAttribute="centerY" secondItem="4RI-qi-fzq" secondAttribute="centerY" id="Tc5-IS-Oc1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IPd-XN-IVL" secondAttribute="trailing" constant="31" id="atB-0K-pD1"/>
                 <constraint firstItem="n7W-BX-oFy" firstAttribute="width" secondItem="DJD-C0-pVt" secondAttribute="width" id="efi-JQ-4ef"/>
                 <constraint firstItem="MSY-p4-lRg" firstAttribute="top" secondItem="t0K-hk-FuB" secondAttribute="bottom" constant="20" id="f7p-wd-ySR"/>
                 <constraint firstItem="Lt2-l5-rT3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fCR-Ql-QUD"/>
@@ -304,12 +318,14 @@
                 <constraint firstItem="DJD-C0-pVt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.9" constant="4.3000000000000114" id="hx7-aG-N08"/>
                 <constraint firstItem="MSY-p4-lRg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="31" id="iP2-fe-fbU"/>
                 <constraint firstItem="n7W-BX-oFy" firstAttribute="leading" secondItem="DJD-C0-pVt" secondAttribute="trailing" constant="10" id="kF7-DX-luE"/>
+                <constraint firstItem="IPd-XN-IVL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.25" id="pN3-US-mUp"/>
                 <constraint firstItem="ELq-Xf-idu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="prN-d4-gWM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e3k-dr-vOk" secondAttribute="trailing" constant="31" id="qE8-I6-rdm"/>
                 <constraint firstItem="4RI-qi-fzq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.8" id="s8e-S8-j8h"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BHl-Yb-7PD" secondAttribute="trailing" constant="31" id="snf-9n-b5S"/>
                 <constraint firstItem="t0K-hk-FuB" firstAttribute="top" secondItem="ELq-Xf-idu" secondAttribute="bottom" constant="2" id="uuE-SD-RDB"/>
                 <constraint firstItem="oHX-mF-1at" firstAttribute="centerY" secondItem="ELq-Xf-idu" secondAttribute="centerY" id="wJj-rg-uO8"/>
+                <constraint firstItem="IPd-XN-IVL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="y7M-Pm-UeH"/>
             </constraints>
             <point key="canvasLocation" x="18.840579710144929" y="16.741071428571427"/>
         </view>

@@ -38,6 +38,9 @@
 		FF2E751D2572F15600236A79 /* DownloadCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E751C2572F15600236A79 /* DownloadCard.swift */; };
 		FF2E75202572F95B00236A79 /* StockCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E751F2572F95B00236A79 /* StockCard.swift */; };
 		FF2E75282572F98F00236A79 /* StockCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E75272572F98F00236A79 /* StockCard.xib */; };
+		FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2E752E25739CB800236A79 /* SecondCompanyCard.xib */; };
+		FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E753125739CCA00236A79 /* SecondCompanyCard.swift */; };
+		FF2E75352573A09400236A79 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75342573A09400236A79 /* Stock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		FF2E751C2572F15600236A79 /* DownloadCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCard.swift; sourceTree = "<group>"; };
 		FF2E751F2572F95B00236A79 /* StockCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCard.swift; sourceTree = "<group>"; };
 		FF2E75272572F98F00236A79 /* StockCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockCard.xib; sourceTree = "<group>"; };
+		FF2E752E25739CB800236A79 /* SecondCompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCompanyCard.xib; sourceTree = "<group>"; };
+		FF2E753125739CCA00236A79 /* SecondCompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCompanyCard.swift; sourceTree = "<group>"; };
+		FF2E75342573A09400236A79 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,19 +143,20 @@
 			children = (
 				FF2E751F2572F95B00236A79 /* StockCard.swift */,
 				FF2E75272572F98F00236A79 /* StockCard.xib */,
+				FF2E7449257267C700236A79 /* FirstCompanyCard */,
+				FF2E752D25739C8F00236A79 /* SecondCompanyCard */,
 				FF2E75182572F12800236A79 /* DownloadCard */,
-				FF2E7449257267C700236A79 /* CompanyCard */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
 		};
-		FF2E7449257267C700236A79 /* CompanyCard */ = {
+		FF2E7449257267C700236A79 /* FirstCompanyCard */ = {
 			isa = PBXGroup;
 			children = (
 				FF2E744A257267DB00236A79 /* FirstCompanyCard.xib */,
 				FF2E744E2572684A00236A79 /* FirstCompanyCard.swift */,
 			);
-			path = CompanyCard;
+			path = FirstCompanyCard;
 			sourceTree = "<group>";
 		};
 		FF2E7492257269BA00236A79 /* fonts */ = {
@@ -197,6 +204,7 @@
 		FF2E74EF2572CAB800236A79 /* CoreDataProperties */ = {
 			isa = PBXGroup;
 			children = (
+				FF2E75342573A09400236A79 /* Stock.swift */,
 				FF2E74F12572CB0A00236A79 /* SwipedStocks */,
 				FF2E74F02572CAC600236A79 /* LoadedStocks */,
 			);
@@ -228,6 +236,15 @@
 				FF2E75192572F14100236A79 /* DownloadCard.xib */,
 			);
 			path = DownloadCard;
+			sourceTree = "<group>";
+		};
+		FF2E752D25739C8F00236A79 /* SecondCompanyCard */ = {
+			isa = PBXGroup;
+			children = (
+				FF2E752E25739CB800236A79 /* SecondCompanyCard.xib */,
+				FF2E753125739CCA00236A79 /* SecondCompanyCard.swift */,
+			);
+			path = SecondCompanyCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +316,7 @@
 				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
 				FF2E74DE2572983400236A79 /* YearRange.xib in Resources */,
 				FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */,
+				FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */,
 				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
 			);
@@ -312,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */,
+				FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */,
+				FF2E75352573A09400236A79 /* Stock.swift in Sources */,
 				FF2E75062572CBA100236A79 /* LoadedStock+CoreDataProperties.swift in Sources */,
 				FF2E750B2572CBB200236A79 /* SwipedStock+CoreDataProperties.swift in Sources */,
 				FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */,
