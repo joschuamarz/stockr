@@ -12,6 +12,7 @@ class YearRange: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var indicatorView: UIView!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    var value = 0.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,19 +31,27 @@ class YearRange: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
+   
     
     func setIndicator(to value: Double) {
+        layoutIfNeeded()
+        self.value = value
         let minX: CGFloat = 0.0
-        let maxX = contentView.frame.width
+        let maxX = contentView.frame.width-indicatorView.frame.width
         
         
-        let center = contentView.frame.width * CGFloat(value)
+        let destination = (contentView.frame.width * CGFloat(value))-indicatorView.frame.width/2
         
-        let constant = min(maxX, center-indicatorView.frame.width/2)
+        let constant = min(maxX, destination)
         
         leadingConstraint.constant = max(constant, minX)
         
         self.contentView.layoutSubviews()
+        print(contentView.frame.width)
+        print(maxX)
+        print(destination)
+        print(indicatorView.frame.width/2)
+        print(max(constant, minX))
     }
 
 }
