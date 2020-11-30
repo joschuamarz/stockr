@@ -193,11 +193,15 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         }
         let deltaX = frontFrame.frame.width / backCard.frame.width
         let deltaY = frontFrame.frame.height / backCard.frame.height
+        
+        if force {
+            self.companyCard.adjustBackgroundColor(with: -0.7)
+        }
+        
         UIView.animate(withDuration: duration) {
             self.companyCard.center.x -= 2000
             if force {
                 self.companyCard.transform = CGAffineTransform.init(rotationAngle: self.destinationAngle)
-                self.companyCard.adjustBackgroundColor(with: -1)
             }
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)
             self.backCard.center = self.frontFrame.center
@@ -215,11 +219,16 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         }
         let deltaX = frontFrame.frame.width / backCard.frame.width
         let deltaY = frontFrame.frame.height / backCard.frame.height
+        
+        if force {
+            self.companyCard.adjustBackgroundColor(with: 0.7)
+        }
+        
         UIView.animate(withDuration: duration) {
             self.companyCard.center.x += 2000
             if force {
                 self.companyCard.transform = CGAffineTransform.init(rotationAngle: -self.destinationAngle)
-                self.companyCard.adjustBackgroundColor(with: 1)
+                
             }
             
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)
