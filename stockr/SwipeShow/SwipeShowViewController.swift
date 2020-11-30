@@ -118,8 +118,11 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     var startPoint = CGPoint.zero
     let destinationAngle: CGFloat = 0.785398
+    
+    
     var currentAngle: CGFloat = 0
     
+   
     @objc
     func handlePan(_ sender: UIPanGestureRecognizer) {
         
@@ -133,8 +136,6 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
         
         let translation = sender.translation(in: self.companyCard)
-        let location = sender.location(in: self.view)
-        
         
         switch sender.state {
         case .changed:
@@ -157,12 +158,13 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
             backCard.frame.size.height = backFrame.frame.height + abs(faktor)*heightOffset
             backCard.center.x = backFrame.center.x
         
-            
+            //COLOR
+            companyCard.adjustBackgroundColor(with: faktor)
             
         case .ended:
-            if location.x < self.view.frame.width/3 {
+            if companyCard.center.x < self.view.frame.width/3 {
                 animateLeftOut(force: false)
-            } else if location.x > 2*self.view.frame.width/3 {
+            } else if companyCard.center.x > 2*self.view.frame.width/3 {
                 animateRightOut(force: false)
             } else {
                 reset()
@@ -185,12 +187,17 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     //MARK: -Animations
     private func animateLeftOut(force: Bool) {
+        var duration = 0.3
+        if force {
+            duration = 0.5
+        }
         let deltaX = frontFrame.frame.width / backCard.frame.width
         let deltaY = frontFrame.frame.height / backCard.frame.height
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: duration) {
             self.companyCard.center.x -= 2000
             if force {
                 self.companyCard.transform = CGAffineTransform.init(rotationAngle: self.destinationAngle)
+                self.companyCard.adjustBackgroundColor(with: -1)
             }
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)
             self.backCard.center = self.frontFrame.center
@@ -202,12 +209,17 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     }
     
     private func animateRightOut(force: Bool) {
+        var duration = 0.3
+        if force {
+            duration = 0.5
+        }
         let deltaX = frontFrame.frame.width / backCard.frame.width
         let deltaY = frontFrame.frame.height / backCard.frame.height
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: duration) {
             self.companyCard.center.x += 2000
             if force {
                 self.companyCard.transform = CGAffineTransform.init(rotationAngle: -self.destinationAngle)
+                self.companyCard.adjustBackgroundColor(with: 1)
             }
             
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)

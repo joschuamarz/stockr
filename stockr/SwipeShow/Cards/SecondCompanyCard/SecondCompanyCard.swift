@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondCompanyCard: UIView {
+class SecondCompanyCard: UIView, BackgroundColorAdjustable {
 
     @IBOutlet var contentView: UIView!
     
@@ -40,6 +40,9 @@ class SecondCompanyCard: UIView {
     
     }
 
+    func setBackgroundColor(to color: UIColor) {
+        self.contentView.backgroundColor = color
+    }
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()

@@ -54,22 +54,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B435C568-7BEA-47B0-BB68-D46198D7D087"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "stockr/SwipeShow/Components/YearRange.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "setIndicator(to:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0A83FC29-602B-494F-B27F-785E49600381"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -77,9 +61,25 @@
             filePath = "stockr/SwipeShow/Cards/FirstCompanyCard/FirstCompanyCard.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "setStock(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55969201-B97C-42C1-8020-991593551463"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "stockr/SwipeShow/Cards/StockCard.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "adjustBackgroundColor(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

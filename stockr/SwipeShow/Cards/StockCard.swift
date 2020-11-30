@@ -19,7 +19,15 @@ class StockCard: UIView {
     
     var isInitialLayout = true
     var currentPage = 0
+    var currentCard: BackgroundColorAdjustable?
     var stock: Stock?
+    
+    let redStart: CGFloat = 0.043
+    let redOffset: CGFloat = 0.257
+    let greenStart: CGFloat = 0.043
+    let greenOffset: CGFloat = 0.257
+    
+    let blue: CGFloat = 0.043
     
     var delegate: StockCardDelegate?
     
@@ -55,6 +63,17 @@ class StockCard: UIView {
         secondCard.setStock(stock)
     }
     
+    func adjustBackgroundColor(with faktor: CGFloat) {
+        if faktor < 0 {
+            let color = UIColor(red: redStart + abs(faktor)*redOffset, green: greenStart, blue: blue, alpha: 1)
+            currentCard?.setBackgroundColor(to: color)
+        } else {
+            let color = UIColor(red: redStart, green: greenStart + abs(faktor)*greenOffset, blue: blue, alpha: 1)
+            currentCard?.setBackgroundColor(to: color)
+        }
+    }
+    
+    
  
     private func setGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -75,14 +94,17 @@ class StockCard: UIView {
             firstCard.isHidden = false
             secondCard.isHidden = true
             thirdCard.isHidden = true
+            currentCard = firstCard
         case 1:
             firstCard.isHidden = true
             secondCard.isHidden = false
             thirdCard.isHidden = true
+            currentCard = secondCard
         case 2:
             firstCard.isHidden = true
             secondCard.isHidden = true
             thirdCard.isHidden = false
+            //currentCard = thirdCard
         default:
             print("Out of range")
         }

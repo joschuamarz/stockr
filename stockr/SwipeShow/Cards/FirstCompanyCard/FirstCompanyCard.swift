@@ -7,7 +7,11 @@
 
 import UIKit
 
-class FirstCompanyCard: UIView {
+protocol BackgroundColorAdjustable {
+    func setBackgroundColor(to color: UIColor)
+}
+
+class FirstCompanyCard: UIView, BackgroundColorAdjustable {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var boxViews: [UIView]!
@@ -54,6 +58,10 @@ class FirstCompanyCard: UIView {
         trashButton.layer.cornerRadius = trashButton.frame.width/2
         addButton.layer.cornerRadius = addButton.frame.width/2
         
+    }
+    
+    func setBackgroundColor(to color: UIColor) {
+        self.contentView.backgroundColor = color
     }
     
     func setStock(_ stock: Stock) {
