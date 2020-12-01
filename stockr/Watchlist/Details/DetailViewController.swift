@@ -100,6 +100,7 @@ class DetailViewController: UIViewController {
         bottomMenu.layer.cornerRadius = bottomMenu.frame.width/8
         indicatorView.layer.cornerRadius = indicatorView.frame.height/2
         deleteButton.layer.cornerRadius = 5
+        yearRange.contentView.backgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)
         
         for box in boxViews {
             box.layer.cornerRadius = 5
@@ -137,12 +138,15 @@ class DetailViewController: UIViewController {
             self.bottomMenu.layoutIfNeeded()
         case .ended:
             if constant > self.view.frame.height/2 {
+                
                 blurView.alpha = 0
                 self.dismiss(animated: true, completion: nil)
+                
             } else {
                 heightConstraint.constant = heightConstant
+                
                 UIView.animate(withDuration: 0.3) {
-                    self.bottomMenu.layoutIfNeeded()
+                    self.view.layoutIfNeeded()
                 }
             }
         default:

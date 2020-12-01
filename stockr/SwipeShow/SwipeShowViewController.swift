@@ -241,6 +241,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     private func reset() {
         UIView.animate(withDuration: 0.1) {
+            self.companyCard.adjustBackgroundColor(with: 0)
             self.companyCard.transform = CGAffineTransform.identity
             self.companyCard.frame = self.frontFrame.frame
             self.backCard.frame = self.backFrame.frame

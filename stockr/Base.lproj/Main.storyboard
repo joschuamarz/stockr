@@ -77,13 +77,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier werden all Deine gespeicherten Unternehmen aufgelistet. Schau sie Dir in Ruhe nochmal an." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfk-F7-XMW">
-                                <rect key="frame" x="31" y="111.00000000000001" width="328" height="52.666666666666671"/>
+                                <rect key="frame" x="31" y="111.00000000000001" width="328" height="61.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Suchen" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="agW-OP-Oz8" customClass="SearchTextField" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="183.66666666666666" width="328" height="40"/>
+                                <rect key="frame" x="31" y="192.66666666666666" width="328" height="40"/>
                                 <color key="backgroundColor" red="0.1589555144" green="0.1677114069" blue="0.16778776049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LZa-0N-5QY"/>
@@ -98,7 +98,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-jx-ReJ">
-                                <rect key="frame" x="31" y="238.66666666666669" width="328" height="512.33333333333326"/>
+                                <rect key="frame" x="31" y="247.66666666666666" width="328" height="503.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -197,7 +197,7 @@
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-4h-r2u">
-                                        <rect key="frame" x="0.0" y="21" width="390" height="719"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="712"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7N-bQ-Xix">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="874.33333333333337"/>
@@ -666,7 +666,7 @@
                                     <constraint firstItem="jKu-by-Yed" firstAttribute="width" secondItem="SwQ-17-l8c" secondAttribute="width" multiplier="0.25" id="Fm3-EW-ff7"/>
                                     <constraint firstAttribute="bottom" secondItem="BSd-4h-r2u" secondAttribute="bottom" id="XzN-QF-eeN"/>
                                     <constraint firstItem="jKu-by-Yed" firstAttribute="top" secondItem="SwQ-17-l8c" secondAttribute="top" constant="8" id="bn5-Xv-4XQ"/>
-                                    <constraint firstItem="BSd-4h-r2u" firstAttribute="top" secondItem="jKu-by-Yed" secondAttribute="bottom" constant="8" id="gY7-9B-em3"/>
+                                    <constraint firstItem="BSd-4h-r2u" firstAttribute="top" secondItem="jKu-by-Yed" secondAttribute="bottom" constant="15" id="gY7-9B-em3"/>
                                     <constraint firstItem="BSd-4h-r2u" firstAttribute="leading" secondItem="SwQ-17-l8c" secondAttribute="leading" id="hLn-Ro-chS"/>
                                     <constraint firstItem="jKu-by-Yed" firstAttribute="centerX" secondItem="SwQ-17-l8c" secondAttribute="centerX" id="mJf-e0-QV4"/>
                                     <constraint firstAttribute="trailing" secondItem="BSd-4h-r2u" secondAttribute="trailing" id="orm-j5-gNH"/>
@@ -736,13 +736,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hier findest Du alles, was Du zu unseren rechtlichen Aspekten wissen musst." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-bE-LFb">
-                                <rect key="frame" x="31" y="115" width="328" height="35"/>
+                                <rect key="frame" x="31" y="115" width="328" height="41"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8k-8f-tMM">
-                                <rect key="frame" x="31" y="175" width="328" height="36"/>
+                                <rect key="frame" x="31" y="181" width="328" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-sB-j1R">
                                         <rect key="frame" x="308" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -754,7 +754,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-tg-JOc">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.666666666666671" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -772,7 +772,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcP-JR-E0h">
-                                <rect key="frame" x="31" y="216" width="328" height="36"/>
+                                <rect key="frame" x="31" y="222" width="328" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diN-l0-rtU">
                                         <rect key="frame" x="308" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -784,7 +784,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK1-8a-8vJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

@@ -92,6 +92,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
             rootVC.tabBar.clipsToBounds = true
             rootVC.modalPresentationStyle = .overFullScreen
             present(rootVC, animated: true, completion: nil)
+            UserDefaults.standard.setValue(true, forKey: "Onboarded")
         } else {
             pageControl.currentPage = (page+1)%3
             pageChanged(self)
