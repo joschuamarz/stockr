@@ -7,7 +7,9 @@
 
 import UIKit
 
-class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+
+
+class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, DetailDelegate {
     
     
 
@@ -28,10 +30,17 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
         filteredStocks = watchedStocks
         stocksTableView.reloadData()
     }
+    
+    func didDeleteStock() {
+        watchedStocks = stockManager.getWatchedStocks()
+        filteredStocks = watchedStocks
+        stocksTableView.reloadData()
+    }
 
     let stockManager = StocksManager()
     var watchedStocks = StocksManager().getWatchedStocks()
     var filteredStocks = [Stock]()
+    var selectedStock: Stock?
     
     //MARK: -TableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -48,6 +57,10 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedStock = filteredStocks[indexPath.row]
+        performSegue(withIdentifier: "detail", sender: self)
+    }
     //MARK: -TextFieldDelegate
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -83,4 +96,12 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                destinationVC.givenStock = selectedStock
+                destinationVC.delegate = self
+            }
+        }
+    }
 }

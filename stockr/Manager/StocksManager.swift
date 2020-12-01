@@ -97,4 +97,10 @@ class StocksManager {
         return stocks
     }
    
+    func toUnwatched(stock: Stock) {
+        if let watchedStock = stock as? SwipedStock {
+            watchedStock.watched = false
+            watchedStock.save()
+        }
+    }
 }

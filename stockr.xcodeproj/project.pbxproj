@@ -45,6 +45,11 @@
 		FF2E753E2573B40D00236A79 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */; };
 		FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */; };
 		FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B42573C843005CFC50 /* LegalViewController.swift */; };
+		FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */; };
+		FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */; };
+		FFDD30C225769335005CFC50 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30C125769335005CFC50 /* InformationView.swift */; };
+		FFDD30C525769345005CFC50 /* InformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30C425769345005CFC50 /* InformationView.xib */; };
+		FFDD30CA2576C935005CFC50 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30C92576C935005CFC50 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +93,11 @@
 		FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewCell.swift; sourceTree = "<group>"; };
 		FFDD30B42573C843005CFC50 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		FFDD30C125769335005CFC50 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		FFDD30C425769345005CFC50 /* InformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationView.xib; sourceTree = "<group>"; };
+		FFDD30C92576C935005CFC50 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 		FF2E742325725E8300236A79 /* stockr */ = {
 			isa = PBXGroup;
 			children = (
+				FFDD30B8257582A8005CFC50 /* Onboarding */,
 				FF2E74EF2572CAB800236A79 /* CoreDataProperties */,
 				FF2E74EA2572BC2E00236A79 /* Manager */,
 				FF2E743D257266D200236A79 /* SwipeShow */,
@@ -263,6 +274,7 @@
 			children = (
 				FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */,
 				FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */,
+				FFDD30C82576C918005CFC50 /* Details */,
 			);
 			path = Watchlist;
 			sourceTree = "<group>";
@@ -273,6 +285,33 @@
 				FFDD30B42573C843005CFC50 /* LegalViewController.swift */,
 			);
 			path = Legal;
+			sourceTree = "<group>";
+		};
+		FFDD30B8257582A8005CFC50 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */,
+				FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */,
+				FFDD30C025769313005CFC50 /* Component */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FFDD30C025769313005CFC50 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30C125769335005CFC50 /* InformationView.swift */,
+				FFDD30C425769345005CFC50 /* InformationView.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		FFDD30C82576C918005CFC50 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30C92576C935005CFC50 /* DetailViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +382,12 @@
 				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
 				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
 				FF2E74DE2572983400236A79 /* YearRange.xib in Resources */,
+				FFDD30C525769345005CFC50 /* InformationView.xib in Resources */,
 				FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */,
 				FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */,
 				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
+				FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +411,15 @@
 				FF2E742F25725E8300236A79 /* stockr.xcdatamodeld in Sources */,
 				FF2E75202572F95B00236A79 /* StockCard.swift in Sources */,
 				FF2E750A2572CBB200236A79 /* SwipedStock+CoreDataClass.swift in Sources */,
+				FFDD30CA2576C935005CFC50 /* DetailViewController.swift in Sources */,
 				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
 				FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */,
 				FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */,
 				FF2E75112572D1E600236A79 /* ApiManager.swift in Sources */,
 				FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
+				FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */,
+				FFDD30C225769335005CFC50 /* InformationView.swift in Sources */,
 				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
 				FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */,

@@ -83,5 +83,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "508843A6-6DB5-4B65-BE33-70B6E02512BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "stockr/Onboarding/OnboardingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "setIndiactorForCurrentPage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "508843A6-6DB5-4B65-BE33-70B6E02512BE - ccb589e0ded3ffcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "stockr.OnboardingViewController.setIndiactorForCurrentPage() -&gt; ()"
+                  moduleName = "stockr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joschuamarz/Projekte/5-swift-Projekte/05-Aktien/02-stockr/stockr/stockr/Onboarding/OnboardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "83">
+               </Location>
+               <Location
+                  uuid = "508843A6-6DB5-4B65-BE33-70B6E02512BE - ccb589e0ded3ffcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "stockr.OnboardingViewController.setIndiactorForCurrentPage() -&gt; ()"
+                  moduleName = "stockr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joschuamarz/Projekte/5-swift-Projekte/05-Aktien/02-stockr/stockr/stockr/Onboarding/OnboardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "1724">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
