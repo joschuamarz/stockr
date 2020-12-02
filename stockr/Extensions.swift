@@ -102,3 +102,63 @@ class LinkUILabel: UILabel{
         self.openUrl(urlString: url)
     }
 }
+
+
+extension String {
+    func getRounded(to places: Int) -> String {
+        let value = Double(self.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+        
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.minimumFractionDigits = 2
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: value.withTwoDecimals())) ?? "err"
+    }
+    
+    func getSeperatedWithoutDecimals() -> String {
+        let value = Int(Double(self) ?? 0)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: value)) ?? "err"
+    }
+    
+    func getPercentage() -> String {
+        let value = Double(self) ?? 0.0
+        
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: value.withTwoDecimals())) ?? "err"
+    }
+}
+
+extension Double {
+    
+    func withTwoDecimals() -> Double {
+        return ((self*100).rounded())/100
+    }
+    
+    func withTwoDecimalsString() -> String {
+        let value = self.withTwoDecimals()
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.minimumFractionDigits = 2
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: value)) ?? "err"
+    }
+}

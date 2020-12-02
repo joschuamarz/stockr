@@ -11,8 +11,9 @@ struct RawStock: Codable {
     public let id: Int
     public let symbol: String
     public let isin: String
+    public let price: String?
     public let name: String?
-    public let description: String?
+    public let descriptionText: String?
     public let country: String?
     public let sector: String?
     public let industry: String?
@@ -43,6 +44,8 @@ class ApiManager {
     
     //MARK: -API
     func getStocksFromAPI(completion: @escaping () -> Void) {
+        
+        CurrencyManager().updateCurrencyFaktor()
         
         self.loadJson(fromURLString: urlString) { (result) in
             switch result {
@@ -105,7 +108,8 @@ class ApiManager {
                     symbol: rawStock.symbol,
                     isin: rawStock.isin,
                     name: rawStock.name,
-                    description: rawStock.description,
+                    price: rawStock.price,
+                    description: rawStock.descriptionText,
                     country: rawStock.country,
                     sector: rawStock.sector,
                     industry: rawStock.industry,

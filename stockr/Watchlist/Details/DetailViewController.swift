@@ -66,14 +66,14 @@ class DetailViewController: UIViewController {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        //PRICE??
+        let price = Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0
+        priceLabel.text = (price*CurrencyManager().getCurrenyFaktor()).withTwoDecimalsString() + "€"
         
         yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
         yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
         
         if let yearLow = Double(stock.getYearLow()) {
             if let yearHigh = Double(stock.getYearHigh()) {
-                let price = 50.57
                 let ratio = (price-yearLow)/(yearHigh-yearLow)
                 yearRange.setIndicator(to: ratio)
             }
@@ -85,8 +85,8 @@ class DetailViewController: UIViewController {
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().getSeperated() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperated() + "€"
+        ebitdaLabel.text = stock.getEbitda().getSeperatedWithoutDecimals() + "€"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperatedWithoutDecimals() + "€"
         
         countryLabel.text = stock.getCountry()
         exchangeLabel.text = stock.getExchange()
@@ -97,7 +97,7 @@ class DetailViewController: UIViewController {
     
     //MARK: -Layouts
     private func setLayouts() {
-        bottomMenu.layer.cornerRadius = bottomMenu.frame.width/8
+        bottomMenu.layer.cornerRadius = bottomMenu.frame.width/10
         indicatorView.layer.cornerRadius = indicatorView.frame.height/2
         deleteButton.layer.cornerRadius = 5
         yearRange.contentView.backgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)

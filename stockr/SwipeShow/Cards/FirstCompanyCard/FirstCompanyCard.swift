@@ -68,14 +68,14 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        //PRICE??
+        let price = Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0
+        priceLabel.text = (price*CurrencyManager().getCurrenyFaktor()).withTwoDecimalsString() + "€"
         
         yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
         yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
         
         if let yearLow = Double(stock.getYearLow()) {
             if let yearHigh = Double(stock.getYearHigh()) {
-                let price = 50.57
                 let ratio = (price-yearLow)/(yearHigh-yearLow)
                 yearRange.setIndicator(to: ratio)
             }
@@ -87,8 +87,8 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().getSeperated() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperated() + "€"
+        ebitdaLabel.text = stock.getEbitda().getSeperatedWithoutDecimals() + "€"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperatedWithoutDecimals() + "€"
     }
 
 }

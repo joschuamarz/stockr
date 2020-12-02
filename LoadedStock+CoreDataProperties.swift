@@ -16,6 +16,7 @@ extension LoadedStock {
         return NSFetchRequest<LoadedStock>(entityName: "LoadedStock")
     }
 
+    @NSManaged public var price: String?
     @NSManaged public var updated_at: String?
     @NSManaged public var country: String?
     @NSManaged public var descriptionText: String?

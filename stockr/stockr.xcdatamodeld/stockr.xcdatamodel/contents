@@ -16,6 +16,7 @@
         <attribute name="moving_avg_200_day" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pe_ratio" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
         <attribute name="sector" optional="YES" attributeType="String"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="String"/>
@@ -38,6 +39,7 @@
         <attribute name="moving_avg_200_day" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pe_ratio" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
         <attribute name="sector" optional="YES" attributeType="String"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="String"/>
@@ -46,7 +48,7 @@
         <attribute name="year_low" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="SwipedStock" positionX="-63" positionY="-18" width="128" height="358"/>
-        <element name="LoadedStock" positionX="-54" positionY="-9" width="128" height="343"/>
+        <element name="LoadedStock" positionX="-54" positionY="-9" width="128" height="358"/>
+        <element name="SwipedStock" positionX="-63" positionY="-18" width="128" height="373"/>
     </elements>
 </model>

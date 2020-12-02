@@ -50,6 +50,7 @@
 		FFDD30C225769335005CFC50 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30C125769335005CFC50 /* InformationView.swift */; };
 		FFDD30C525769345005CFC50 /* InformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30C425769345005CFC50 /* InformationView.xib */; };
 		FFDD30CA2576C935005CFC50 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30C92576C935005CFC50 /* DetailViewController.swift */; };
+		FFDD30CE25775FA9005CFC50 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30CD25775FA9005CFC50 /* CurrencyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		FFDD30C125769335005CFC50 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		FFDD30C425769345005CFC50 /* InformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationView.xib; sourceTree = "<group>"; };
 		FFDD30C92576C935005CFC50 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FFDD30CD25775FA9005CFC50 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				FF2E75102572D1E600236A79 /* ApiManager.swift */,
 				FF2E750D2572D0B800236A79 /* LoadedStocksManager.swift */,
 				FF2E75132572D34900236A79 /* SwipedStocksManager.swift */,
+				FFDD30CD25775FA9005CFC50 /* CurrencyManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */,
+				FFDD30CE25775FA9005CFC50 /* CurrencyManager.swift in Sources */,
 				FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */,
 				FF2E75352573A09400236A79 /* Stock.swift in Sources */,
 				FF2E753E2573B40D00236A79 /* WatchlistViewController.swift in Sources */,

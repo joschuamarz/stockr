@@ -19,6 +19,7 @@ extension SwipedStock {
     @NSManaged public var symbol: String
     @NSManaged public var isin: String
     @NSManaged public var name: String?
+    @NSManaged public var price: String?
     @NSManaged public var descriptionText: String?
     @NSManaged public var country: String?
     @NSManaged public var sector: String?
