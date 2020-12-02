@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09DDD2343ABF22EBDDBA782D /* Pods_stockr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087CFDEE898704B67F31AA89 /* Pods_stockr.framework */; };
 		FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742425725E8300236A79 /* AppDelegate.swift */; };
 		FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E742625725E8300236A79 /* SceneDelegate.swift */; };
 		FF2E742C25725E8300236A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2E742A25725E8300236A79 /* Main.storyboard */; };
@@ -56,9 +57,15 @@
 		FFDD30E12577875F005CFC50 /* NoNetworkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30E02577875F005CFC50 /* NoNetworkCard.swift */; };
 		FFDD30E62577A6D5005CFC50 /* FinishCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30E52577A6D5005CFC50 /* FinishCard.xib */; };
 		FFDD30E92577A822005CFC50 /* FinishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30E82577A822005CFC50 /* FinishCard.swift */; };
+		FFDD31032577E3DE005CFC50 /* AdMobNativeCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */; };
+		FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */; };
+		FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087CFDEE898704B67F31AA89 /* Pods_stockr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stockr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9ED56E20027FEF25EDEFE1 /* Pods-stockr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stockr.debug.xcconfig"; path = "Target Support Files/Pods-stockr/Pods-stockr.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8DCC82448533A9CE50D9B1 /* Pods-stockr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stockr.release.xcconfig"; path = "Target Support Files/Pods-stockr/Pods-stockr.release.xcconfig"; sourceTree = "<group>"; };
 		FF2E742125725E8300236A79 /* stockr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2E742425725E8300236A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2E742625725E8300236A79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +117,9 @@
 		FFDD30E02577875F005CFC50 /* NoNetworkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkCard.swift; sourceTree = "<group>"; };
 		FFDD30E52577A6D5005CFC50 /* FinishCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishCard.xib; sourceTree = "<group>"; };
 		FFDD30E82577A822005CFC50 /* FinishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishCard.swift; sourceTree = "<group>"; };
+		FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdMobNativeCard.xib; sourceTree = "<group>"; };
+		FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobNativCard.swift; sourceTree = "<group>"; };
+		FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedNativeAdView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,17 +127,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DDD2343ABF22EBDDBA782D /* Pods_stockr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75B9DAFDA8A28EB4D1062F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				087CFDEE898704B67F31AA89 /* Pods_stockr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB72B1A3F3C884FA087BD037 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E9ED56E20027FEF25EDEFE1 /* Pods-stockr.debug.xcconfig */,
+				CA8DCC82448533A9CE50D9B1 /* Pods-stockr.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF2E741825725E8300236A79 = {
 			isa = PBXGroup;
 			children = (
 				FF2E742325725E8300236A79 /* stockr */,
 				FF2E742225725E8300236A79 /* Products */,
+				BB72B1A3F3C884FA087BD037 /* Pods */,
+				75B9DAFDA8A28EB4D1062F66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +209,7 @@
 				FFDD30D52577674C005CFC50 /* Stock */,
 				FF2E75182572F12800236A79 /* DownloadCard */,
 				FFDD30D8257785F3005CFC50 /* NoNetwork */,
+				FFDD31012577E365005CFC50 /* AdMob */,
 				FFDD30E32577A6AD005CFC50 /* Finished */,
 			);
 			path = Cards;
@@ -356,6 +387,16 @@
 			path = Finished;
 			sourceTree = "<group>";
 		};
+		FFDD31012577E365005CFC50 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */,
+				FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */,
+				FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,9 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF2E743825725E8500236A79 /* Build configuration list for PBXNativeTarget "stockr" */;
 			buildPhases = (
+				F08AF61A0670659E932B9FC0 /* [CP] Check Pods Manifest.lock */,
 				FF2E741D25725E8300236A79 /* Sources */,
 				FF2E741E25725E8300236A79 /* Frameworks */,
 				FF2E741F25725E8300236A79 /* Resources */,
+				9012F86415C264481CE62C6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,6 +464,7 @@
 				FF2E74C8257269BA00236A79 /* Manrope-Light.ttf in Resources */,
 				FF2E744B257267DB00236A79 /* FirstCompanyCard.xib in Resources */,
 				FF2E743125725E8500236A79 /* Assets.xcassets in Resources */,
+				FFDD31032577E3DE005CFC50 /* AdMobNativeCard.xib in Resources */,
 				FF2E751A2572F14100236A79 /* DownloadCard.xib in Resources */,
 				FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */,
 				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
@@ -431,11 +475,54 @@
 				FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */,
 				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
+				FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */,
 				FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9012F86415C264481CE62C6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stockr/Pods-stockr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stockr/Pods-stockr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stockr/Pods-stockr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F08AF61A0670659E932B9FC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stockr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF2E741D25725E8300236A79 /* Sources */ = {
@@ -467,6 +554,7 @@
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
 				FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */,
 				FFDD30C225769335005CFC50 /* InformationView.swift in Sources */,
+				FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */,
 				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
 				FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */,
@@ -532,6 +620,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -593,6 +682,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -615,6 +705,7 @@
 		};
 		FF2E743925725E8500236A79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9ED56E20027FEF25EDEFE1 /* Pods-stockr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -634,6 +725,7 @@
 		};
 		FF2E743A25725E8500236A79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA8DCC82448533A9CE50D9B1 /* Pods-stockr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

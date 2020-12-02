@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DownloadCard" customModule="stockr" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Prj-Ad-A4x" id="Jro-Yh-iqb"/>
                 <outlet property="contentView" destination="4Df-RI-w8k" id="Zwg-a4-Mjh"/>
             </connections>
         </placeholder>
@@ -32,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-IR-tUT" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="449" width="352" height="81.5"/>
+                    <rect key="frame" x="31" y="586.5" width="352" height="81.5"/>
                     <string key="text">Für eine optimale Nutzung werden die angezeigten Werte einmal täglich aktualisiert.
 
 Das dauert nur einen kurzen Moment</string>
@@ -40,35 +41,22 @@ Das dauert nur einen kurzen Moment</string>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-87-K72">
-                    <rect key="frame" x="31" y="792" width="352" height="50"/>
-                    <color key="backgroundColor" name="background"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Heu-aP-exx"/>
-                    </constraints>
-                    <state key="normal" title="Erneut versuchen">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VUw-7p-wbi">
-                    <rect key="frame" x="188.5" y="730" width="37" height="37"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Prj-Ad-A4x">
+                    <rect key="frame" x="188.5" y="788" width="37" height="37"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="pui-Q2-fDL"/>
             <color key="backgroundColor" name="cardColor"/>
             <constraints>
-                <constraint firstItem="pui-Q2-fDL" firstAttribute="trailing" secondItem="ySJ-87-K72" secondAttribute="trailing" constant="31" id="0iM-fD-eev"/>
                 <constraint firstItem="980-gC-QLt" firstAttribute="centerX" secondItem="4Df-RI-w8k" secondAttribute="centerX" id="2f1-cs-3NE"/>
                 <constraint firstItem="UrG-BV-NEs" firstAttribute="centerX" secondItem="4Df-RI-w8k" secondAttribute="centerX" id="9Gh-s4-vO0"/>
                 <constraint firstItem="UrG-BV-NEs" firstAttribute="centerY" secondItem="4Df-RI-w8k" secondAttribute="centerY" multiplier="0.8" id="9Hz-hA-pcC"/>
+                <constraint firstItem="UjW-IR-tUT" firstAttribute="centerY" secondItem="4Df-RI-w8k" secondAttribute="centerY" multiplier="1.4" id="CYj-Ib-RRn"/>
                 <constraint firstItem="UjW-IR-tUT" firstAttribute="leading" secondItem="4Df-RI-w8k" secondAttribute="leading" constant="31" id="Mhs-KX-uQo"/>
                 <constraint firstItem="UrG-BV-NEs" firstAttribute="width" secondItem="4Df-RI-w8k" secondAttribute="width" multiplier="0.57971" id="NCa-1l-5tq"/>
-                <constraint firstItem="ySJ-87-K72" firstAttribute="top" secondItem="VUw-7p-wbi" secondAttribute="bottom" constant="25" id="Rzm-hG-sjd"/>
                 <constraint firstItem="980-gC-QLt" firstAttribute="centerY" secondItem="4Df-RI-w8k" secondAttribute="centerY" multiplier="0.4" id="Szo-8M-Ph8"/>
-                <constraint firstItem="VUw-7p-wbi" firstAttribute="centerX" secondItem="4Df-RI-w8k" secondAttribute="centerX" id="lqE-F9-jP6"/>
-                <constraint firstItem="ySJ-87-K72" firstAttribute="leading" secondItem="pui-Q2-fDL" secondAttribute="leading" constant="31" id="nNf-TP-Pfq"/>
-                <constraint firstItem="pui-Q2-fDL" firstAttribute="bottom" secondItem="ySJ-87-K72" secondAttribute="bottom" constant="20" id="pet-y9-PzM"/>
-                <constraint firstItem="UjW-IR-tUT" firstAttribute="top" secondItem="UrG-BV-NEs" secondAttribute="bottom" constant="25" id="tvd-8p-ikA"/>
+                <constraint firstItem="Prj-Ad-A4x" firstAttribute="centerY" secondItem="4Df-RI-w8k" secondAttribute="centerY" multiplier="1.8" id="TO0-zU-JSV"/>
+                <constraint firstItem="Prj-Ad-A4x" firstAttribute="centerX" secondItem="4Df-RI-w8k" secondAttribute="centerX" id="YNn-XN-j22"/>
                 <constraint firstAttribute="trailing" secondItem="UjW-IR-tUT" secondAttribute="trailing" constant="31" id="xp9-hD-bRm"/>
             </constraints>
             <point key="canvasLocation" x="186.95652173913044" y="88.392857142857139"/>
@@ -76,9 +64,6 @@ Das dauert nur einen kurzen Moment</string>
     </objects>
     <resources>
         <image name="icloud" catalog="system" width="128" height="88"/>
-        <namedColor name="background">
-            <color red="0.098999999463558197" green="0.1080000028014183" blue="0.1080000028014183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="cardColor">
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

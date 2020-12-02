@@ -29,6 +29,7 @@ class DownloadCard: UIView, CardView {
     }
     
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +49,7 @@ class DownloadCard: UIView, CardView {
         
         contentView.layer.cornerRadius = 20
         self.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
     }
     
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

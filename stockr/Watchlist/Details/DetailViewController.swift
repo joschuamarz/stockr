@@ -96,7 +96,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         sectorLabel.text = stock.getSector()
         //BRANCHE?
         
-        employeesLabel.text = stock.getEmployees()
+        employeesLabel.text = stock.getEmployees().getSeperatedWithoutDecimals()
         
         //FOUNDED
         

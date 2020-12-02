@@ -35,7 +35,9 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         
         self.view.layoutIfNeeded()
-        
+        let view = AdMobNativCard(frame: frontFrame.frame)
+        self.view.addSubview(view)
+        /*
         findOutGameMode()
         prepareGameMode()
             
@@ -49,7 +51,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         frontCard.setStockDelegate(self)
         backCard.setStockDelegate(self)
-        
+        */
     }
     
     var gameMode: GameMode = .stocks
@@ -97,6 +99,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         if let stock = self.stockManager.getFirst() {
             self.backCard = StockCard(frame: backFrame.frame)
             self.backCard.setStock(stock)
+            self.backCard.setStockDelegate(self)
             self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
         }
         

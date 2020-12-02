@@ -33,8 +33,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-Q1-tQN" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="444" width="352" height="101.5"/>
+                    <rect key="frame" x="31" y="444" width="352" height="122"/>
                     <string key="text">Du hast alle verfügbaren Werte einmal geswiped.
+
 Wenn Du willst kannst Du die Werte, die nicht in Deiner Watchliste sind, nochmal ins Swipe Game zurückholen.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
