@@ -11,8 +11,9 @@ protocol DetailDelegate {
     func didDeleteStock()
 }
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet var boxViews: [UIView]!
     
@@ -66,8 +67,8 @@ class DetailViewController: UIViewController {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        let price = Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0
-        priceLabel.text = (price*CurrencyManager().getCurrenyFaktor()).withTwoDecimalsString() + "€"
+        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyManager().getCurrenyFaktor()
+        priceLabel.text = price.withTwoDecimalsString() + "€"
         
         yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
         yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
@@ -120,6 +121,7 @@ class DetailViewController: UIViewController {
         blurView.addGestureRecognizer(tap)
         
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        pan.delegate = self
         bottomMenu.addGestureRecognizer(pan)
     }
     
@@ -135,15 +137,16 @@ class DetailViewController: UIViewController {
         case .began:
             heightConstant = heightConstraint.constant
         case .changed:
-            
-            heightConstraint.constant = constant
-            
-            let faktor = abs(constant/self.view.frame.height)
-            blurView.alpha = 0.7-faktor*0.5
-            
-            self.bottomMenu.layoutIfNeeded()
+            if translation.y > 0 {
+                heightConstraint.constant = constant
+                
+                let faktor = abs(constant/self.view.frame.height)
+                blurView.alpha = 0.7-faktor*0.5
+                
+                self.bottomMenu.layoutIfNeeded()
+            }
         case .ended:
-            if constant > self.view.frame.height/2 {
+            if constant > self.view.frame.height/3 {
                 
                 blurView.alpha = 0
                 self.dismiss(animated: true, completion: nil)
@@ -174,6 +177,9 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return (scrollView.contentOffset.y == 0 || (scrollView.contentOffset.y < 50 && scrollView.isBouncing))
+    }
     
     /*
     // MARK: - Navigation
@@ -186,3 +192,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+
