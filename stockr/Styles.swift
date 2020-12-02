@@ -16,6 +16,14 @@ class Headline: UILabel {
     }
 }
 
+class Information: UILabel {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.font = UIFont.init(name: "Manrope-Medium", size: 14)
+        self.textColor = .white
+        self.alpha = 0.5
+    }
+}
 
 class CompanyInformation: UILabel {
     override func awakeFromNib() {

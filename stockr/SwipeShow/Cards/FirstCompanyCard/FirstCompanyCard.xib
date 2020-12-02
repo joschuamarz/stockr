@@ -48,25 +48,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-l5-rT3" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="176" y="133.5" width="62.5" height="16.5"/>
+                    <rect key="frame" x="175.5" y="131" width="63.5" height="14"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahrestief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-Xf-idu" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="254.5" width="49.5" height="14"/>
+                    <rect key="frame" x="31" y="259.5" width="43.5" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43,54€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0K-hk-FuB" customClass="Price" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="270.5" width="52.5" height="22"/>
+                    <rect key="frame" x="31" y="273.5" width="49" height="19"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahreshoch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-mF-1at" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="326" y="254.5" width="57" height="14"/>
+                    <rect key="frame" x="331" y="259.5" width="52" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73,54€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-dr-vOk" customClass="Price" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="331.5" y="270.5" width="51.5" height="22"/>
+                    <rect key="frame" x="334" y="273.5" width="49" height="19"/>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -111,19 +111,19 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BHl-Yb-7PD">
-                    <rect key="frame" x="31" y="525.5" width="352" height="158.5"/>
+                    <rect key="frame" x="31" y="532" width="352" height="146"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-Ve-dzo">
-                            <rect key="frame" x="0.0" y="0.0" width="352" height="16.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KGV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-vx-zJh" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.29" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYr-5C-87a" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -131,23 +131,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqR-Hs-Dpf">
-                            <rect key="frame" x="0.0" y="25.5" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="23" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="rA4-av-y5x"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nSP-Hh-snI">
-                            <rect key="frame" x="0.0" y="35.5" width="352" height="16.5"/>
+                            <rect key="frame" x="0.0" y="33" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dividendenrendite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-bF-G3A" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.85%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wud-u8-RVk" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -155,23 +155,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUH-Oh-a2m">
-                            <rect key="frame" x="0.0" y="61" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="56" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="9Bf-Rt-Siv"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VSg-zg-01A">
-                            <rect key="frame" x="0.0" y="71" width="352" height="16.5"/>
+                            <rect key="frame" x="0.0" y="66" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reingewinn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYb-4x-VmN" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55.400.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-Tq-FLM" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -179,23 +179,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3w-kR-TaY">
-                            <rect key="frame" x="0.0" y="96.5" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="89" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="ANg-8J-s7M"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bL1-zB-o6f">
-                            <rect key="frame" x="0.0" y="106.5" width="352" height="16.5"/>
+                            <rect key="frame" x="0.0" y="99" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EBITDA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-NI-NLT" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73.800.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU3-9H-eDX" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -203,23 +203,23 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vom-42-P4X">
-                            <rect key="frame" x="0.0" y="132" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="122" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="JfF-aE-2ut"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-pu-BcM">
-                            <rect key="frame" x="0.0" y="142" width="352" height="16.5"/>
+                            <rect key="frame" x="0.0" y="132" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marktkapitalisierung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-os-wJ5" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.000.000.000€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdv-MX-FUp" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="16.5"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -279,13 +279,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-XN-IVL">
-                    <rect key="frame" x="31" y="95.5" width="352" height="33"/>
+                    <rect key="frame" x="31" y="98" width="352" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51,34€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-MT-4al">
-                    <rect key="frame" x="171" y="170" width="72" height="33"/>
+                    <rect key="frame" x="170.5" y="165" width="73.5" height="28"/>
                     <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
