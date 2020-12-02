@@ -78,13 +78,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier werden all Deine gespeicherten Unternehmen aufgelistet. Schau sie Dir in Ruhe nochmal an." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfk-F7-XMW">
-                                <rect key="frame" x="31" y="119.33333333333331" width="366" height="35"/>
+                                <rect key="frame" x="31" y="119.33333333333331" width="366" height="41"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Suchen" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="agW-OP-Oz8" customClass="SearchTextField" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="174.33333333333334" width="366" height="40"/>
+                                <rect key="frame" x="31" y="180.33333333333334" width="366" height="40"/>
                                 <color key="backgroundColor" red="0.1589555144" green="0.1677114069" blue="0.16778776049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LZa-0N-5QY"/>
@@ -99,7 +99,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-jx-ReJ">
-                                <rect key="frame" x="31" y="229.33333333333331" width="366" height="603.66666666666674"/>
+                                <rect key="frame" x="31" y="235.33333333333331" width="366" height="597.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -739,13 +739,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hier findest Du alles, was Du zu unseren rechtlichen Aspekten wissen musst." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-bE-LFb">
-                                <rect key="frame" x="31" y="119" width="366" height="35"/>
+                                <rect key="frame" x="31" y="119" width="366" height="41"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8k-8f-tMM">
-                                <rect key="frame" x="31" y="179" width="366" height="36"/>
+                                <rect key="frame" x="31" y="185" width="366" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-sB-j1R">
                                         <rect key="frame" x="346" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -757,7 +757,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-tg-JOc">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.666666666666671" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -775,7 +775,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcP-JR-E0h">
-                                <rect key="frame" x="31" y="220" width="366" height="36"/>
+                                <rect key="frame" x="31" y="226" width="366" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diN-l0-rtU">
                                         <rect key="frame" x="346" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -787,7 +787,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK1-8a-8vJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -829,7 +829,7 @@
                         <outlet property="dataProtectionBoxView" destination="XcP-JR-E0h" id="IVn-GN-it7"/>
                         <outlet property="impressumBoxView" destination="K8k-8f-tMM" id="SSw-3Y-q6t"/>
                         <segue destination="ZyJ-kU-Pon" kind="show" identifier="impressum" id="Hph-7i-7cW"/>
-                        <segue destination="La6-oD-nTD" kind="show" identifier="datenschutz" id="0yQ-t4-kui"/>
+                        <segue destination="ogr-N0-yK7" kind="show" identifier="datenschutz" id="djC-zJ-rMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ey-fg-arU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -848,7 +848,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfy-7i-b0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="548.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="551.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-aW-lW3" customClass="Headline" customModule="stockr" customModuleProvider="target">
                                                 <rect key="frame" x="171.66666666666666" y="25" width="84.999999999999972" height="21"/>
@@ -874,7 +874,7 @@ FrankfurterLandstraße 168
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-V1-P31" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="81.666666666666686" y="169.66666666666666" width="119.33333333333331" height="16.333333333333343"/>
+                                                <rect key="frame" x="81.666666666666686" y="169.66666666666666" width="129" height="19.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -904,7 +904,7 @@ Benjamin Kostrzewa</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustration by Freepik Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-7P-DmF" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="492.33333333333331" width="181.66666666666666" height="16.333333333333314"/>
+                                                <rect key="frame" x="31" y="492.33333333333331" width="189.66666666666666" height="19.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -986,105 +986,179 @@ Benjamin Kostrzewa</string>
             <point key="canvasLocation" x="295" y="-532"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="ljH-hD-4Qn">
+        <scene sceneID="zle-dL-CKc">
             <objects>
-                <viewController id="La6-oD-nTD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fvY-N2-DRT">
+                <viewController id="ogr-N0-yK7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJR-IM-JWV">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-xX-Dz0" customClass="Headline" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="165.66666666666666" y="20" width="96.666666666666657" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-lk-uFg" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="66" width="162.66666666666666" height="77.666666666666686"/>
-                                <string key="text">Betreiber und Kontakt:
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-T0-ehb">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-FE-qO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1007.6666666666666"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-dd-K3q" customClass="Headline" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="165.66666666666666" y="25" width="96.666666666666657" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCG-9B-VDb" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="86" width="366" height="67"/>
+                                                <string key="text">Datenschutzerklärung von stockr
 
+stockr erhebt personenbezogene Daten von ihren Nutzern.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P48-rq-qGx" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="193" width="366" height="117"/>
+                                                <string key="text">Die folgenden personenbezogenen Daten werden erhoben, um die Sicherheit und Funktionalität der Anwendung zu gewährleisten
+
+	•	IP des Zugreifenden
+	•	Datum des Zugriffs
+	•	Gerätekennung des Zugreifenden</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMX-s7-nfS" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="350" width="366" height="133.66666666666663"/>
+                                                <string key="text">Zur Bereitstellung der Funktionalitäten wird die Infrastruktur von AWS genutzt.
+
+Kontaktdaten von AWS:
+Amazon Webservices, Inc.
+410 Terry Avenue North
+Seattle WA 98109
+United States</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-bj-1bq" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="508.66666666666669" width="366" height="150.66666666666669"/>
+                                                <string key="text">Amazon webservices, Inc. ist eone nach dem Recht des Staates Delaware gegründete und registrierte Gesellschaft.
+Registernummer: 4152954, Secretary of State, State of Delaware.
+Steuernr.: 204938068
+
+Vertretungsberechtigter: Associate General Counsel, EMEA</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aws.amazon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-g8-DcE" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="667.33333333333337" width="113" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="aws.amazon.com"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avn-ZL-BeZ" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="726.66666666666663" width="366" height="67"/>
+                                                <string key="text">Plattformdienste und Hosting
+
+Google Play Store und Apple App Store Personenbezogene Daten: Nutzungsdaten</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-9L-nct" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="833.66666666666663" width="366" height="117"/>
+                                                <string key="text">Kontaktdaten
+
+Anbieter und Verantwortlicher
 Finevisuals GmbH
-FrankfurterLandstraße 168
-61352 Bas Homburg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7u-kT-ZeO" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31.000000000000004" y="143.66666666666666" width="36.333333333333343" height="15.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8J-me-LYu" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="79.333333333333314" y="143.66666666666666" width="101.66666666666669" height="15.666666666666657"/>
-                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="11"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="mailto:info@finevisuals.de"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjC-Q4-B8k" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="184.33333333333331" width="366" height="186.33333333333331"/>
-                                <string key="text">Vertretung:
-
-Finevisuals GmbH wir vertreten durch Benjamin Kostrzewa und Patrick Julius
-Register und Registernummer: Amtsgerichr Bad Homburg HRB 15130
-
-Umsatzsteuer ID: DE302097275
-
-Verantwortlich für journalistisch-redaktionelle Inhalte gem. § 55 II RstV:
-Benjamin Kostrzewa</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Die Grafiken im Onboarding stammen von: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-dN-jNH" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="139.33333333333334" y="395.66666666666669" width="259.33333333333326" height="15.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustration by Freepik Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzV-83-xsT" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="419.33333333333331" width="149.66666666666666" height="15.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="11"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="https://stories.freepik.com/finance"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
+Frankfurter Landstraße 168
+61352 Bad Homburg
+Geschäftsführer: Patrick Julius und Benjamin Kostrzewa</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd9-4Q-Jzm" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="30.999999999999996" y="950.66666666666663" width="38.666666666666657" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBU-8P-9mN" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="81.666666666666686" y="949.66666666666663" width="129" height="19.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="mailto:info@finevisuals.de"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="background"/>
+                                        <constraints>
+                                            <constraint firstItem="Lhf-9L-nct" firstAttribute="top" secondItem="avn-ZL-BeZ" secondAttribute="bottom" constant="40" id="0Ip-be-vai"/>
+                                            <constraint firstItem="a5F-bj-1bq" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="2M4-gW-HjD"/>
+                                            <constraint firstItem="P48-rq-qGx" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="3h4-LE-3Xs"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OCG-9B-VDb" secondAttribute="trailing" constant="31" id="54y-Ww-rQm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lhf-9L-nct" secondAttribute="trailing" constant="31" id="7ag-pO-IcJ"/>
+                                            <constraint firstItem="OCG-9B-VDb" firstAttribute="top" secondItem="6bC-dd-K3q" secondAttribute="bottom" constant="40" id="ACa-dZ-c3Y"/>
+                                            <constraint firstItem="a5F-bj-1bq" firstAttribute="top" secondItem="cMX-s7-nfS" secondAttribute="bottom" constant="25" id="DyU-VO-ZtA"/>
+                                            <constraint firstItem="UBU-8P-9mN" firstAttribute="centerY" secondItem="rd9-4Q-Jzm" secondAttribute="centerY" id="Hob-Y3-ktJ"/>
+                                            <constraint firstItem="avn-ZL-BeZ" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="Q4v-TT-ec4"/>
+                                            <constraint firstItem="1Ma-g8-DcE" firstAttribute="top" secondItem="a5F-bj-1bq" secondAttribute="bottom" constant="8" id="TM4-jc-6mS"/>
+                                            <constraint firstItem="OCG-9B-VDb" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="Ufa-La-9cS"/>
+                                            <constraint firstAttribute="bottom" secondItem="rd9-4Q-Jzm" secondAttribute="bottom" constant="40" id="VTU-GA-ZQr"/>
+                                            <constraint firstItem="Lhf-9L-nct" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="WCt-nw-fOM"/>
+                                            <constraint firstItem="rd9-4Q-Jzm" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="XLA-ht-UKb"/>
+                                            <constraint firstItem="UBU-8P-9mN" firstAttribute="leading" secondItem="rd9-4Q-Jzm" secondAttribute="trailing" constant="12" id="ZHL-oW-kWs"/>
+                                            <constraint firstAttribute="trailing" secondItem="avn-ZL-BeZ" secondAttribute="trailing" constant="31" id="ZdG-2G-JFq"/>
+                                            <constraint firstItem="rd9-4Q-Jzm" firstAttribute="top" secondItem="Lhf-9L-nct" secondAttribute="bottom" id="a4e-4d-zvY"/>
+                                            <constraint firstItem="avn-ZL-BeZ" firstAttribute="top" secondItem="1Ma-g8-DcE" secondAttribute="bottom" constant="40" id="bOt-Pm-e6e"/>
+                                            <constraint firstItem="P48-rq-qGx" firstAttribute="top" secondItem="OCG-9B-VDb" secondAttribute="bottom" constant="40" id="c5B-yR-iLD"/>
+                                            <constraint firstAttribute="trailing" secondItem="P48-rq-qGx" secondAttribute="trailing" constant="31" id="dVY-e1-WrQ"/>
+                                            <constraint firstItem="cMX-s7-nfS" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="f8z-Vd-18p"/>
+                                            <constraint firstAttribute="trailing" secondItem="cMX-s7-nfS" secondAttribute="trailing" constant="31" id="gXH-3M-DJT"/>
+                                            <constraint firstItem="6bC-dd-K3q" firstAttribute="top" secondItem="BlV-FE-qO4" secondAttribute="top" constant="25" id="hJ2-Vf-rzM"/>
+                                            <constraint firstItem="a5F-bj-1bq" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="iaK-mu-fXT"/>
+                                            <constraint firstItem="cMX-s7-nfS" firstAttribute="top" secondItem="P48-rq-qGx" secondAttribute="bottom" constant="40" id="iaZ-Xg-AjX"/>
+                                            <constraint firstItem="1Ma-g8-DcE" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="j4f-aG-Tgk"/>
+                                            <constraint firstItem="Lhf-9L-nct" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="kE4-zd-I4s"/>
+                                            <constraint firstItem="6bC-dd-K3q" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="mmH-ov-dOC"/>
+                                            <constraint firstItem="avn-ZL-BeZ" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="phb-C2-ps4"/>
+                                            <constraint firstItem="OCG-9B-VDb" firstAttribute="centerX" secondItem="BlV-FE-qO4" secondAttribute="centerX" id="w9d-lZ-dks"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5F-bj-1bq" secondAttribute="trailing" constant="31" id="xml-kx-IeU"/>
+                                            <constraint firstItem="P48-rq-qGx" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="ybp-Zf-fI5"/>
+                                            <constraint firstItem="cMX-s7-nfS" firstAttribute="leading" secondItem="BlV-FE-qO4" secondAttribute="leading" constant="31" id="zxo-WC-NLF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BlV-FE-qO4" firstAttribute="trailing" secondItem="dAN-yx-Kvh" secondAttribute="trailing" id="Hq5-aM-sUd"/>
+                                    <constraint firstItem="BlV-FE-qO4" firstAttribute="bottom" secondItem="dAN-yx-Kvh" secondAttribute="bottom" id="JL9-AS-xun"/>
+                                    <constraint firstItem="BlV-FE-qO4" firstAttribute="leading" secondItem="dAN-yx-Kvh" secondAttribute="leading" id="jQs-dc-hSd"/>
+                                    <constraint firstItem="BlV-FE-qO4" firstAttribute="width" secondItem="gcP-Ac-dlI" secondAttribute="width" id="ryd-sq-huc"/>
+                                    <constraint firstItem="BlV-FE-qO4" firstAttribute="top" secondItem="dAN-yx-Kvh" secondAttribute="top" id="tRm-SO-uxI"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dAN-yx-Kvh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="gcP-Ac-dlI"/>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="VUr-DG-BDN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ehz-f1-7u7"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
-                            <constraint firstItem="VUr-DG-BDN" firstAttribute="trailing" secondItem="CSI-dN-jNH" secondAttribute="trailing" constant="29.5" id="7oV-ZB-mYn"/>
-                            <constraint firstItem="fjC-Q4-B8k" firstAttribute="leading" secondItem="VUr-DG-BDN" secondAttribute="leading" constant="31" id="9IT-8v-2db"/>
-                            <constraint firstItem="VUr-DG-BDN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c8J-me-LYu" secondAttribute="trailing" symbolic="YES" id="D8e-Y2-6Ro"/>
-                            <constraint firstItem="Hn2-lk-uFg" firstAttribute="leading" secondItem="VUr-DG-BDN" secondAttribute="leading" constant="31" id="IvE-BX-LVy"/>
-                            <constraint firstItem="fjC-Q4-B8k" firstAttribute="top" secondItem="s7u-kT-ZeO" secondAttribute="bottom" constant="25" id="Jod-ae-nLJ"/>
-                            <constraint firstItem="VUr-DG-BDN" firstAttribute="trailing" secondItem="fjC-Q4-B8k" secondAttribute="trailing" constant="31" id="Nya-gH-VmK"/>
-                            <constraint firstItem="VUr-DG-BDN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hn2-lk-uFg" secondAttribute="trailing" symbolic="YES" id="RxA-eq-VAR"/>
-                            <constraint firstItem="mzV-83-xsT" firstAttribute="top" secondItem="CSI-dN-jNH" secondAttribute="bottom" constant="8" id="V0Q-5a-Gyq"/>
-                            <constraint firstItem="c8J-me-LYu" firstAttribute="top" secondItem="Hn2-lk-uFg" secondAttribute="bottom" id="V56-uf-0uI"/>
-                            <constraint firstItem="mzV-83-xsT" firstAttribute="leading" secondItem="VUr-DG-BDN" secondAttribute="leading" constant="31" id="Xip-Mu-BtU"/>
-                            <constraint firstItem="Hn2-lk-uFg" firstAttribute="top" secondItem="mOg-xX-Dz0" secondAttribute="bottom" constant="25" id="bgY-2i-x3J"/>
-                            <constraint firstItem="CSI-dN-jNH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VUr-DG-BDN" secondAttribute="leading" id="d8e-VU-mqy"/>
-                            <constraint firstItem="VUr-DG-BDN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mzV-83-xsT" secondAttribute="trailing" symbolic="YES" id="db5-GV-pTd"/>
-                            <constraint firstItem="mOg-xX-Dz0" firstAttribute="centerX" secondItem="fvY-N2-DRT" secondAttribute="centerX" id="fIJ-BD-h9f"/>
-                            <constraint firstItem="mOg-xX-Dz0" firstAttribute="top" secondItem="VUr-DG-BDN" secondAttribute="top" constant="20" id="osa-9m-M7v"/>
-                            <constraint firstItem="s7u-kT-ZeO" firstAttribute="top" secondItem="Hn2-lk-uFg" secondAttribute="bottom" id="qcJ-zC-xKm"/>
-                            <constraint firstItem="CSI-dN-jNH" firstAttribute="top" secondItem="fjC-Q4-B8k" secondAttribute="bottom" constant="25" id="suP-CT-C7e"/>
-                            <constraint firstItem="s7u-kT-ZeO" firstAttribute="leading" secondItem="VUr-DG-BDN" secondAttribute="leading" constant="31" id="u4K-wY-Cfg"/>
-                            <constraint firstItem="c8J-me-LYu" firstAttribute="leading" secondItem="s7u-kT-ZeO" secondAttribute="trailing" constant="12" id="v8Y-V2-r39"/>
+                            <constraint firstItem="Ehz-f1-7u7" firstAttribute="bottom" secondItem="gIo-T0-ehb" secondAttribute="bottom" id="7UZ-Wh-NXG"/>
+                            <constraint firstAttribute="trailing" secondItem="gIo-T0-ehb" secondAttribute="trailing" id="BpJ-hQ-gkC"/>
+                            <constraint firstItem="gIo-T0-ehb" firstAttribute="leading" secondItem="OJR-IM-JWV" secondAttribute="leading" id="PUG-uV-1Ir"/>
+                            <constraint firstItem="gIo-T0-ehb" firstAttribute="top" secondItem="OJR-IM-JWV" secondAttribute="top" id="vxo-2i-nGx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ibg-Vq-W5e"/>
+                    <navigationItem key="navigationItem" id="dR6-Kp-JER"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCu-6r-t6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPD-yN-XNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="1143"/>
+            <point key="canvasLocation" x="1911" y="1142"/>
         </scene>
     </scenes>
     <resources>
@@ -1093,13 +1167,10 @@ Benjamin Kostrzewa</string>
         <image name="lock.shield" catalog="system" width="128" height="118"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <namedColor name="background">
-            <color red="0.098950274290000001" green="0.1083341464" blue="0.1084275916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.098999999463558197" green="0.1080000028014183" blue="0.1080000028014183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -37,7 +37,7 @@ class LegalViewController: UIViewController {
     
     @objc
     func handleDataTap() {
-        shouldPerformSegue(withIdentifier: "datenschutz", sender: self)
+        performSegue(withIdentifier: "datenschutz", sender: self)
     }
     
 }
