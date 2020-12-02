@@ -94,7 +94,8 @@ class StockCard: UIView, CardView {
     
     @objc
     func handleTap() {
-        currentPage = (currentPage+1)%3
+        currentPage = (currentPage+1)%2
+        
         
         pageControl.currentPage = currentPage
         setCurrentPage()

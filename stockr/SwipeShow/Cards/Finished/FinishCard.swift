@@ -1,13 +1,13 @@
 //
-//  DownloadCard.swift
+//  FinishCard.swift
 //  stockr
 //
-//  Created by Joschua Marz on 28.11.20.
+//  Created by Joschua Marz on 02.12.20.
 //
 
 import UIKit
 
-class DownloadCard: UIView, CardView {
+class FinishCard: UIView , CardView {
     func adjustBackgroundColor(with faktor: CGFloat) {
         //NOT NEEDED
     }
@@ -30,6 +30,17 @@ class DownloadCard: UIView, CardView {
     
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    var delegate: FinishCardDelegate?
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        StocksManager().resetUnwatchedStocks {
+            self.delegate?.didResetCards()
+        }
+        
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -41,17 +52,18 @@ class DownloadCard: UIView, CardView {
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed("DownloadCard", owner: self, options: nil)
+        Bundle.main.loadNibNamed("FinishCard", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         
         
         contentView.layer.cornerRadius = 20
-        self.isUserInteractionEnabled = false
+        resetButton.layer.cornerRadius = 5
     }
     
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return false
     }
+
 
 }

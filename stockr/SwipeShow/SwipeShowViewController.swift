@@ -12,11 +12,18 @@ protocol StockCardDelegate {
     func addButtonTapped()
 }
 
-enum GameMode {
-    case downloading, adMob, finished, stocks
+protocol NetworkDelegate {
+    func connectionSucceeded()
 }
 
-class SwipeShowViewController: UIViewController, StockCardDelegate {
+protocol FinishCardDelegate {
+    func didResetCards()
+}
+enum GameMode {
+    case downloading, adMob, lastStock, finished, stocks
+}
+
+class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDelegate, FinishCardDelegate {
     
     //MARK: -Outlets
     @IBOutlet weak var frontFrame: UIView!
@@ -29,35 +36,9 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
         self.view.layoutIfNeeded()
         
-        
-        
-        
-        if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
-            frontCard = DownloadCard(frame: frontFrame.frame)
-            self.view.addSubview(backCard)
-            self.view.addSubview(frontCard)
-            DispatchQueue.main.async {
-                ApiManager().getStocksFromAPI {
-                    self.setupCompanyCards()
-                    UserDefaults.standard.setValue(Date().stripTimeString(), forKey: "last_update")
-                }
-            }
-        } else {
-            //bestehende verwenden
-            if let stock = self.stockManager.getFirst() {
-                self.frontCard.setStock(stock)
-            }
+        findOutGameMode()
+        prepareGameMode()
             
-            if let stock = self.stockManager.getSecond() {
-                self.backCard.setStock(stock)
-            }
-            
-            self.view.addSubview(backCard)
-            self.view.addSubview(frontCard)
-        }
-        
-        
-        
         setGestures()
         
 
@@ -71,6 +52,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
     }
     
+    var gameMode: GameMode = .stocks
     var frontCard: CardView = StockCard()
     var backCard: CardView = StockCard()
     
@@ -93,23 +75,141 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         isInitialLayout = true
     }
     
-    private func setupCompanyCards() {
-        self.stockManager = StocksManager()
-        if let stock = self.stockManager.getFirst(){
-            self.backCard.setStock(stock)
+    func connectionSucceeded() {
+        self.findOutGameMode()
+        
+        if self.gameMode == .stocks || self.gameMode == .lastStock {
+            self.changeToStockMode(delay: false)
+        } else if self.gameMode == .finished {
+            //changeToFinished
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    }
+    
+    func didResetCards() {
+        findOutGameMode()
+        if self.gameMode == .stocks || self.gameMode == .lastStock {
+            self.changeToStockMode(delay: false)
+        }
+    }
+    
+    private func changeToStockMode(delay: Bool) {
+        backCard.removeFromSuperview()
+        if let stock = self.stockManager.getFirst() {
+            self.backCard = StockCard(frame: backFrame.frame)
+            self.backCard.setStock(stock)
+            self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
+        }
+        
+        var deadline: DispatchTime = .now()
+        if delay {
+            deadline = .now() + 2
+        }
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
             
             self.animateLeftOut(force: true)
+        
         }
-        
-        
-        
+    }
+    
+    private func changeToNoNetworkMode() {
+        if UserDefaults.standard.string(forKey: "last_update") ?? "" == "" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.backCard.removeFromSuperview()
+                let networkCard = NoNetworkCard(frame: self.backCard.frame)
+                networkCard.delegate = self
+                self.backCard = networkCard
+                self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
+                self.view.layoutIfNeeded()
+                self.animateLeftOut(force: true)
+            })
+            
+        }
+    }
+    
+    //MARK: - Game Mode
+    private func findOutGameMode() {
+        self.stockManager = StocksManager()
+        if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
+            gameMode = .downloading
+        } else {
+            if self.stockManager.getSecond() != nil{
+                gameMode = .stocks
+            } else {
+                gameMode = .lastStock
+                
+            }
+            if self.stockManager.getFirst() == nil {
+                gameMode = .finished
+            }
+        }
+    }
+    
+    private func prepareGameMode() {
+        switch gameMode {
+        case .stocks:
+            //Werte bereitstellen
+            if let stock = self.stockManager.getFirst() {
+                self.frontCard.setStock(stock)
+                self.frontCard.setStockDelegate(self)
+            }
+            
+            if let stock = self.stockManager.getSecond() {
+                self.backCard.setStock(stock)
+                self.backCard.setStockDelegate(self)
+            }
+            
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
+        case .downloading:
+            //Download starten
+            frontCard = DownloadCard(frame: frontFrame.frame)
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
+            DispatchQueue.main.async {
+                ApiManager().getStocksFromAPI(completion: { (success) in
+                    if success {
+                        UserDefaults.standard.setValue(Date().stripTimeString(), forKey: "last_update")
+                        
+                        self.findOutGameMode()
+                        
+                        if self.gameMode == .stocks || self.gameMode == .lastStock {
+                            self.changeToStockMode(delay: true)
+                        } else if self.gameMode == .finished {
+                            //changeToFinished
+                        }
+                    } else {
+                        self.changeToNoNetworkMode()
+                    }
+                })
+            }
+        case .adMob:
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
+            print("TBD")
+        case .finished:
+            let finishCard = FinishCard(frame: backFrame.frame)
+            finishCard.delegate = self
+            frontCard = finishCard
+            
+            self.view.addSubview(frontCard)
+        case .lastStock:
+            if let stock = self.stockManager.getFirst() {
+                self.frontCard.setStock(stock)
+                self.frontCard.setStockDelegate(self)
+            }
+            
+            let finishCard = FinishCard(frame: backFrame.frame)
+            finishCard.delegate = self
+            backCard = finishCard
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
+        }
     }
     
     //MARK: -Gestures
     private func setGestures() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        pan.delegate = frontCard
         frontCard.addGestureRecognizer(pan)
     }
     
@@ -254,31 +354,48 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     
     private func presentNextCard() {
-        guard !finished else {
-            //Finished Karte zeigen
-            return
-        }
-        
         //Fordere Karte weg
         frontCard.removeFromSuperview()
-        
         //Karten tauschen
         frontCard = backCard
-        backCard = StockCard(frame: backFrame.frame)
-        backCard.alpha = 0
-        backCard.setStockDelegate(self)
-        
-        //Neue Back Card
-        self.view.insertSubview(backCard, belowSubview: frontCard)
         setGestures()
         
+        findOutGameMode()
         
-        if let stock = stockManager.getSecond() {
-            backCard.setStock(stock)
-        } else {
-            finished = true
-            //backCard = finishCard
+        switch gameMode {
+        case .stocks:
+            backCard = StockCard(frame: backFrame.frame)
+            if let stock = stockManager.getSecond() {
+                backCard.setStock(stock)
+            }
+            backCard.alpha = 0
+            backCard.setStockDelegate(self)
+            
+            //Neue Back Card
+            self.view.insertSubview(backCard, belowSubview: frontCard)
+        case .adMob:
+            print("ADMOB")
+        case .lastStock:
+            print("Last")
+            let finishCard = FinishCard(frame: backFrame.frame)
+            finishCard.delegate = self
+            backCard = finishCard
+            
+            backCard.alpha = 0
+            self.view.insertSubview(backCard, belowSubview: frontCard)
+            //backCard = FinishedCard
+        case .downloading:
+            backCard = StockCard(frame: backFrame.frame)
+            
+            backCard.alpha = 0
+            backCard.setStockDelegate(self)
+            
+            //Neue Back Card
+            self.view.insertSubview(backCard, belowSubview: frontCard)
+        case .finished:
+            backCard = StockCard()
         }
+       
         
         self.frontCard.alpha = 1
         
@@ -295,6 +412,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
     }
 
+    
     /*
     // MARK: - Navigation
 

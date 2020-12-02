@@ -67,7 +67,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyManager().getCurrenyFaktor()
+        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
         priceLabel.text = price.withTwoDecimalsString() + "€"
         
         yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
@@ -131,6 +131,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     func handlePan(_ sender: UIPanGestureRecognizer) {
 
         let translation = sender.translation(in: bottomMenu)
+        let location = sender.location(in: self.view)
         let constant = heightConstant + translation.y
         
         switch sender.state {
@@ -146,7 +147,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.bottomMenu.layoutIfNeeded()
             }
         case .ended:
-            if constant > self.view.frame.height/3 {
+            if constant > self.view.frame.height/3 || (constant > self.view.frame.height/5 && location.y > self.view.frame.width*0.6){
                 
                 blurView.alpha = 0
                 self.dismiss(animated: true, completion: nil)

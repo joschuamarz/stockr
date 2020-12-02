@@ -43,19 +43,18 @@ class ApiManager {
     
     
     //MARK: -API
-    func getStocksFromAPI(completion: @escaping () -> Void) {
-        
-        CurrencyManager().updateCurrencyFaktor {
-            self.loadJson(fromURLString: self.urlString) { (result) in
-                switch result {
-                case .success(let data):
-                    self.parse(jsonData: data, completion: completion)
-                case .failure(let error):
-                    print(error)
-                    completion()
-                }
+    func getStocksFromAPI(completion: @escaping (_ success: Bool) -> Void) {
+        CurrencyConverter().updateExchangeRates()
+        self.loadJson(fromURLString: self.urlString) { (result) in
+            switch result {
+            case .success(let data):
+                self.parse(jsonData: data, completion: completion)
+            case .failure(let error):
+                print(error)
+                completion(false)
             }
         }
+        
        
     }
     
@@ -79,7 +78,7 @@ class ApiManager {
         
     }
     
-    private func parse(jsonData: Data, completion: @escaping () -> Void) {
+    private func parse(jsonData: Data, completion: @escaping (_ success: Bool) -> Void) {
         do {
             let decodedData = try JSONDecoder().decode(Array<RawStock>.self,
                                                        from: jsonData)
@@ -89,12 +88,12 @@ class ApiManager {
             print("===================================")
         } catch {
             print(error)
-            completion()
+            completion(false)
             print("decode error")
         }
     }
     
-    private func saveLoadedStocks(_ rawStocks: [RawStock], completion: @ escaping () -> Void) {
+    private func saveLoadedStocks(_ rawStocks: [RawStock], completion: @ escaping (_ success: Bool) -> Void) {
         let group = DispatchGroup()
         DispatchQueue.main.async {
             group.enter()
@@ -136,10 +135,10 @@ class ApiManager {
             
             do {
                 try context.save()
-                completion()
+                completion(true)
             } catch {
                 print("LoadedStocks konnten nicht gespeichert werden")
-                completion()
+                completion(false)
             }
 
         }

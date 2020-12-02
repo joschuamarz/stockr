@@ -9,22 +9,7 @@
 
 import Foundation
 
-class CurrencyManager {
-        
-    func updateCurrencyFaktor(completion: @escaping () -> Void) {
-        let converter = CurrencyConverter()
-        converter.updateExchangeRates {
-            let doubleResult = converter.convert(1, valueCurrency: .USD, outputCurrency: .EUR)
-            UserDefaults.standard.setValue(doubleResult, forKey: "dollar_euro_faktor")
-            completion()
-        }
-    }
-    
-    func getCurrenyFaktor() -> Double {
-        return UserDefaults.standard.double(forKey: "dollar_euro_faktor")
-    }
 
-}
 
 //
 //  Created by Thiago Martins on 26/03/19.
@@ -92,6 +77,14 @@ class CurrencyConverter {
     
     // Initialization:
     init() { updateExchangeRates {} }
+    
+    func getCurrencyFaktor() -> Double {
+        self.exchangeRates = CurrencyConverterLocalData.loadMostRecentExchangeRates()
+        guard let valueRate = exchangeRates[.USD] else { return 0 }
+        guard let outputRate = exchangeRates[.EUR] else { return 0 }
+        let multiplier = outputRate/valueRate
+        return multiplier
+    }
     
     // Public Methods:
     /** Updates the exchange rate and runs the completion afterwards. */
@@ -213,6 +206,7 @@ private class CurrencyConverterLocalData {
     // Updated in: 04/15/2019.
     static let fallBackExchangeRates : [Currency : Double] = [
         .USD : 1.1321,
+        .EUR : 1.0,
         .JPY : 126.76,
         .BGN : 1.9558,
         .CZK : 25.623,

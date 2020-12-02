@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol CardView: UIView {
+protocol CardView: UIView, UIGestureRecognizerDelegate {
     func adjustBackgroundColor(with faktor: CGFloat)
     func swipedRight(manager: StocksManager)
     func swipedLeft(manager: StocksManager)

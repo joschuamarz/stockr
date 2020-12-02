@@ -104,4 +104,27 @@ class StocksManager {
             watchedStock.save()
         }
     }
+    
+    func resetUnwatchedStocks(completion: @escaping () -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        for stock in swipedStocks {
+            if !stock.watched {
+                managedContext.delete(stock)
+            }
+        }
+        
+        do {
+            try managedContext.save()
+        } catch {
+            print("Konnte nicht gespeichert werden")
+        }
+        
+        completion()
+    }
 }

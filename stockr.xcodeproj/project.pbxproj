@@ -52,6 +52,10 @@
 		FFDD30CA2576C935005CFC50 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30C92576C935005CFC50 /* DetailViewController.swift */; };
 		FFDD30CE25775FA9005CFC50 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30CD25775FA9005CFC50 /* CurrencyManager.swift */; };
 		FFDD30D225776746005CFC50 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30D125776746005CFC50 /* CardView.swift */; };
+		FFDD30DA2577860F005CFC50 /* NoNetworkCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30D92577860E005CFC50 /* NoNetworkCard.xib */; };
+		FFDD30E12577875F005CFC50 /* NoNetworkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30E02577875F005CFC50 /* NoNetworkCard.swift */; };
+		FFDD30E62577A6D5005CFC50 /* FinishCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30E52577A6D5005CFC50 /* FinishCard.xib */; };
+		FFDD30E92577A822005CFC50 /* FinishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30E82577A822005CFC50 /* FinishCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +106,10 @@
 		FFDD30C92576C935005CFC50 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FFDD30CD25775FA9005CFC50 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		FFDD30D125776746005CFC50 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FFDD30D92577860E005CFC50 /* NoNetworkCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoNetworkCard.xib; sourceTree = "<group>"; };
+		FFDD30E02577875F005CFC50 /* NoNetworkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkCard.swift; sourceTree = "<group>"; };
+		FFDD30E52577A6D5005CFC50 /* FinishCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishCard.xib; sourceTree = "<group>"; };
+		FFDD30E82577A822005CFC50 /* FinishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,8 @@
 				FFDD30D125776746005CFC50 /* CardView.swift */,
 				FFDD30D52577674C005CFC50 /* Stock */,
 				FF2E75182572F12800236A79 /* DownloadCard */,
+				FFDD30D8257785F3005CFC50 /* NoNetwork */,
+				FFDD30E32577A6AD005CFC50 /* Finished */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -328,6 +338,24 @@
 			path = Stock;
 			sourceTree = "<group>";
 		};
+		FFDD30D8257785F3005CFC50 /* NoNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30D92577860E005CFC50 /* NoNetworkCard.xib */,
+				FFDD30E02577875F005CFC50 /* NoNetworkCard.swift */,
+			);
+			path = NoNetwork;
+			sourceTree = "<group>";
+		};
+		FFDD30E32577A6AD005CFC50 /* Finished */ = {
+			isa = PBXGroup;
+			children = (
+				FFDD30E52577A6D5005CFC50 /* FinishCard.xib */,
+				FFDD30E82577A822005CFC50 /* FinishCard.swift */,
+			);
+			path = Finished;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,8 +414,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2E74C9257269BA00236A79 /* Manrope-Bold.ttf in Resources */,
+				FFDD30E62577A6D5005CFC50 /* FinishCard.xib in Resources */,
 				FF2E743425725E8500236A79 /* LaunchScreen.storyboard in Resources */,
 				FF2E75282572F98F00236A79 /* StockCard.xib in Resources */,
+				FFDD30DA2577860F005CFC50 /* NoNetworkCard.xib in Resources */,
 				FF2E74C8257269BA00236A79 /* Manrope-Light.ttf in Resources */,
 				FF2E744B257267DB00236A79 /* FirstCompanyCard.xib in Resources */,
 				FF2E743125725E8500236A79 /* Assets.xcassets in Resources */,
@@ -421,6 +451,7 @@
 				FF2E750B2572CBB200236A79 /* SwipedStock+CoreDataProperties.swift in Sources */,
 				FF2E743F257266EA00236A79 /* SwipeShowViewController.swift in Sources */,
 				FF2E750E2572D0B800236A79 /* LoadedStocksManager.swift in Sources */,
+				FFDD30E12577875F005CFC50 /* NoNetworkCard.swift in Sources */,
 				FF2E744F2572684A00236A79 /* FirstCompanyCard.swift in Sources */,
 				FF2E74E12572984D00236A79 /* YearRange.swift in Sources */,
 				FF2E742F25725E8300236A79 /* stockr.xcdatamodeld in Sources */,
@@ -439,6 +470,7 @@
 				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,
 				FF2E742725725E8300236A79 /* SceneDelegate.swift in Sources */,
 				FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */,
+				FFDD30E92577A822005CFC50 /* FinishCard.swift in Sources */,
 				FF2E751D2572F15600236A79 /* DownloadCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

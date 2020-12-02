@@ -68,7 +68,7 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyManager().getCurrenyFaktor()
+        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
         priceLabel.text = price.withTwoDecimalsString() + "€"
         
         yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
