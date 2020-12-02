@@ -11,16 +11,16 @@ import Foundation
 
 class CurrencyManager {
         
-    func updateCurrencyFaktor() {
+    func updateCurrencyFaktor(completion: @escaping () -> Void) {
         let converter = CurrencyConverter()
         converter.updateExchangeRates {
             let doubleResult = converter.convert(1, valueCurrency: .USD, outputCurrency: .EUR)
             UserDefaults.standard.setValue(doubleResult, forKey: "dollar_euro_faktor")
+            completion()
         }
     }
     
     func getCurrenyFaktor() -> Double {
-        let faktor = UserDefaults.standard.double(forKey: "dollar_euro_faktor")
         return UserDefaults.standard.double(forKey: "dollar_euro_faktor")
     }
 

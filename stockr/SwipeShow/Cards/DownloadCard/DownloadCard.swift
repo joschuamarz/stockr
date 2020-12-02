@@ -7,7 +7,27 @@
 
 import UIKit
 
-class DownloadCard: UIView {
+class DownloadCard: UIView, CardView {
+    func adjustBackgroundColor(with faktor: CGFloat) {
+        //NOT NEEDED
+    }
+    
+    func swipedRight(manager: StocksManager) {
+        //NOT NEEDED
+    }
+    
+    func swipedLeft(manager: StocksManager) {
+        //NOT NEEDED
+    }
+    
+    func setStock(_ stock: Stock) {
+        //NOT NEEDED
+    }
+    
+    func setStockDelegate(_ delegate: StockCardDelegate) {
+        //NOT NEEDED
+    }
+    
 
     @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
@@ -27,6 +47,7 @@ class DownloadCard: UIView {
         
         
         contentView.layer.cornerRadius = 20
+        self.isUserInteractionEnabled = false
     }
 
 }

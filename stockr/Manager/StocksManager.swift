@@ -46,7 +46,7 @@ class StocksManager {
                 isin: rawStock.isin,
                 name: rawStock.name,
                 price: rawStock.price,
-                description: rawStock.description,
+                description: rawStock.descriptionText,
                 country: rawStock.country,
                 sector: rawStock.sector,
                 industry: rawStock.industry,

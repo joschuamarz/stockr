@@ -7,8 +7,8 @@
 
 import UIKit
 
-class StockCard: UIView {
-
+class StockCard: UIView, CardView {
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var firstCard: FirstCompanyCard!
@@ -63,6 +63,10 @@ class StockCard: UIView {
         secondCard.setStock(stock)
     }
     
+    func setStockDelegate(_ delegate: StockCardDelegate) {
+        self.delegate = delegate
+    }
+    
     func adjustBackgroundColor(with faktor: CGFloat) {
         if faktor < 0 {
             let color = UIColor(red: redStart + abs(faktor)*redOffset, green: greenStart, blue: blue, alpha: 1)
@@ -71,6 +75,14 @@ class StockCard: UIView {
             let color = UIColor(red: redStart, green: greenStart + abs(faktor)*greenOffset, blue: blue, alpha: 1)
             currentCard?.setBackgroundColor(to: color)
         }
+    }
+    
+    func swipedRight(manager: StocksManager) {
+        manager.swiped(watched: true)
+    }
+    
+    func swipedLeft(manager: StocksManager) {
+        manager.swiped(watched: false)
     }
     
     

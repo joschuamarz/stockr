@@ -45,15 +45,15 @@ class ApiManager {
     //MARK: -API
     func getStocksFromAPI(completion: @escaping () -> Void) {
         
-        CurrencyManager().updateCurrencyFaktor()
-        
-        self.loadJson(fromURLString: urlString) { (result) in
-            switch result {
-            case .success(let data):
-                self.parse(jsonData: data, completion: completion)
-            case .failure(let error):
-                print(error)
-                completion()
+        CurrencyManager().updateCurrencyFaktor {
+            self.loadJson(fromURLString: self.urlString) { (result) in
+                switch result {
+                case .success(let data):
+                    self.parse(jsonData: data, completion: completion)
+                case .failure(let error):
+                    print(error)
+                    completion()
+                }
             }
         }
        

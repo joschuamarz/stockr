@@ -12,6 +12,10 @@ protocol StockCardDelegate {
     func addButtonTapped()
 }
 
+enum GameMode {
+    case downloading, adMob, finished, stocks
+}
+
 class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     //MARK: -Outlets
@@ -25,13 +29,13 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
         self.view.layoutIfNeeded()
         
-        self.view.addSubview(backCard)
-        self.view.addSubview(companyCard)
+        
         
         
         if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
-            //Neu laden
-            self.view.addSubview(downloadCard)
+            frontCard = DownloadCard(frame: frontFrame.frame)
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
             DispatchQueue.main.async {
                 ApiManager().getStocksFromAPI {
                     self.setupCompanyCards()
@@ -39,19 +43,22 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
                 }
             }
         } else {
-            //bestehende verwend
+            //bestehende verwenden
             if let stock = self.stockManager.getFirst() {
-                self.companyCard.setStock(stock)
+                self.frontCard.setStock(stock)
             }
             
             if let stock = self.stockManager.getSecond() {
                 self.backCard.setStock(stock)
             }
             
-            self.setGestures()
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
         }
         
         
+        
+        setGestures()
         
 
         backFrame.backgroundColor = .clear
@@ -59,20 +66,22 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         backCard.alpha = 0.8
         
         
-        companyCard.delegate = self
-        backCard.delegate = self
+        frontCard.setStockDelegate(self)
+        backCard.setStockDelegate(self)
         
     }
     
-    var companyCard = StockCard()
-    var backCard = StockCard()
+    var frontCard: CardView = StockCard()
+    var backCard: CardView = StockCard()
+    
+    var finished = false
     var downloadCard = DownloadCard()
     var stockManager = StocksManager()
     
     var isInitialLayout = true
     override func viewDidLayoutSubviews() {
         if isInitialLayout {
-            companyCard.frame = frontFrame.frame
+            frontCard.frame = frontFrame.frame
             backCard.frame = backFrame.frame
             downloadCard.frame = frontFrame.frame
             isInitialLayout = false
@@ -85,25 +94,13 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     }
     
     private func setupCompanyCards() {
-        
+        self.stockManager = StocksManager()
+        if let stock = self.stockManager.getFirst(){
+            self.backCard.setStock(stock)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.animateDownloadLeftOut {
-                self.downloadCard.removeFromSuperview()
-                
-                self.stockManager = StocksManager()
-                
-                if let stock = self.stockManager.getFirst() {
-                    self.companyCard.setStock(stock)
-                }
-                
-                if let stock = self.stockManager.getSecond() {
-                    self.backCard.setStock(stock)
-                }
-                
-                self.setGestures()
-            }
             
-           
+            self.animateLeftOut(force: true)
         }
         
         
@@ -113,7 +110,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     //MARK: -Gestures
     private func setGestures() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
-        companyCard.addGestureRecognizer(pan)
+        frontCard.addGestureRecognizer(pan)
     }
     
     var startPoint = CGPoint.zero
@@ -135,22 +132,22 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         let heightOffset = frontFrame.frame.height - backFrame.frame.height
         
         
-        let translation = sender.translation(in: self.companyCard)
+        let translation = sender.translation(in: self.frontCard)
         
         switch sender.state {
         case .changed:
             //Rotation zurücksetzen - Front
-            companyCard.transform = CGAffineTransform.identity
+            frontCard.transform = CGAffineTransform.identity
             
             //Neue Position - Front
             let x = frontFrame.center.x + translation.x
             let y = frontFrame.center.y + translation.y
-            companyCard.center = CGPoint(x: x, y: y)
+            frontCard.center = CGPoint(x: x, y: y)
             
             //Rotation - Front
             let faktor = translation.x/self.view.frame.width
             let transform = CGAffineTransform(rotationAngle: -faktor*destinationAngle)
-            companyCard.transform = transform
+            frontCard.transform = transform
             
             //BACK
             backCard.center.y = backFrame.center.y + abs(faktor)*yOffset
@@ -159,12 +156,12 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
             backCard.center.x = backFrame.center.x
         
             //COLOR
-            companyCard.adjustBackgroundColor(with: faktor)
+            frontCard.adjustBackgroundColor(with: faktor)
             
         case .ended:
-            if companyCard.center.x < self.view.frame.width/3 {
+            if frontCard.center.x < self.view.frame.width/3 {
                 animateLeftOut(force: false)
-            } else if companyCard.center.x > 2*self.view.frame.width/3 {
+            } else if frontCard.center.x > 2*self.view.frame.width/3 {
                 animateRightOut(force: false)
             } else {
                 reset()
@@ -195,17 +192,17 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         let deltaY = frontFrame.frame.height / backCard.frame.height
         
         if force {
-            self.companyCard.adjustBackgroundColor(with: -0.7)
+            self.frontCard.adjustBackgroundColor(with: -0.7)
         }
         
         UIView.animate(withDuration: duration) {
-            self.companyCard.center.x -= 2000
+            self.frontCard.center.x -= 2000
             if force {
-                self.companyCard.transform = CGAffineTransform.init(rotationAngle: self.destinationAngle)
+                self.frontCard.transform = CGAffineTransform.init(rotationAngle: self.destinationAngle)
             }
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)
             self.backCard.center = self.frontFrame.center
-            self.stockManager.swiped(watched: false)
+            self.frontCard.swipedLeft(manager: self.stockManager)
             
         } completion: { (success) in
             self.presentNextCard()
@@ -221,19 +218,19 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         let deltaY = frontFrame.frame.height / backCard.frame.height
         
         if force {
-            self.companyCard.adjustBackgroundColor(with: 0.7)
+            self.frontCard.adjustBackgroundColor(with: 0.7)
         }
         
         UIView.animate(withDuration: duration) {
-            self.companyCard.center.x += 2000
+            self.frontCard.center.x += 2000
             if force {
-                self.companyCard.transform = CGAffineTransform.init(rotationAngle: -self.destinationAngle)
+                self.frontCard.transform = CGAffineTransform.init(rotationAngle: -self.destinationAngle)
                 
             }
             
             self.backCard.transform = CGAffineTransform.init(scaleX: deltaX, y: deltaY)
             self.backCard.center = self.frontFrame.center
-            self.stockManager.swiped(watched: true)
+            self.frontCard.swipedRight(manager: self.stockManager)
         } completion: { (success) in
             self.presentNextCard()
         }
@@ -241,9 +238,9 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
     
     private func reset() {
         UIView.animate(withDuration: 0.1) {
-            self.companyCard.adjustBackgroundColor(with: 0)
-            self.companyCard.transform = CGAffineTransform.identity
-            self.companyCard.frame = self.frontFrame.frame
+            self.frontCard.adjustBackgroundColor(with: 0)
+            self.frontCard.transform = CGAffineTransform.identity
+            self.frontCard.frame = self.frontFrame.frame
             self.backCard.frame = self.backFrame.frame
         } completion: { (success) in
             //
@@ -251,40 +248,39 @@ class SwipeShowViewController: UIViewController, StockCardDelegate {
         
     }
     
-    //DownloadCard
-    private func animateDownloadLeftOut(completion: @escaping () -> Void) {
-        
-        UIView.animate(withDuration: 0.3) {
-            self.downloadCard.center.x -= 2000
-            self.downloadCard.transform = CGAffineTransform.init(rotationAngle: self.destinationAngle)
-            
-        } completion: { (success) in
-            completion()
-        }
-    }
+    
+    
     
     
     
     private func presentNextCard() {
+        guard !finished else {
+            //Finished Karte zeigen
+            return
+        }
+        
         //Fordere Karte weg
-        companyCard.removeFromSuperview()
+        frontCard.removeFromSuperview()
         
         //Karten tauschen
-        companyCard = backCard
+        frontCard = backCard
         backCard = StockCard(frame: backFrame.frame)
         backCard.alpha = 0
-        backCard.delegate = self
+        backCard.setStockDelegate(self)
         
         //Neue Back Card
-        self.view.insertSubview(backCard, belowSubview: companyCard)
+        self.view.insertSubview(backCard, belowSubview: frontCard)
         setGestures()
         
         
         if let stock = stockManager.getSecond() {
             backCard.setStock(stock)
+        } else {
+            finished = true
+            //backCard = finishCard
         }
         
-        self.companyCard.alpha = 1
+        self.frontCard.alpha = 1
         
         
         UIView.animate(withDuration: 0.3) {

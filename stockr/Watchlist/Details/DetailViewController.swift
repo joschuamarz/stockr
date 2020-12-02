@@ -82,6 +82,8 @@ class DetailViewController: UIViewController {
         avg50DayLabel.text = stock.getAvg50Day().getRounded(to: 2) + "€"
         avg200DayLabel.text = stock.getAvg200Day().getRounded(to: 2) + "€"
         
+        descriptionLabel.text = stock.getDescription()
+        
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
@@ -92,6 +94,10 @@ class DetailViewController: UIViewController {
         exchangeLabel.text = stock.getExchange()
         sectorLabel.text = stock.getSector()
         //BRANCHE?
+        
+        employeesLabel.text = stock.getEmployees()
+        
+        //FOUNDED
         
     }
     
