@@ -32,12 +32,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.view.layoutIfNeeded()
-        let view = AdMobNativCard(frame: frontFrame.frame)
-        self.view.addSubview(view)
-        /*
+        
         findOutGameMode()
         prepareGameMode()
             
@@ -51,7 +47,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         frontCard.setStockDelegate(self)
         backCard.setStockDelegate(self)
-        */
+        
     }
     
     var gameMode: GameMode = .stocks
@@ -130,12 +126,15 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     }
     
     //MARK: - Game Mode
+    var count = 1
     private func findOutGameMode() {
         self.stockManager = StocksManager()
         if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
             gameMode = .downloading
         } else {
-            if self.stockManager.getSecond() != nil{
+            if count % 5 == 0 {
+                gameMode = .adMob
+            } else if self.stockManager.getSecond() != nil{
                 gameMode = .stocks
             } else {
                 gameMode = .lastStock
@@ -373,11 +372,16 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             }
             backCard.alpha = 0
             backCard.setStockDelegate(self)
-            
+            count += 1
             //Neue Back Card
             self.view.insertSubview(backCard, belowSubview: frontCard)
         case .adMob:
-            print("ADMOB")
+            let view = AdMobNativCard(frame: backFrame.frame)
+            view.root = self
+            view.start()
+            backCard = view
+            self.view.insertSubview(backCard, belowSubview: frontCard)
+            count += 1
         case .lastStock:
             print("Last")
             let finishCard = FinishCard(frame: backFrame.frame)

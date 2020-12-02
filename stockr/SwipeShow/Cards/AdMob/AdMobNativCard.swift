@@ -10,7 +10,27 @@ import GoogleMobileAds
 
 
 
-class AdMobNativCard: UIView {
+class AdMobNativCard: UIView, CardView {
+    func adjustBackgroundColor(with faktor: CGFloat) {
+        //
+    }
+    
+    func swipedRight(manager: StocksManager) {
+        //
+    }
+    
+    func swipedLeft(manager: StocksManager) {
+        //
+    }
+    
+    func setStock(_ stock: Stock) {
+        //
+    }
+    
+    func setStockDelegate(_ delegate: StockCardDelegate) {
+        //
+    }
+    
 
     @IBOutlet var contentView: UIView!
     
@@ -26,7 +46,7 @@ class AdMobNativCard: UIView {
     /// The ad unit ID.
     let adUnitID = "ca-app-pub-3940256099942544/3986624511"
     
-    
+    var root: UIViewController?
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -45,10 +65,15 @@ class AdMobNativCard: UIView {
         contentView.frame = self.bounds
         contentView.layer.cornerRadius = 20
         
+        
+    }
+    
+    func start() {
         guard let nibObjects = Bundle.main.loadNibNamed("UnifiedNativeAdView", owner: nil, options: nil),
           let adView = nibObjects.first as? GADUnifiedNativeAdView else {
             assert(false, "Could not load nib file for adView")
         }
+        adView.layer.cornerRadius = 20
         setAdView(adView)
     }
     
@@ -65,6 +90,11 @@ class AdMobNativCard: UIView {
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        
+        adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,
+                               adTypes: [ .unifiedNative ], options: nil)
+        adLoader.delegate = self
+        adLoader.load(GADRequest())
     }
     
    
