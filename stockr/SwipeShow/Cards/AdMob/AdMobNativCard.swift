@@ -33,6 +33,7 @@ class AdMobNativCard: UIView, CardView {
     
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var placeholderView: UIView!
     
     var heightConstraint : NSLayoutConstraint?
 
@@ -73,22 +74,21 @@ class AdMobNativCard: UIView, CardView {
           let adView = nibObjects.first as? GADUnifiedNativeAdView else {
             assert(false, "Could not load nib file for adView")
         }
-        adView.layer.cornerRadius = 20
         setAdView(adView)
     }
     
     func setAdView(_ view: GADUnifiedNativeAdView) {
       // Remove the previous ad view.
         nativeAdView = view
-        self.contentView.addSubview(nativeAdView)
+        self.placeholderView.addSubview(nativeAdView)
         nativeAdView.translatesAutoresizingMaskIntoConstraints = false
 
       // Layout constraints for positioning the native ad view to stretch the entire width and height
       // of the nativeAdPlaceholder.
       let viewDictionary = ["_nativeAdView": nativeAdView!]
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         
         adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,

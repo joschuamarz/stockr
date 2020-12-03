@@ -20,7 +20,7 @@ protocol FinishCardDelegate {
     func didResetCards()
 }
 enum GameMode {
-    case downloading, adMob, lastStock, finished, stocks
+    case downloading, adMob, afterAdMob, lastStock, finished, stocks
 }
 
 class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDelegate, FinishCardDelegate {
@@ -34,7 +34,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         super.viewDidLoad()
         self.view.layoutIfNeeded()
         
-        findOutGameMode()
+        findOutGameMode(reloadData: true)
         prepareGameMode()
             
         setGestures()
@@ -74,7 +74,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     }
     
     func connectionSucceeded() {
-        self.findOutGameMode()
+        self.findOutGameMode(reloadData: true)
         
         if self.gameMode == .stocks || self.gameMode == .lastStock {
             self.changeToStockMode(delay: false)
@@ -84,7 +84,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     }
     
     func didResetCards() {
-        findOutGameMode()
+        findOutGameMode(reloadData: true)
         if self.gameMode == .stocks || self.gameMode == .lastStock {
             self.changeToStockMode(delay: false)
         }
@@ -111,29 +111,34 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     }
     
     private func changeToNoNetworkMode() {
-        if UserDefaults.standard.string(forKey: "last_update") ?? "" == "" {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self.backCard.removeFromSuperview()
-                let networkCard = NoNetworkCard(frame: self.backCard.frame)
-                networkCard.delegate = self
-                self.backCard = networkCard
-                self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
-                self.view.layoutIfNeeded()
-                self.animateLeftOut(force: true)
-            })
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            self.backCard.removeFromSuperview()
+            let networkCard = NoNetworkCard(frame: self.backCard.frame)
+            networkCard.delegate = self
+            self.backCard = networkCard
+            self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
+            self.view.layoutIfNeeded()
+            self.animateLeftOut(force: true)
+        })
             
-        }
+        
     }
     
     //MARK: - Game Mode
     var count = 1
-    private func findOutGameMode() {
-        self.stockManager = StocksManager()
+    private func findOutGameMode(reloadData: Bool) {
+        if reloadData {
+            self.stockManager = StocksManager()
+        }
+        
         if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
             gameMode = .downloading
         } else {
             if count % 5 == 0 {
                 gameMode = .adMob
+            } else if count != 1 && (count+4)%5 == 0 {
+                gameMode = .afterAdMob
             } else if self.stockManager.getSecond() != nil{
                 gameMode = .stocks
             } else {
@@ -172,7 +177,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
                     if success {
                         UserDefaults.standard.setValue(Date().stripTimeString(), forKey: "last_update")
                         
-                        self.findOutGameMode()
+                        self.findOutGameMode(reloadData: true)
                         
                         if self.gameMode == .stocks || self.gameMode == .lastStock {
                             self.changeToStockMode(delay: true)
@@ -180,11 +185,23 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
                             //changeToFinished
                         }
                     } else {
-                        self.changeToNoNetworkMode()
+                        DispatchQueue.main.async {
+                            if UserDefaults.standard.string(forKey: "last_update") ?? "" == "" {
+                                self.changeToNoNetworkMode()
+                            } else {
+                                UserDefaults.standard.setValue(Date().stripTimeString(), forKey: "last_update")
+                                self.changeToStockMode(delay: true)
+                            }
+                        }
+                        
                     }
                 })
             }
         case .adMob:
+            self.view.addSubview(backCard)
+            self.view.addSubview(frontCard)
+            print("TBD")
+        case .afterAdMob:
             self.view.addSubview(backCard)
             self.view.addSubview(frontCard)
             print("TBD")
@@ -362,7 +379,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         frontCard = backCard
         setGestures()
         
-        findOutGameMode()
+        findOutGameMode(reloadData: false)
         
         switch gameMode {
         case .stocks:
@@ -382,12 +399,21 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             backCard = view
             self.view.insertSubview(backCard, belowSubview: frontCard)
             count += 1
+        case .afterAdMob:
+            backCard = StockCard(frame: backFrame.frame)
+            if let stock = stockManager.getFirst() {
+                backCard.setStock(stock)
+            }
+            backCard.alpha = 0
+            backCard.setStockDelegate(self)
+            count += 1
+            //Neue Back Card
+            self.view.insertSubview(backCard, belowSubview: frontCard)
         case .lastStock:
             print("Last")
             let finishCard = FinishCard(frame: backFrame.frame)
             finishCard.delegate = self
             backCard = finishCard
-            
             backCard.alpha = 0
             self.view.insertSubview(backCard, belowSubview: frontCard)
             //backCard = FinishedCard
@@ -400,7 +426,11 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             //Neue Back Card
             self.view.insertSubview(backCard, belowSubview: frontCard)
         case .finished:
-            backCard = StockCard()
+            let finishCard = FinishCard(frame: backFrame.frame)
+            finishCard.delegate = self
+            backCard = finishCard
+            backCard.alpha = 0
+            self.view.insertSubview(backCard, belowSubview: frontCard)
         }
        
         

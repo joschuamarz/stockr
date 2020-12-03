@@ -7,18 +7,50 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Manrope-Medium.ttf">
+            <string>Manrope-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdMobNativCard" customModule="stockr" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="oYY-sn-bUj"/>
+                <outlet property="placeholderView" destination="dyz-QA-BGf" id="w8W-Mz-5yZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="473" height="804"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werbung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-ap-nS0">
+                    <rect key="frame" x="0.0" y="0.0" width="473" height="40"/>
+                    <color key="backgroundColor" red="0.26427200439999998" green="0.81053048370000003" blue="0.16222307089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="b1D-Zr-s9c"/>
+                        <constraint firstAttribute="height" constant="40" id="pzR-Rl-SR9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="15"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-QA-BGf" customClass="UnifiedNativeAdView" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="473" height="764"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="cardColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vrz-ap-nS0" secondAttribute="trailing" id="5x4-dB-emu"/>
+                <constraint firstItem="Vrz-ap-nS0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JUz-jx-zBc"/>
+                <constraint firstItem="dyz-QA-BGf" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="PQg-ba-e3Q"/>
+                <constraint firstItem="dyz-QA-BGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vsj-gI-a6Z"/>
+                <constraint firstItem="Vrz-ap-nS0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f5a-4P-tgn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dyz-QA-BGf" secondAttribute="bottom" id="rpv-xl-jA7"/>
+                <constraint firstItem="dyz-QA-BGf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uxV-59-Sgo"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="367.39130434782612" y="149.18478260869566"/>
         </view>

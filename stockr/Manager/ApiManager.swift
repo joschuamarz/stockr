@@ -94,6 +94,12 @@ class ApiManager {
     }
     
     private func saveLoadedStocks(_ rawStocks: [RawStock], completion: @ escaping (_ success: Bool) -> Void) {
+        
+        guard rawStocks.count > 0 else {
+            completion(false)
+            return
+        }
+        
         let group = DispatchGroup()
         DispatchQueue.main.async {
             group.enter()
