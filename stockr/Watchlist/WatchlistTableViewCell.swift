@@ -26,8 +26,7 @@ class WatchlistTableViewCell: UITableViewCell {
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()
-        let price = Double(stock.getPrice()) ?? 0.0
-        priceLabel.text = (price*CurrencyConverter().getCurrencyFaktor()).withTwoDecimalsString() + "€"
+        priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"
     }
 
 }

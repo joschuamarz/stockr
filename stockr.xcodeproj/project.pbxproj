@@ -59,7 +59,6 @@
 		FFDD30E92577A822005CFC50 /* FinishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30E82577A822005CFC50 /* FinishCard.swift */; };
 		FFDD31032577E3DE005CFC50 /* AdMobNativeCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */; };
 		FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */; };
-		FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */; };
 		FFDD3148257932A5005CFC50 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD3147257932A5005CFC50 /* NativeAdView.xib */; };
 		FFDD314B2579338D005CFC50 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD314A2579338D005CFC50 /* NativeAdView.swift */; };
 /* End PBXBuildFile section */
@@ -121,7 +120,6 @@
 		FFDD30E82577A822005CFC50 /* FinishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishCard.swift; sourceTree = "<group>"; };
 		FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdMobNativeCard.xib; sourceTree = "<group>"; };
 		FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobNativCard.swift; sourceTree = "<group>"; };
-		FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedNativeAdView.xib; sourceTree = "<group>"; };
 		FFDD3147257932A5005CFC50 /* NativeAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		FFDD314A2579338D005CFC50 /* NativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,7 +392,6 @@
 		FFDD31012577E365005CFC50 /* AdMob */ = {
 			isa = PBXGroup;
 			children = (
-				FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */,
 				FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */,
 				FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */,
 				FFDD3147257932A5005CFC50 /* NativeAdView.xib */,
@@ -481,7 +478,6 @@
 				FF2E752F25739CB800236A79 /* SecondCompanyCard.xib in Resources */,
 				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
-				FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */,
 				FFDD3148257932A5005CFC50 /* NativeAdView.xib in Resources */,
 				FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */,
 			);
@@ -718,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -741,7 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;

@@ -12,7 +12,7 @@ protocol Stock {
     func getSymbol() -> String
     func getName() -> String
     func getIsin() -> String
-    func getPrice() -> String
+    func getPrice() -> Double
     
     func getDescription() -> String
     func getCountry() -> String
@@ -20,14 +20,14 @@ protocol Stock {
     func getIndustry() -> String
     func getExchange() -> String
     func getEmployees() -> String
-    func getEbitda() -> String
-    func getMarketCapitalization() -> String
-    func getYearHigh() -> String
-    func getYearLow() -> String
+    func getEbitda() -> Double
+    func getMarketCapitalization() -> Double
+    func getYearHigh() -> Double
+    func getYearLow() -> Double
     func getDividendYield() -> String
     func getPeRatio() -> String
-    func getAvg200Day() -> String
-    func getAvg50Day() -> String
+    func getAvg200Day() -> Double
+    func getAvg50Day() -> Double
     func getEnabled() -> Bool
 }
 

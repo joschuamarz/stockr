@@ -67,29 +67,25 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
-        priceLabel.text = price.withTwoDecimalsString() + "€"
         
-        yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
-        yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
+        priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"
         
-        if let yearLow = Double(stock.getYearLow()) {
-            if let yearHigh = Double(stock.getYearHigh()) {
-                let ratio = (price-yearLow)/(yearHigh-yearLow)
-                yearRange.setIndicator(to: ratio)
-            }
-        }
+        yearLowLabel.text = stock.getYearLow().withTwoDecimalsString() + "€"
+        yearHighLabel.text = stock.getYearHigh().withTwoDecimalsString() + "€"
         
-        avg50DayLabel.text = stock.getAvg50Day().getRounded(to: 2) + "€"
-        avg200DayLabel.text = stock.getAvg200Day().getRounded(to: 2) + "€"
+        let ratio = (stock.getPrice() - stock.getYearLow())/(stock.getYearHigh()-stock.getYearLow())
+        yearRange.setIndicator(to: ratio)
+        
+        avg50DayLabel.text = stock.getAvg50Day().withTwoDecimalsString() + "€"
+        avg200DayLabel.text = stock.getAvg200Day().withTwoDecimalsString() + "€"
         
         descriptionLabel.text = stock.getDescription()
         
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().getSeperatedWithoutDecimals() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperatedWithoutDecimals() + "€"
+        ebitdaLabel.text = stock.getEbitda().withoutDecimalsString() + "€"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().withoutDecimalsString() + "€"
         
         countryLabel.text = stock.getCountry()
         exchangeLabel.text = stock.getExchange()

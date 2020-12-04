@@ -58,9 +58,11 @@ public class LoadedStock: NSManagedObject, Stock {
         return self.isin
     }
     
-    func getPrice() -> String {
-        return self.price ?? "err"
+    func getPrice() -> Double {
+        let price = (Double((self.price ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
+    
     
     func getDescription() -> String {
         return self.descriptionText ?? "err"
@@ -86,20 +88,24 @@ public class LoadedStock: NSManagedObject, Stock {
         return self.employees ?? "err"
     }
     
-    func getEbitda() -> String {
-        return self.ebitda ?? "err"
+    func getEbitda() -> Double {
+        let price = (Double((self.ebitda ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
-    func getMarketCapitalization() -> String {
-        return self.market_capitalization ?? "err"
+    func getMarketCapitalization() -> Double {
+        let price = (Double((self.market_capitalization ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
-    func getYearHigh() -> String {
-        return self.year_high ?? "err"
+    func getYearHigh() -> Double {
+        let price = (Double((self.year_high ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
-    func getYearLow() -> String {
-        return self.year_low ?? "err"
+    func getYearLow() -> Double {
+        let price = (Double((self.year_low ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
     func getDividendYield() -> String {
@@ -110,12 +116,14 @@ public class LoadedStock: NSManagedObject, Stock {
         return self.pe_ratio ?? "err"
     }
     
-    func getAvg200Day() -> String {
-        return self.moving_avg_200_day ?? "err"
+    func getAvg200Day() -> Double {
+        let price = (Double((self.moving_avg_200_day ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
-    func getAvg50Day() -> String {
-        return self.moving_avg_50_day ?? "err"
+    func getAvg50Day() -> Double {
+        let price = (Double((self.moving_avg_50_day ?? "").replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
+        return price
     }
     
     func getEnabled() -> Bool {

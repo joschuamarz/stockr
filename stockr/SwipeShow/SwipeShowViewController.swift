@@ -98,6 +98,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             self.backCard = StockCard(frame: backFrame.frame)
             self.backCard.setStock(stock)
             self.backCard.setStockDelegate(self)
+            self.count += 1
             self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
         }
         

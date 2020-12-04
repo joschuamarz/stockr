@@ -161,6 +161,19 @@ extension Double {
         
         return formatter.string(from: NSNumber(value: value)) ?? "err"
     }
+    
+    func withoutDecimalsString() -> String {
+        let value = self.withTwoDecimals()
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.minimumFractionDigits = 0
+        formatter.locale = NSLocale.current
+        
+        return formatter.string(from: NSNumber(value: value)) ?? "err"
+    }
 }
 
 

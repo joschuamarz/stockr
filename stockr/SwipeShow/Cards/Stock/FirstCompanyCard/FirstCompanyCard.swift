@@ -68,27 +68,23 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
         nameLabel.text = stock.getName()
         isinLabel.text = stock.getIsin()
         
-        let price = (Double(stock.getPrice().replacingOccurrences(of: ",", with: ".")) ?? 0.0)*CurrencyConverter().getCurrencyFaktor()
-        priceLabel.text = price.withTwoDecimalsString() + "€"
+       
+        priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"
         
-        yearLowLabel.text = stock.getYearLow().getRounded(to: 2) + "€"
-        yearHighLabel.text = stock.getYearHigh().getRounded(to: 2) + "€"
+        yearLowLabel.text = stock.getYearLow().withTwoDecimalsString() + "€"
+        yearHighLabel.text = stock.getYearHigh().withTwoDecimalsString() + "€"
         
-        if let yearLow = Double(stock.getYearLow()) {
-            if let yearHigh = Double(stock.getYearHigh()) {
-                let ratio = (price-yearLow)/(yearHigh-yearLow)
-                yearRange.setIndicator(to: ratio)
-            }
-        }
-        
-        avg_50_day_label.text = stock.getAvg50Day().getRounded(to: 2) + "€"
-        avg_200_day_label.text = stock.getAvg200Day().getRounded(to: 2) + "€"
+        let ratio = (stock.getPrice() - stock.getYearLow())/(stock.getYearHigh()-stock.getYearLow())
+        yearRange.setIndicator(to: ratio)
+       
+        avg_50_day_label.text = stock.getAvg50Day().withTwoDecimalsString() + "€"
+        avg_200_day_label.text = stock.getAvg200Day().withTwoDecimalsString() + "€"
         
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().getSeperatedWithoutDecimals() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().getSeperatedWithoutDecimals() + "€"
+        ebitdaLabel.text = stock.getEbitda().withoutDecimalsString() + "€"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().withoutDecimalsString() + "€"
     }
 
 }
