@@ -60,6 +60,8 @@
 		FFDD31032577E3DE005CFC50 /* AdMobNativeCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */; };
 		FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */; };
 		FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */; };
+		FFDD3148257932A5005CFC50 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD3147257932A5005CFC50 /* NativeAdView.xib */; };
+		FFDD314B2579338D005CFC50 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD314A2579338D005CFC50 /* NativeAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdMobNativeCard.xib; sourceTree = "<group>"; };
 		FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobNativCard.swift; sourceTree = "<group>"; };
 		FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedNativeAdView.xib; sourceTree = "<group>"; };
+		FFDD3147257932A5005CFC50 /* NativeAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		FFDD314A2579338D005CFC50 /* NativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +397,8 @@
 				FFDD31092577F4EF005CFC50 /* UnifiedNativeAdView.xib */,
 				FFDD31022577E3DE005CFC50 /* AdMobNativeCard.xib */,
 				FFDD31052577E6A0005CFC50 /* AdMobNativCard.swift */,
+				FFDD3147257932A5005CFC50 /* NativeAdView.xib */,
+				FFDD314A2579338D005CFC50 /* NativeAdView.swift */,
 			);
 			path = AdMob;
 			sourceTree = "<group>";
@@ -476,6 +482,7 @@
 				FF2E74C3257269BA00236A79 /* Manrope-Medium.ttf in Resources */,
 				FF2E742C25725E8300236A79 /* Main.storyboard in Resources */,
 				FFDD310A2577F4F0005CFC50 /* UnifiedNativeAdView.xib in Resources */,
+				FFDD3148257932A5005CFC50 /* NativeAdView.xib in Resources */,
 				FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +556,7 @@
 				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
 				FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */,
 				FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */,
+				FFDD314B2579338D005CFC50 /* NativeAdView.swift in Sources */,
 				FF2E75112572D1E600236A79 /* ApiManager.swift in Sources */,
 				FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
@@ -710,16 +718,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 928Q46DTW3;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joschua.stockr;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finevisuals.stockr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -730,16 +741,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 928Q46DTW3;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joschua.stockr;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finevisuals.stockr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

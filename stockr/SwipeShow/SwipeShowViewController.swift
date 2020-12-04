@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AdSupport
 
 protocol StockCardDelegate {
     func trashButtonTapped()
@@ -32,6 +33,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(ASIdentifierManager().advertisingIdentifier)
         self.view.layoutIfNeeded()
         
         findOutGameMode(reloadData: true)
@@ -85,7 +87,7 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     
     func didResetCards() {
         findOutGameMode(reloadData: true)
-        if self.gameMode == .stocks || self.gameMode == .lastStock {
+        if self.gameMode == .stocks || self.gameMode == .lastStock || self.gameMode == .afterAdMob {
             self.changeToStockMode(delay: false)
         }
     }
@@ -123,6 +125,18 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         })
             
         
+    }
+    
+    private func changeToFinished() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            self.backCard.removeFromSuperview()
+            let finishCard = FinishCard(frame: self.backFrame.frame)
+            finishCard.delegate = self
+            self.backCard = finishCard
+            self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
+            self.view.layoutIfNeeded()
+            self.animateLeftOut(force: true)
+        })
     }
     
     //MARK: - Game Mode

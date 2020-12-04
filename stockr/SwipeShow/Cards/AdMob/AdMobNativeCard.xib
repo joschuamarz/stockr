@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,29 +17,54 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdMobNativCard" customModule="stockr" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="oYY-sn-bUj"/>
+                <outlet property="firstAdView" destination="xFP-Xo-dSV" id="LsJ-lD-tsk"/>
                 <outlet property="placeholderView" destination="dyz-QA-BGf" id="w8W-Mz-5yZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view clipsSubviews="YES" contentMode="scaleToFill" interfaceStyle="dark" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="473" height="804"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-QA-BGf" customClass="UnifiedNativeAdView" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="473" height="764"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-Xo-dSV" customClass="NativeAdView" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="473" height="382"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kontaktiere uns gerne unter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-zP-R9T" customClass="Information" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="131" y="482.33333333333331" width="211.33333333333337" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stockr@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD7-LL-0f6" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="153.33333333333331" y="502.66666666666669" width="166.33333333333331" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="linkColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="mailto:stockr@finevisuals.de"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier soll Deine Werbung stehen?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-7P-ocu" customClass="Headline" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="5" y="447" width="463" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werbung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-ap-nS0">
                     <rect key="frame" x="0.0" y="0.0" width="473" height="40"/>
                     <color key="backgroundColor" red="0.26427200439999998" green="0.81053048370000003" blue="0.16222307089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="b1D-Zr-s9c"/>
                         <constraint firstAttribute="height" constant="40" id="pzR-Rl-SR9"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="15"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-QA-BGf" customClass="UnifiedNativeAdView" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="40" width="473" height="764"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="cardColor"/>
@@ -46,8 +72,20 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vrz-ap-nS0" secondAttribute="trailing" id="5x4-dB-emu"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JUz-jx-zBc"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="PQg-ba-e3Q"/>
+                <constraint firstItem="CD7-LL-0f6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SFj-Qv-yo7"/>
+                <constraint firstItem="dWB-zP-R9T" firstAttribute="top" secondItem="wiM-7P-ocu" secondAttribute="bottom" constant="15" id="UBv-Hm-zkO"/>
+                <constraint firstItem="CD7-LL-0f6" firstAttribute="top" secondItem="dWB-zP-R9T" secondAttribute="bottom" id="VRg-VP-lMh"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vsj-gI-a6Z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wiM-7P-ocu" secondAttribute="trailing" constant="5" id="YUQ-LJ-lan"/>
+                <constraint firstItem="xFP-Xo-dSV" firstAttribute="height" secondItem="dyz-QA-BGf" secondAttribute="height" multiplier="0.5" id="dR1-ux-fCh"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f5a-4P-tgn"/>
+                <constraint firstItem="dWB-zP-R9T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hSq-xa-j2g"/>
+                <constraint firstItem="wiM-7P-ocu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="kOW-lZ-p6i"/>
+                <constraint firstItem="xFP-Xo-dSV" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="mE1-TN-IXF"/>
+                <constraint firstItem="xFP-Xo-dSV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nJP-KI-LxK"/>
+                <constraint firstAttribute="trailing" secondItem="xFP-Xo-dSV" secondAttribute="trailing" id="qjp-tr-4x1"/>
+                <constraint firstItem="wiM-7P-ocu" firstAttribute="top" secondItem="xFP-Xo-dSV" secondAttribute="bottom" constant="25" id="qrt-dI-jfp"/>
+                <constraint firstItem="wiM-7P-ocu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rKe-tQ-A8a"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dyz-QA-BGf" secondAttribute="bottom" id="rpv-xl-jA7"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uxV-59-Sgo"/>
             </constraints>
@@ -59,5 +97,11 @@
         <namedColor name="cardColor">
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

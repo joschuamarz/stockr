@@ -31,7 +31,10 @@ class AdMobNativCard: UIView, CardView {
         //
     }
     
+    @IBOutlet weak var firstAdView: NativeAdView!
 
+    
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var placeholderView: UIView!
     
@@ -46,6 +49,7 @@ class AdMobNativCard: UIView, CardView {
 
     /// The ad unit ID.
     let adUnitID = "ca-app-pub-3940256099942544/3986624511"
+    //let adUnitID = "ca-app-pub-3679492847424716/3586098043"
     
     var root: UIViewController?
     override init(frame: CGRect) {
@@ -61,6 +65,7 @@ class AdMobNativCard: UIView, CardView {
     var rootVC: UIViewController?
     
     func commonInit() {
+        layoutIfNeeded()
         Bundle.main.loadNibNamed("AdMobNativeCard", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
@@ -69,18 +74,23 @@ class AdMobNativCard: UIView, CardView {
         
     }
     
+    @IBOutlet weak var adView: GADUnifiedNativeAdView!
     func start() {
+        /*
         guard let nibObjects = Bundle.main.loadNibNamed("UnifiedNativeAdView", owner: nil, options: nil),
           let adView = nibObjects.first as? GADUnifiedNativeAdView else {
             assert(false, "Could not load nib file for adView")
         }
-        setAdView(adView)
+ */
+        setAdView(firstAdView.contentView)
+        //setAdView(secondAdView.contentView)
     }
     
     func setAdView(_ view: GADUnifiedNativeAdView) {
       // Remove the previous ad view.
         nativeAdView = view
-        self.placeholderView.addSubview(nativeAdView)
+        
+        //self.placeholderView.addSubview(nativeAdView)
         nativeAdView.translatesAutoresizingMaskIntoConstraints = false
 
       // Layout constraints for positioning the native ad view to stretch the entire width and height
@@ -91,10 +101,15 @@ class AdMobNativCard: UIView, CardView {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         
+        
+        let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
+            multipleAdsOptions.numberOfAds = 5
+ 
         adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,
-                               adTypes: [ .unifiedNative ], options: nil)
+                               adTypes: [ .unifiedNative ], options: [multipleAdsOptions])
         adLoader.delegate = self
         adLoader.load(GADRequest())
+        
     }
     
    
