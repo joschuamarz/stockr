@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-sh-5gr" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="444" width="352" height="101.5"/>
+                    <rect key="frame" x="31" y="576.5" width="352" height="101.5"/>
                     <string key="text">Für die erste Verwendung von stockr wird eine Internetverbindung benötigt.
 
 Bitte stelle eine Verbindung zum Internet her und versuche es erneut.</string>
@@ -62,6 +62,7 @@ Bitte stelle eine Verbindung zum Internet her und versuche es erneut.</string>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="cardColor"/>
             <constraints>
+                <constraint firstItem="dGZ-sh-5gr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.4" id="3HD-nE-QMi"/>
                 <constraint firstAttribute="trailing" secondItem="dGZ-sh-5gr" secondAttribute="trailing" constant="31" id="7sd-0k-WP9"/>
                 <constraint firstItem="QlV-7F-ysg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="31" id="8c5-ge-HYr"/>
                 <constraint firstItem="Abh-B7-3RR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C4I-yF-mLo"/>
@@ -72,7 +73,6 @@ Bitte stelle eine Verbindung zum Internet her und versuche es erneut.</string>
                 <constraint firstItem="lmR-NV-4hg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.4" id="fe9-zb-g4d"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QlV-7F-ysg" secondAttribute="trailing" constant="31" id="hso-oe-8a5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QlV-7F-ysg" secondAttribute="bottom" constant="20" id="iqb-xK-HTF"/>
-                <constraint firstItem="dGZ-sh-5gr" firstAttribute="top" secondItem="Abh-B7-3RR" secondAttribute="bottom" constant="20" id="lXI-nX-ngI"/>
                 <constraint firstItem="lmR-NV-4hg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pMD-Cs-UG3"/>
                 <constraint firstItem="dGZ-sh-5gr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="31" id="tqg-EN-H33"/>
             </constraints>

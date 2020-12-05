@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-Q1-tQN" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="444" width="352" height="122"/>
+                    <rect key="frame" x="31" y="566" width="352" height="122"/>
                     <string key="text">Du hast alle verfügbaren Werte einmal geswiped.
 
 Wenn Du willst kannst Du die Werte, die nicht in Deiner Watchliste sind, nochmal ins Swipe Game zurückholen.</string>
@@ -59,7 +59,7 @@ Wenn Du willst kannst Du die Werte, die nicht in Deiner Watchliste sind, nochmal
             <color key="backgroundColor" name="cardColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="TR0-Q1-tQN" secondAttribute="trailing" constant="31" id="3Am-NJ-M5P"/>
-                <constraint firstItem="TR0-Q1-tQN" firstAttribute="top" secondItem="fxA-Bc-paV" secondAttribute="bottom" constant="20" id="Cdw-G5-0us"/>
+                <constraint firstItem="TR0-Q1-tQN" firstAttribute="centerY" secondItem="4yn-2E-Jmv" secondAttribute="centerY" multiplier="1.4" id="DJZ-RA-frY"/>
                 <constraint firstItem="CuG-fd-cq2" firstAttribute="centerY" secondItem="4yn-2E-Jmv" secondAttribute="centerY" multiplier="0.4" id="FEA-aQ-Hvg"/>
                 <constraint firstItem="TR0-Q1-tQN" firstAttribute="leading" secondItem="4yn-2E-Jmv" secondAttribute="leading" constant="31" id="HYj-Qc-Tke"/>
                 <constraint firstItem="hkT-bA-lOw" firstAttribute="bottom" secondItem="tK8-MQ-j9D" secondAttribute="bottom" constant="20" id="NvG-wz-mwX"/>

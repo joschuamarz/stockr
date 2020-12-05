@@ -34,27 +34,23 @@
                     <rect key="frame" x="0.0" y="40" width="473" height="382"/>
                     <color key="backgroundColor" systemColor="systemGrayColor"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kontaktiere uns gerne unter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-zP-R9T" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="131" y="482.33333333333331" width="211.33333333333337" height="20.333333333333314"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stockr@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD7-LL-0f6" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="153.33333333333331" y="502.66666666666669" width="166.33333333333331" height="20.333333333333314"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" systemColor="linkColor"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="url" value="mailto:stockr@finevisuals.de"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier soll Deine Werbung stehen?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-7P-ocu" customClass="Headline" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="5" y="447" width="463" height="20.333333333333314"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EbP-Eh-3kO">
+                    <rect key="frame" x="15" y="524.66666666666663" width="443" height="76"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warum erscheint hier Werbung?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-7P-ocu" customClass="Headline" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="443" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Das Einblenden von Werbung ermöglicht es uns, stockr kostenfrei zur Verfügung zu stellen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-zP-R9T" customClass="Information" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="35.333333333333371" width="443" height="40.666666666666657"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werbung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-ap-nS0">
                     <rect key="frame" x="0.0" y="0.0" width="473" height="40"/>
                     <color key="backgroundColor" red="0.26427200439999998" green="0.81053048370000003" blue="0.16222307089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,22 +67,18 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vrz-ap-nS0" secondAttribute="trailing" id="5x4-dB-emu"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JUz-jx-zBc"/>
+                <constraint firstItem="EbP-Eh-3kO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Kb6-8P-FiR"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="PQg-ba-e3Q"/>
-                <constraint firstItem="CD7-LL-0f6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SFj-Qv-yo7"/>
-                <constraint firstItem="dWB-zP-R9T" firstAttribute="top" secondItem="wiM-7P-ocu" secondAttribute="bottom" constant="15" id="UBv-Hm-zkO"/>
-                <constraint firstItem="CD7-LL-0f6" firstAttribute="top" secondItem="dWB-zP-R9T" secondAttribute="bottom" id="VRg-VP-lMh"/>
+                <constraint firstItem="EbP-Eh-3kO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.4" id="ScP-se-HWi"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vsj-gI-a6Z"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wiM-7P-ocu" secondAttribute="trailing" constant="5" id="YUQ-LJ-lan"/>
                 <constraint firstItem="xFP-Xo-dSV" firstAttribute="height" secondItem="dyz-QA-BGf" secondAttribute="height" multiplier="0.5" id="dR1-ux-fCh"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f5a-4P-tgn"/>
-                <constraint firstItem="dWB-zP-R9T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hSq-xa-j2g"/>
-                <constraint firstItem="wiM-7P-ocu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="kOW-lZ-p6i"/>
                 <constraint firstItem="xFP-Xo-dSV" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="mE1-TN-IXF"/>
                 <constraint firstItem="xFP-Xo-dSV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nJP-KI-LxK"/>
                 <constraint firstAttribute="trailing" secondItem="xFP-Xo-dSV" secondAttribute="trailing" id="qjp-tr-4x1"/>
-                <constraint firstItem="wiM-7P-ocu" firstAttribute="top" secondItem="xFP-Xo-dSV" secondAttribute="bottom" constant="25" id="qrt-dI-jfp"/>
-                <constraint firstItem="wiM-7P-ocu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rKe-tQ-A8a"/>
+                <constraint firstAttribute="trailing" secondItem="EbP-Eh-3kO" secondAttribute="trailing" constant="15" id="rG7-Xk-v3V"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dyz-QA-BGf" secondAttribute="bottom" id="rpv-xl-jA7"/>
+                <constraint firstItem="EbP-Eh-3kO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sgw-Dd-MJQ"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uxV-59-Sgo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -97,9 +89,6 @@
         <namedColor name="cardColor">
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
