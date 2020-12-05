@@ -68,7 +68,7 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qvz-If-l3N">
-                    <rect key="frame" x="31" y="532" width="352" height="146"/>
+                    <rect key="frame" x="31" y="548.5" width="352" height="113"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-BB-gMF">
                             <rect key="frame" x="0.0" y="0.0" width="352" height="14"/>
@@ -159,24 +159,24 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-j0-tB6">
-                            <rect key="frame" x="0.0" y="122" width="352" height="1"/>
+                        <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-j0-tB6">
+                            <rect key="frame" x="0.0" y="113" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="DGo-gI-erA"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kfa-eo-wna">
-                            <rect key="frame" x="0.0" y="132" width="352" height="14"/>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kfa-eo-wna">
+                            <rect key="frame" x="0.0" y="113" width="352" height="0.0"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Branche" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-l1-tQK" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getränke / Tabak" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-bz-iSo" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
