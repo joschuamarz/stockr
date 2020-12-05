@@ -100,7 +100,10 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //MARK: -Layouts
     private func setLayouts() {
+        
+        
         bottomMenu.layer.cornerRadius = bottomMenu.frame.width/10
+        bottomMenu.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         indicatorView.layer.cornerRadius = indicatorView.frame.height/2
         deleteButton.layer.cornerRadius = 5
         yearRange.contentView.backgroundColor = UIColor(red: 57/255, green: 57/255, blue: 57/255, alpha: 1)

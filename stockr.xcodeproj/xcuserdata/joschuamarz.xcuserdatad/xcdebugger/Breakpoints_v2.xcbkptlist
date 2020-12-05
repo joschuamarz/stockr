@@ -189,8 +189,8 @@
             filePath = "stockr/SwipeShow/SwipeShowViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "presentNextCard()"
             landmarkType = "7">
          </BreakpointContent>
@@ -205,8 +205,8 @@
             filePath = "stockr/SwipeShow/SwipeShowViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
             landmarkName = "presentNextCard()"
             landmarkType = "7">
          </BreakpointContent>
@@ -237,8 +237,8 @@
             filePath = "stockr/SwipeShow/SwipeShowViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "434"
-            endingLineNumber = "434"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
             landmarkName = "presentNextCard()"
             landmarkType = "7">
          </BreakpointContent>

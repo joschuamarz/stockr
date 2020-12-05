@@ -267,11 +267,13 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         
         let translation = sender.translation(in: self.frontCard)
-        
+        var transform: CGAffineTransform = CGAffineTransform.identity
         switch sender.state {
+
+        case .began:
+            transform = frontCard.transform
+            
         case .changed:
-            //Rotation zurücksetzen - Front
-            frontCard.transform = CGAffineTransform.identity
             
             //Neue Position - Front
             let x = frontFrame.center.x + translation.x
@@ -280,7 +282,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             
             //Rotation - Front
             let faktor = translation.x/self.view.frame.width
-            let transform = CGAffineTransform(rotationAngle: -faktor*destinationAngle)
+            transform = transform.rotated(by: -faktor*destinationAngle)
+            self.currentAngle = -faktor*destinationAngle
             frontCard.transform = transform
             
             //BACK
@@ -392,6 +395,9 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         frontCard.removeFromSuperview()
         //Karten tauschen
         frontCard = backCard
+        //frontCard.transform = CGAffineTransform.identity
+        //frontCard.frame = frontFrame.frame
+        
         setGestures()
         
         findOutGameMode(reloadData: false)
@@ -448,11 +454,9 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             self.view.insertSubview(backCard, belowSubview: frontCard)
         }
        
-        
         self.frontCard.alpha = 1
-        
-        
         UIView.animate(withDuration: 0.3) {
+            
             self.backCard.alpha = 0.8
         }
         

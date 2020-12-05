@@ -739,7 +739,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hier findest Du alles, was Du zu unseren rechtlichen Aspekten wissen musst." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-bE-LFb">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier findest Du alles, was Du zu unseren rechtlichen Aspekten wissen musst." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-bE-LFb">
                                 <rect key="frame" x="31" y="119" width="366" height="35"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>

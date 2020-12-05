@@ -48,8 +48,8 @@ class AdMobNativCard: UIView, CardView {
     var nativeAdView: GADUnifiedNativeAdView!
 
     /// The ad unit ID.
-    //let adUnitID = "ca-app-pub-3940256099942544/3986624511"
-    let adUnitID = "ca-app-pub-3679492847424716/3586098043"
+    let adUnitID = "ca-app-pub-3940256099942544/3986624511"
+    //let adUnitID = "ca-app-pub-3679492847424716/3586098043"
     
     var root: UIViewController?
     override init(frame: CGRect) {

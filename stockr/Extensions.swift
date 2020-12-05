@@ -49,7 +49,7 @@ extension UITextField{
         let size = 22
 
         let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size+2*padding, height: size) )
-        let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size+padding/2, height: size))
+        let iconView  = UIImageView(frame: CGRect(x: padding, y: 0, width: size+padding/4, height: size))
         iconView.image = icon
         iconView.tintColor = UIColor.placeholderText
         outerView.addSubview(iconView)
