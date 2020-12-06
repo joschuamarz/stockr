@@ -150,18 +150,34 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         if UserDefaults.standard.string(forKey: "last_update") ?? "" != Date().stripTimeString() {
             gameMode = .downloading
         } else {
-            if count % 5 == 0 {
-                gameMode = .adMob
-            } else if count != 1 && (count+4)%5 == 0 {
-                gameMode = .afterAdMob
-            } else if self.stockManager.getSecond() != nil{
-                gameMode = .stocks
+            if UserDefaults.standard.bool(forKey: "premium") {
+                //No ads
+                if self.stockManager.getSecond() != nil{
+                    gameMode = .stocks
+                } else {
+                    gameMode = .lastStock
+                    
+                }
+                if self.stockManager.getFirst() == nil {
+                    gameMode = .finished
+                }
             } else {
-                gameMode = .lastStock
-                
-            }
-            if self.stockManager.getFirst() == nil {
-                gameMode = .finished
+                //ads
+                if count % 5 == 0 {
+                    if !UserDefaults.standard.bool(forKey: "premium") {
+                     gameMode = .adMob
+                    }
+                } else if count != 1 && (count+4)%5 == 0 {
+                    gameMode = .afterAdMob
+                } else if self.stockManager.getSecond() != nil{
+                    gameMode = .stocks
+                } else {
+                    gameMode = .lastStock
+                    
+                }
+                if self.stockManager.getFirst() == nil {
+                    gameMode = .finished
+                }
             }
         }
     }

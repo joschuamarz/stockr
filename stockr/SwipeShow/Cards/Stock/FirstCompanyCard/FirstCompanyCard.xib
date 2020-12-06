@@ -53,8 +53,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahrestief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-Xf-idu" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="259.5" width="43.5" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52-Wochen Tief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-Xf-idu" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="31" y="259.5" width="70.5" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -65,8 +65,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jahreshoch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-mF-1at" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="331" y="259.5" width="52" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52-Wochen Hoch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-mF-1at" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="305" y="259.5" width="78" height="12"/>
                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

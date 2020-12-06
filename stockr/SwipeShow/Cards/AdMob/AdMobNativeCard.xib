@@ -18,7 +18,9 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="oYY-sn-bUj"/>
                 <outlet property="firstAdView" destination="xFP-Xo-dSV" id="LsJ-lD-tsk"/>
+                <outlet property="noAdView" destination="VjZ-aQ-eIs" id="P0J-tc-aD3"/>
                 <outlet property="placeholderView" destination="dyz-QA-BGf" id="w8W-Mz-5yZ"/>
+                <outlet property="purchaseButton" destination="5qP-lW-Cg8" id="FKU-Oa-jC7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,26 +33,55 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-Xo-dSV" customClass="NativeAdView" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="40" width="473" height="382"/>
+                    <rect key="frame" x="0.0" y="422" width="473" height="382"/>
                     <color key="backgroundColor" systemColor="systemGrayColor"/>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EbP-Eh-3kO">
-                    <rect key="frame" x="15" y="524.66666666666663" width="443" height="76"/>
+                <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EbP-Eh-3kO">
+                    <rect key="frame" x="15" y="136.66666666666669" width="443" height="128.66666666666669"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warum erscheint hier Werbung?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-7P-ocu" customClass="Headline" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="443" height="20.333333333333332"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keine Lust mehr auf Werbung?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-7P-ocu" customClass="Headline" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="104.66666666666667" y="0.0" width="233.66666666666663" height="20.333333333333332"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Das Einblenden von Werbung ermöglicht es uns, stockr kostenfrei zur Verfügung zu stellen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-zP-R9T" customClass="Information" customModule="stockr" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="35.333333333333371" width="443" height="40.666666666666657"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hole Dir jetzt stockr Premium" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-zP-R9T" customClass="Information" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="110.33333333333333" y="45.333333333333343" width="222.33333333333337" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qP-lW-Cg8">
+                            <rect key="frame" x="174.66666666666666" y="90.666666666666686" width="93.999999999999972" height="38"/>
+                            <color key="backgroundColor" name="green"/>
+                            <inset key="contentEdgeInsets" minX="25" minY="10" maxX="25" maxY="10"/>
+                            <state key="normal" title="2,29 €">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="purchaseButtonTapped:" destination="-1" eventType="touchUpInside" id="l3a-nW-LfR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjZ-aQ-eIs">
+                    <rect key="frame" x="0.0" y="402" width="473" height="402"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werbung derzeit nicht verfügbar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJi-j4-h64" customClass="Headline" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="15" y="191" width="443" height="20.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pJi-j4-h64" firstAttribute="centerX" secondItem="VjZ-aQ-eIs" secondAttribute="centerX" id="IyT-da-xZt"/>
+                        <constraint firstItem="pJi-j4-h64" firstAttribute="centerY" secondItem="VjZ-aQ-eIs" secondAttribute="centerY" id="bNM-7F-6NV"/>
+                        <constraint firstItem="pJi-j4-h64" firstAttribute="leading" secondItem="VjZ-aQ-eIs" secondAttribute="leading" constant="15" id="hLU-9k-1qd"/>
+                        <constraint firstAttribute="trailing" secondItem="pJi-j4-h64" secondAttribute="trailing" constant="15" id="tjp-bI-eBI"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Werbung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-ap-nS0">
                     <rect key="frame" x="0.0" y="0.0" width="473" height="40"/>
                     <color key="backgroundColor" red="0.26427200439999998" green="0.81053048370000003" blue="0.16222307089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,14 +97,18 @@
             <color key="backgroundColor" name="cardColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vrz-ap-nS0" secondAttribute="trailing" id="5x4-dB-emu"/>
+                <constraint firstItem="VjZ-aQ-eIs" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="IgN-Pb-4cA"/>
+                <constraint firstAttribute="bottom" secondItem="xFP-Xo-dSV" secondAttribute="bottom" id="JNU-oQ-lqW"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JUz-jx-zBc"/>
                 <constraint firstItem="EbP-Eh-3kO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Kb6-8P-FiR"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="PQg-ba-e3Q"/>
-                <constraint firstItem="EbP-Eh-3kO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.4" id="ScP-se-HWi"/>
+                <constraint firstAttribute="bottom" secondItem="VjZ-aQ-eIs" secondAttribute="bottom" id="QhA-ht-9m7"/>
+                <constraint firstItem="EbP-Eh-3kO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.5" id="ScP-se-HWi"/>
                 <constraint firstItem="dyz-QA-BGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vsj-gI-a6Z"/>
+                <constraint firstItem="VjZ-aQ-eIs" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="W32-B2-nk0"/>
                 <constraint firstItem="xFP-Xo-dSV" firstAttribute="height" secondItem="dyz-QA-BGf" secondAttribute="height" multiplier="0.5" id="dR1-ux-fCh"/>
+                <constraint firstItem="VjZ-aQ-eIs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dbx-li-PRq"/>
                 <constraint firstItem="Vrz-ap-nS0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f5a-4P-tgn"/>
-                <constraint firstItem="xFP-Xo-dSV" firstAttribute="top" secondItem="Vrz-ap-nS0" secondAttribute="bottom" id="mE1-TN-IXF"/>
                 <constraint firstItem="xFP-Xo-dSV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nJP-KI-LxK"/>
                 <constraint firstAttribute="trailing" secondItem="xFP-Xo-dSV" secondAttribute="trailing" id="qjp-tr-4x1"/>
                 <constraint firstAttribute="trailing" secondItem="EbP-Eh-3kO" secondAttribute="trailing" constant="15" id="rG7-Xk-v3V"/>
@@ -89,6 +124,12 @@
         <namedColor name="cardColor">
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <namedColor name="green">
+            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

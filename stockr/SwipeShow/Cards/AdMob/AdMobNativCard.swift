@@ -35,8 +35,17 @@ class AdMobNativCard: UIView, CardView {
 
     
     
+    @IBOutlet weak var noAdView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var placeholderView: UIView!
+    
+    var purchaseManager: PurchaseManager!
+    
+    @IBOutlet weak var purchaseButton: UIButton!
+    
+    @IBAction func purchaseButtonTapped(_ sender: Any) {
+        purchaseManager.startPurchase()
+    }
     
     var heightConstraint : NSLayoutConstraint?
 
@@ -48,8 +57,8 @@ class AdMobNativCard: UIView, CardView {
     var nativeAdView: GADUnifiedNativeAdView!
 
     /// The ad unit ID.
-    let adUnitID = "ca-app-pub-3940256099942544/3986624511"
-    //let adUnitID = "ca-app-pub-3679492847424716/3586098043"
+    let adUnitID = "ca-app-pub-3940256099942544/3986624511" //Test
+    //let adUnitID = "ca-app-pub-3679492847424716/3586098043"  //Live
     
     var root: UIViewController?
     override init(frame: CGRect) {
@@ -70,7 +79,8 @@ class AdMobNativCard: UIView, CardView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.layer.cornerRadius = 20
-        
+        purchaseManager = PurchaseManager()
+        purchaseButton.layer.cornerRadius = purchaseButton.frame.height/2
         
     }
     
@@ -93,6 +103,7 @@ class AdMobNativCard: UIView, CardView {
         //self.placeholderView.addSubview(nativeAdView)
         nativeAdView.translatesAutoresizingMaskIntoConstraints = false
 
+    
       // Layout constraints for positioning the native ad view to stretch the entire width and height
       // of the nativeAdPlaceholder.
       let viewDictionary = ["_nativeAdView": nativeAdView!]
@@ -100,13 +111,12 @@ class AdMobNativCard: UIView, CardView {
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+    
         
-        
-        let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
-            multipleAdsOptions.numberOfAds = 5
+       
  
         adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,
-                               adTypes: [ .unifiedNative ], options: [multipleAdsOptions])
+                               adTypes: [ .unifiedNative ], options: nil)
         adLoader.delegate = self
         adLoader.load(GADRequest())
         
@@ -136,6 +146,7 @@ extension AdMobNativCard : GADUnifiedNativeAdLoaderDelegate {
 
   func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
     //refreshAdButton.isEnabled = true
+    noAdView.isHidden = true
     nativeAdView.nativeAd = nativeAd
 
     // Set ourselves as the native ad delegate to be notified of native ad events.
