@@ -30,6 +30,8 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var avg50DayLabel: UILabel!
     @IBOutlet weak var avg200DayLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var extendDescriptionButton: UIButton!
+    @IBOutlet weak var descriptionHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var kgvLabel: UILabel!
     @IBOutlet weak var dividendYieldLabel: UILabel!
@@ -52,10 +54,14 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         setGestures()
         setLayouts()
         setValuesToLabels()
+        
+        constraint = descriptionHeightConstraint
     }
     
     var givenStock: Stock?
     var delegate: DetailDelegate?
+    var extended = false
+    var constraint: NSLayoutConstraint!
     
     //MARK: -Values
     private func setValuesToLabels() {
@@ -180,6 +186,25 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return (scrollView.contentOffset.y == 0 || (scrollView.contentOffset.y < 50 && scrollView.isBouncing))
     }
+    
+    
+    
+    @IBAction func extendDescriptionButtonTapped(_ sender: Any) {
+        if extended {
+            descriptionLabel.addConstraint(constraint)
+            extendDescriptionButton.setTitle("Mehr anzeigen...", for: .normal)
+            extended = false
+        } else {
+            descriptionLabel.removeConstraint(constraint)
+            extendDescriptionButton.setTitle("Weniger anzeigen", for: .normal)
+            extended = true
+        }
+        
+        UIView.animate(withDuration: 0.4) {
+            self.bottomMenu.layoutIfNeeded()
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
