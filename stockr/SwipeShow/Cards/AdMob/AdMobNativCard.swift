@@ -107,12 +107,13 @@ class AdMobNativCard: UIView, CardView {
       // Layout constraints for positioning the native ad view to stretch the entire width and height
       // of the nativeAdPlaceholder.
       let viewDictionary = ["_nativeAdView": nativeAdView!]
+       
+        
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
-                                                              options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
                                                               options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
     
-        
        
  
         adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,
