@@ -59,7 +59,7 @@ class ThirdCompanyCard: UIView, BackgroundColorAdjustable {
         
         descriptionLabel.text = stock.getDescription()
         
-        extendButton.isHidden = !descriptionLabel.isTruncated
+        
     }
     
 

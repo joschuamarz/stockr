@@ -93,15 +93,20 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().withoutDecimalsString() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().withoutDecimalsString() + "€"
+        ebitdaLabel.text = stock.getEbitda().formattedReadable() + " €"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().formattedReadable() + " €"
         
         countryLabel.text = stock.getCountry()
         exchangeLabel.text = stock.getExchange()
         sectorLabel.text = stock.getSector()
         //BRANCHE?
         
-        employeesLabel.text = stock.getEmployees().getSeperatedWithoutDecimals()
+        if let employees = Double(stock.getEmployees()) {
+            employeesLabel.text = employees.formattedReadable()
+        } else {
+            employeesLabel.text = stock.getEmployees().getSeperatedWithoutDecimals()
+        }
+        
         
         //FOUNDED
         

@@ -83,8 +83,8 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
         kgvLabel.text = stock.getPeRatio().getRounded(to: 2)
         dividendYieldLabel.text = stock.getDividendYield().getPercentage() + "%"
         //REINGEWINN?
-        ebitdaLabel.text = stock.getEbitda().formattedReadable() + "€"
-        marktCapitalizationLabel.text = stock.getMarketCapitalization().formattedReadable() + "€"
+        ebitdaLabel.text = stock.getEbitda().formattedReadable() + " €"
+        marktCapitalizationLabel.text = stock.getMarketCapitalization().formattedReadable() + " €"
     }
 
 }
