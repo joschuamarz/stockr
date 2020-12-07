@@ -72,6 +72,7 @@ class AdMobNativCard: UIView, CardView {
     }
     
     var rootVC: UIViewController?
+    var premiumDelegate: PremiumDelegate?
     
     func commonInit() {
         layoutIfNeeded()
@@ -80,8 +81,14 @@ class AdMobNativCard: UIView, CardView {
         contentView.frame = self.bounds
         contentView.layer.cornerRadius = 20
         purchaseManager = PurchaseManager()
+        
         purchaseButton.layer.cornerRadius = purchaseButton.frame.height/2
         
+    }
+    
+    func setPremiumDelegate(_ delegate: PremiumDelegate) {
+        self.premiumDelegate = delegate
+        purchaseManager.delegate = delegate
     }
     
     @IBOutlet weak var adView: GADUnifiedNativeAdView!

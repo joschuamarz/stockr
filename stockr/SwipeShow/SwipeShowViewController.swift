@@ -21,11 +21,15 @@ protocol NetworkDelegate {
 protocol FinishCardDelegate {
     func didResetCards()
 }
+
+protocol PremiumDelegate {
+    func subsripted()
+}
 enum GameMode {
-    case downloading, adMob, afterAdMob, lastStock, finished, stocks
+    case downloading, adMob, afterAdMob, lastStock, finished, stocks, afterPremium
 }
 
-class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDelegate, FinishCardDelegate {
+class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDelegate, FinishCardDelegate, PremiumDelegate {
     
     //MARK: -Outlets
     @IBOutlet weak var frontFrame: UIView!
@@ -50,6 +54,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         frontCard.setStockDelegate(self)
         backCard.setStockDelegate(self)
+        
+        UserDefaults.standard.setValue(false, forKey: "premium")
         
     }
     
@@ -141,8 +147,23 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         })
     }
     
+    func subsripted() {
+        DispatchQueue.main.async {
+            self.backCard.removeFromSuperview()
+            
+            let thankCard = ThankForPremiumCard(frame: self.backFrame.frame)
+            
+            self.backCard = thankCard
+            self.view.insertSubview(self.backCard, belowSubview: self.frontCard)
+            self.view.layoutIfNeeded()
+            self.changedToPremium = true
+            self.animateLeftOut(force: true)
+        }
+    }
+    
     //MARK: - Game Mode
     var count = 1
+    var changedToPremium = false
     private func findOutGameMode(reloadData: Bool) {
         if reloadData {
             self.stockManager = StocksManager()
@@ -153,7 +174,10 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         } else {
             if UserDefaults.standard.bool(forKey: "premium") {
                 //No ads
-                if self.stockManager.getSecond() != nil{
+                if changedToPremium {
+                    gameMode = .afterPremium
+                    changedToPremium = false
+                } else if self.stockManager.getSecond() != nil{
                     gameMode = .stocks
                 } else {
                     gameMode = .lastStock
@@ -254,6 +278,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             backCard = finishCard
             self.view.addSubview(backCard)
             self.view.addSubview(frontCard)
+        case .afterPremium:
+            return
         }
     }
     
@@ -432,12 +458,13 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             self.view.insertSubview(backCard, belowSubview: frontCard)
         case .adMob:
             let view = AdMobNativCard(frame: backFrame.frame)
+            view.setPremiumDelegate(self)
             view.root = self
             view.start()
             backCard = view
             self.view.insertSubview(backCard, belowSubview: frontCard)
             count += 1
-        case .afterAdMob:
+        case .afterAdMob, .afterPremium:
             backCard = StockCard(frame: backFrame.frame)
             if let stock = stockManager.getFirst() {
                 backCard.setStock(stock)

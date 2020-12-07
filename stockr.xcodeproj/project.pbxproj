@@ -51,6 +51,8 @@
 		FFCE9864257E6E49000B03A4 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE9863257E6E49000B03A4 /* DescriptionViewController.swift */; };
 		FFCE9869257E6FAB000B03A4 /* ThirdCompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCE9868257E6FAB000B03A4 /* ThirdCompanyCard.xib */; };
 		FFCE986C257E6FC7000B03A4 /* ThirdCompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */; };
+		FFCE9871257EAFC8000B03A4 /* ThankForPremiumCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCE9870257EAFC8000B03A4 /* ThankForPremiumCard.xib */; };
+		FFCE9874257EAFD8000B03A4 /* ThankForPremiumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE9873257EAFD8000B03A4 /* ThankForPremiumCard.swift */; };
 		FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B42573C843005CFC50 /* LegalViewController.swift */; };
 		FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */; };
 		FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */; };
@@ -118,6 +120,8 @@
 		FFCE9863257E6E49000B03A4 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		FFCE9868257E6FAB000B03A4 /* ThirdCompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCompanyCard.xib; sourceTree = "<group>"; };
 		FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCompanyCard.swift; sourceTree = "<group>"; };
+		FFCE9870257EAFC8000B03A4 /* ThankForPremiumCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThankForPremiumCard.xib; sourceTree = "<group>"; };
+		FFCE9873257EAFD8000B03A4 /* ThankForPremiumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankForPremiumCard.swift; sourceTree = "<group>"; };
 		FFDD30B42573C843005CFC50 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				FFDD30D8257785F3005CFC50 /* NoNetwork */,
 				FFDD31012577E365005CFC50 /* AdMob */,
 				FFDD30E32577A6AD005CFC50 /* Finished */,
+				FFCE986F257EAFAD000B03A4 /* ThankForPremium */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -349,6 +354,15 @@
 				FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */,
 			);
 			path = ThirdCard;
+			sourceTree = "<group>";
+		};
+		FFCE986F257EAFAD000B03A4 /* ThankForPremium */ = {
+			isa = PBXGroup;
+			children = (
+				FFCE9870257EAFC8000B03A4 /* ThankForPremiumCard.xib */,
+				FFCE9873257EAFD8000B03A4 /* ThankForPremiumCard.swift */,
+			);
+			path = ThankForPremium;
 			sourceTree = "<group>";
 		};
 		FFDD30B32573C817005CFC50 /* Legal */ = {
@@ -500,6 +514,7 @@
 				FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */,
 				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
 				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
+				FFCE9871257EAFC8000B03A4 /* ThankForPremiumCard.xib in Resources */,
 				FFCE9869257E6FAB000B03A4 /* ThirdCompanyCard.xib in Resources */,
 				FF2E74DE2572983400236A79 /* YearRange.xib in Resources */,
 				FFDD30C525769345005CFC50 /* InformationView.xib in Resources */,
@@ -587,6 +602,7 @@
 				FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
 				FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */,
+				FFCE9874257EAFD8000B03A4 /* ThankForPremiumCard.swift in Sources */,
 				FFCE986C257E6FC7000B03A4 /* ThirdCompanyCard.swift in Sources */,
 				FFDD30C225769335005CFC50 /* InformationView.swift in Sources */,
 				FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */,

@@ -17,6 +17,7 @@ class PurchaseManager: NSObject, SKProductsRequestDelegate, SKPaymentTransaction
     }
     
     var premiumProduct: SKProduct?
+    var delegate: PremiumDelegate?
     
     func startPurchase() {
         guard let premiumProduct = premiumProduct else {
@@ -55,7 +56,7 @@ class PurchaseManager: NSObject, SKProductsRequestDelegate, SKPaymentTransaction
             case .purchased, .restored:
                 //unlock
                 UserDefaults.standard.setValue(true, forKey: "premium")
-                
+                delegate?.subsripted()
                 SKPaymentQueue.default().finishTransaction(transaction)
                 SKPaymentQueue.default().remove(self)
                 break
