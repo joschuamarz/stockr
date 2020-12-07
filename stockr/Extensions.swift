@@ -174,6 +174,23 @@ extension Double {
         
         return formatter.string(from: NSNumber(value: value)) ?? "err"
     }
+    
+    func formattedReadable() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.decimalSeparator = ","
+        formatter.minimumFractionDigits = 2
+        formatter.locale = NSLocale.current
+        
+        if Int(self/1000000000) > 0 {
+            return (formatter.string(from: NSNumber(value: (self/1000000000).withTwoDecimals())) ?? "err") + " Mrd"
+        } else if Int(self/1000000) > 0 {
+            return (formatter.string(from: NSNumber(value: (self/1000000).withTwoDecimals())) ?? "err") + " Mio"
+        } else {
+            return self.withoutDecimalsString()
+        }
+    }
 }
 
 
@@ -190,3 +207,25 @@ extension UIScrollView {
         return isBouncing
     }
 }
+
+
+extension UILabel {
+
+    var isTruncated: Bool {
+
+        guard let labelText = text else {
+            return false
+        }
+
+        let labelTextSize = (labelText as NSString).boundingRect(
+            with: CGSize(width: frame.size.width, height: .greatestFiniteMagnitude),
+            options: .usesLineFragmentOrigin,
+            attributes: [.font: font ?? UIFont.systemFont(ofSize: 12)],
+            context: nil).size
+
+        return labelTextSize.height > bounds.size.height
+    }
+}
+
+
+

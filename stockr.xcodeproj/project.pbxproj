@@ -48,6 +48,9 @@
 		FFCE985A257BA452000B03A4 /* Splash Screen-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCE9859257BA452000B03A4 /* Splash Screen-2x.png */; };
 		FFCE985E257D2623000B03A4 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE985D257D2623000B03A4 /* PurchaseManager.swift */; };
 		FFCE9861257D294E000B03A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCE9860257D294E000B03A4 /* StoreKit.framework */; };
+		FFCE9864257E6E49000B03A4 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE9863257E6E49000B03A4 /* DescriptionViewController.swift */; };
+		FFCE9869257E6FAB000B03A4 /* ThirdCompanyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCE9868257E6FAB000B03A4 /* ThirdCompanyCard.xib */; };
+		FFCE986C257E6FC7000B03A4 /* ThirdCompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */; };
 		FFDD30B52573C843005CFC50 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B42573C843005CFC50 /* LegalViewController.swift */; };
 		FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */; };
 		FFDD30BC257582D1005CFC50 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */; };
@@ -112,6 +115,9 @@
 		FFCE9859257BA452000B03A4 /* Splash Screen-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen-2x.png"; sourceTree = "<group>"; };
 		FFCE985D257D2623000B03A4 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		FFCE9860257D294E000B03A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FFCE9863257E6E49000B03A4 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		FFCE9868257E6FAB000B03A4 /* ThirdCompanyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdCompanyCard.xib; sourceTree = "<group>"; };
+		FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCompanyCard.swift; sourceTree = "<group>"; };
 		FFDD30B42573C843005CFC50 /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		FFDD30B9257582D1005CFC50 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		FFDD30BA257582D1005CFC50 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2E743E257266EA00236A79 /* SwipeShowViewController.swift */,
+				FFCE9863257E6E49000B03A4 /* DescriptionViewController.swift */,
 				FF2E74412572678A00236A79 /* Cards */,
 				FF2E74D725728E6000236A79 /* Components */,
 			);
@@ -335,6 +342,15 @@
 			path = Watchlist;
 			sourceTree = "<group>";
 		};
+		FFCE9867257E6F92000B03A4 /* ThirdCard */ = {
+			isa = PBXGroup;
+			children = (
+				FFCE9868257E6FAB000B03A4 /* ThirdCompanyCard.xib */,
+				FFCE986B257E6FC7000B03A4 /* ThirdCompanyCard.swift */,
+			);
+			path = ThirdCard;
+			sourceTree = "<group>";
+		};
 		FFDD30B32573C817005CFC50 /* Legal */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +393,7 @@
 				FF2E75272572F98F00236A79 /* StockCard.xib */,
 				FF2E7449257267C700236A79 /* FirstCompanyCard */,
 				FF2E752D25739C8F00236A79 /* SecondCompanyCard */,
+				FFCE9867257E6F92000B03A4 /* ThirdCard */,
 			);
 			path = Stock;
 			sourceTree = "<group>";
@@ -483,6 +500,7 @@
 				FF2E74C6257269BA00236A79 /* Manrope-Regular.ttf in Resources */,
 				FF2E74C5257269BA00236A79 /* Manrope-ExtraBold.ttf in Resources */,
 				FF2E74C7257269BA00236A79 /* Manrope-ExtraLight.ttf in Resources */,
+				FFCE9869257E6FAB000B03A4 /* ThirdCompanyCard.xib in Resources */,
 				FF2E74DE2572983400236A79 /* YearRange.xib in Resources */,
 				FFDD30C525769345005CFC50 /* InformationView.xib in Resources */,
 				FF2E74C4257269BA00236A79 /* Manrope-SemiBold.ttf in Resources */,
@@ -544,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2E74EC2572BC4200236A79 /* StocksManager.swift in Sources */,
+				FFCE9864257E6E49000B03A4 /* DescriptionViewController.swift in Sources */,
 				FFDD30CE25775FA9005CFC50 /* CurrencyManager.swift in Sources */,
 				FF2E753225739CCA00236A79 /* SecondCompanyCard.swift in Sources */,
 				FF2E75352573A09400236A79 /* Stock.swift in Sources */,
@@ -568,6 +587,7 @@
 				FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */,
 				FF2E742525725E8300236A79 /* AppDelegate.swift in Sources */,
 				FFDD30BB257582D1005CFC50 /* OnboardingViewController.swift in Sources */,
+				FFCE986C257E6FC7000B03A4 /* ThirdCompanyCard.swift in Sources */,
 				FFDD30C225769335005CFC50 /* InformationView.swift in Sources */,
 				FFDD31062577E6A0005CFC50 /* AdMobNativCard.swift in Sources */,
 				FF2E75052572CBA100236A79 /* LoadedStock+CoreDataClass.swift in Sources */,

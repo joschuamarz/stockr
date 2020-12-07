@@ -13,7 +13,7 @@ class StockCard: UIView, CardView {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var firstCard: FirstCompanyCard!
     @IBOutlet weak var secondCard: SecondCompanyCard!
-    @IBOutlet weak var thirdCard: UIView!
+    @IBOutlet weak var thirdCard: ThirdCompanyCard!
     @IBOutlet weak var trashButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     
@@ -55,16 +55,19 @@ class StockCard: UIView, CardView {
         setGestures()
         setCurrentPage()
         
+        
     }
     
     func setStock(_ stock: Stock) {
         self.stock = stock
         firstCard.setStock(stock)
         secondCard.setStock(stock)
+        thirdCard.setStock(stock)
     }
     
     func setStockDelegate(_ delegate: StockCardDelegate) {
         self.delegate = delegate
+        thirdCard.delegate = delegate
     }
     
     func adjustBackgroundColor(with faktor: CGFloat) {
@@ -94,7 +97,7 @@ class StockCard: UIView, CardView {
     
     @objc
     func handleTap() {
-        currentPage = (currentPage+1)%2
+        currentPage = (currentPage+1)%3
         
         
         pageControl.currentPage = currentPage
@@ -117,7 +120,7 @@ class StockCard: UIView, CardView {
             firstCard.isHidden = true
             secondCard.isHidden = true
             thirdCard.isHidden = false
-            //currentCard = thirdCard
+            currentCard = thirdCard
         default:
             print("Out of range")
         }

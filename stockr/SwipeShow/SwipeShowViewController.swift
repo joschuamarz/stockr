@@ -11,6 +11,7 @@ import AdSupport
 protocol StockCardDelegate {
     func trashButtonTapped()
     func addButtonTapped()
+    func extendStock(_ stock: Stock)
 }
 
 protocol NetworkDelegate {
@@ -484,15 +485,24 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
     }
 
+    var currentStock: Stock?
+    func extendStock(_ stock: Stock) {
+        currentStock = stock
+        performSegue(withIdentifier: "description", sender: self)
+    }
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "description" {
+            if let destinationVC = segue.destination as? DescriptionViewController {
+                destinationVC.givenStock = currentStock
+            }
+        }
+        
     }
-    */
+    
 
 }

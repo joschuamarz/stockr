@@ -29,6 +29,8 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var yearRange: YearRange!
     @IBOutlet weak var avg50DayLabel: UILabel!
     @IBOutlet weak var avg200DayLabel: UILabel!
+    
+    @IBOutlet weak var disclaimerBoxView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var extendDescriptionButton: UIButton!
     @IBOutlet weak var descriptionHeightConstraint: NSLayoutConstraint!
@@ -56,6 +58,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         setValuesToLabels()
         
         constraint = descriptionHeightConstraint
+        extendDescriptionButton.isHidden = !descriptionLabel.isTruncated
     }
     
     var givenStock: Stock?

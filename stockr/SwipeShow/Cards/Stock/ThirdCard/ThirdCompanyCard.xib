@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Manrope-Bold.ttf">
+            <string>Manrope-Bold</string>
+        </array>
+        <array key="Manrope-Medium.ttf">
+            <string>Manrope-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdCompanyCard" customModule="stockr" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="3dd-aB-1JI" id="2cW-J3-hlb"/>
+                <outlet property="descriptionLabel" destination="7at-8E-J7a" id="uGG-Sx-fwR"/>
+                <outlet property="disclaimerBoxView" destination="p34-Fq-U8d" id="UZX-uc-IEe"/>
+                <outlet property="extendButton" destination="2MM-dH-8o1" id="E3A-uc-How"/>
+                <outlet property="isinLabel" destination="jxT-IC-NHj" id="ogk-Eo-Yrq"/>
+                <outlet property="nameLabel" destination="rQy-Y4-LgT" id="VFL-mb-3Bg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="dark" id="3dd-aB-1JI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US1232434" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-IC-NHj" customClass="PriceInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="175.5" y="120" width="63.5" height="14"/>
+                    <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc9-t8-JX2">
+                    <rect key="frame" x="73.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="D8c-Ok-ZwY"/>
+                        <constraint firstAttribute="width" constant="60" id="Nhn-AU-QNR"/>
+                    </constraints>
+                    <color key="tintColor" name="red"/>
+                    <state key="normal">
+                        <imageReference key="image" image="trash" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="small"/>
+                    </state>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ys9-zP-ZFl">
+                    <rect key="frame" x="280.5" y="776.5" width="60" height="60"/>
+                    <color key="backgroundColor" name="background"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="StT-5O-8LP"/>
+                        <constraint firstAttribute="height" constant="60" id="xAf-dO-J3i"/>
+                    </constraints>
+                    <color key="tintColor" name="green"/>
+                    <state key="normal">
+                        <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="small"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQy-Y4-LgT">
+                    <rect key="frame" x="31" y="87" width="352" height="28"/>
+                    <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p34-Fq-U8d">
+                    <rect key="frame" x="31" y="174" width="352" height="30.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wir arbeiten bereits an einer Übersetzung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-UR-eer" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                            <rect key="frame" x="15" y="5" width="322" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19602227210000001" green="0.1960555017" blue="0.1960117817" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="i0h-UR-eer" firstAttribute="top" secondItem="p34-Fq-U8d" secondAttribute="top" constant="5" id="C8z-yQ-S6j"/>
+                        <constraint firstItem="i0h-UR-eer" firstAttribute="leading" secondItem="p34-Fq-U8d" secondAttribute="leading" constant="15" id="EBy-GW-qNm"/>
+                        <constraint firstAttribute="trailing" secondItem="i0h-UR-eer" secondAttribute="trailing" constant="15" id="Kue-9b-9vV"/>
+                        <constraint firstAttribute="bottom" secondItem="i0h-UR-eer" secondAttribute="bottom" constant="5" id="oYM-ij-jqX"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MM-dH-8o1">
+                    <rect key="frame" x="31" y="700.5" width="89" height="26"/>
+                    <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="12"/>
+                    <state key="normal" title="Mehr anzeigen...">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="extendButtonTapped:" destination="-1" eventType="touchUpInside" id="jEk-6M-abk"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7at-8E-J7a" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="31" y="209.5" width="352" height="486"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2Z2-23-DEM"/>
+            <color key="backgroundColor" name="cardColor"/>
+            <constraints>
+                <constraint firstItem="p34-Fq-U8d" firstAttribute="leading" secondItem="3dd-aB-1JI" secondAttribute="leading" constant="31" id="4dm-Cp-NpS"/>
+                <constraint firstItem="7at-8E-J7a" firstAttribute="leading" secondItem="2Z2-23-DEM" secondAttribute="leading" constant="31" id="4np-FT-6we"/>
+                <constraint firstItem="rQy-Y4-LgT" firstAttribute="centerY" secondItem="3dd-aB-1JI" secondAttribute="centerY" multiplier="0.225" id="5IP-ub-gar"/>
+                <constraint firstItem="ys9-zP-ZFl" firstAttribute="centerX" secondItem="3dd-aB-1JI" secondAttribute="centerX" multiplier="1.5" id="CJV-2J-eNo"/>
+                <constraint firstItem="2Z2-23-DEM" firstAttribute="trailing" secondItem="7at-8E-J7a" secondAttribute="trailing" constant="31" id="OM4-De-jwD"/>
+                <constraint firstItem="jxT-IC-NHj" firstAttribute="centerX" secondItem="2Z2-23-DEM" secondAttribute="centerX" id="OWa-GF-vb5"/>
+                <constraint firstItem="2Z2-23-DEM" firstAttribute="trailing" secondItem="p34-Fq-U8d" secondAttribute="trailing" constant="31" id="OcF-Lp-JvD"/>
+                <constraint firstItem="uc9-t8-JX2" firstAttribute="centerY" secondItem="3dd-aB-1JI" secondAttribute="centerY" multiplier="1.8" id="Opf-lD-Jed"/>
+                <constraint firstItem="7at-8E-J7a" firstAttribute="top" secondItem="p34-Fq-U8d" secondAttribute="bottom" constant="5" id="Q9i-DD-mzx"/>
+                <constraint firstItem="uc9-t8-JX2" firstAttribute="top" secondItem="2MM-dH-8o1" secondAttribute="bottom" constant="50" id="T4n-JH-S9b"/>
+                <constraint firstItem="rQy-Y4-LgT" firstAttribute="centerX" secondItem="2Z2-23-DEM" secondAttribute="centerX" id="Uiv-gE-rCG"/>
+                <constraint firstItem="uc9-t8-JX2" firstAttribute="centerX" secondItem="3dd-aB-1JI" secondAttribute="centerX" multiplier="0.5" id="VSR-ii-PRP"/>
+                <constraint firstItem="ys9-zP-ZFl" firstAttribute="centerY" secondItem="uc9-t8-JX2" secondAttribute="centerY" id="Xqq-iE-sXa"/>
+                <constraint firstItem="2MM-dH-8o1" firstAttribute="top" secondItem="7at-8E-J7a" secondAttribute="bottom" constant="5" id="cVt-qF-tIl"/>
+                <constraint firstItem="2MM-dH-8o1" firstAttribute="leading" secondItem="2Z2-23-DEM" secondAttribute="leading" constant="31" id="moH-iJ-4E5"/>
+                <constraint firstItem="rQy-Y4-LgT" firstAttribute="leading" secondItem="2Z2-23-DEM" secondAttribute="leading" constant="31" id="n2z-eD-y34"/>
+                <constraint firstItem="jxT-IC-NHj" firstAttribute="top" secondItem="rQy-Y4-LgT" secondAttribute="bottom" constant="5" id="pHc-5q-3xL"/>
+                <constraint firstItem="p34-Fq-U8d" firstAttribute="top" secondItem="jxT-IC-NHj" secondAttribute="bottom" constant="40" id="qML-mK-auF"/>
+                <constraint firstItem="2Z2-23-DEM" firstAttribute="trailing" secondItem="rQy-Y4-LgT" secondAttribute="trailing" constant="31" id="yKv-ud-Dzx"/>
+            </constraints>
+            <point key="canvasLocation" x="18.840579710144929" y="16.741071428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <namedColor name="background">
+            <color red="0.098999999463558197" green="0.1080000028014183" blue="0.1080000028014183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cardColor">
+            <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
