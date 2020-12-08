@@ -183,11 +183,11 @@ extension Double {
         formatter.minimumFractionDigits = 2
         formatter.locale = NSLocale.current
         
-        if Int(self/1000000000000) > 0 {
+        if abs(Int(self/1000000000000)) > 0 {
             return (formatter.string(from: NSNumber(value: (self/1000000000000).withTwoDecimals())) ?? "err") + " Bio."
-        } else if Int(self/1000000000) > 0 {
+        } else if abs(Int(self/1000000000)) > 0 {
             return (formatter.string(from: NSNumber(value: (self/1000000000).withTwoDecimals())) ?? "err") + " Mrd."
-        } else if Int(self/1000000) > 0 {
+        } else if abs(Int(self/1000000)) > 0 {
             return (formatter.string(from: NSNumber(value: (self/1000000).withTwoDecimals())) ?? "err") + " Mio."
         } else {
             return self.withoutDecimalsString()

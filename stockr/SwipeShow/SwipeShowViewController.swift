@@ -7,6 +7,7 @@
 
 import UIKit
 import AdSupport
+import StoreKit
 
 protocol StockCardDelegate {
     func trashButtonTapped()
@@ -54,10 +55,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
         
         frontCard.setStockDelegate(self)
         backCard.setStockDelegate(self)
-        
-        UserDefaults.standard.setValue(false, forKey: "premium")
-        
     }
+
     
     var gameMode: GameMode = .stocks
     var frontCard: CardView = StockCard()
@@ -66,6 +65,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     var finished = false
     var downloadCard = DownloadCard()
     var stockManager = StocksManager()
+    
+    var totalSwipedCards = 0
     
     var isInitialLayout = true
     override func viewDidLayoutSubviews() {
@@ -80,6 +81,12 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isInitialLayout = true
+        totalSwipedCards = UserDefaults.standard.integer(forKey: "totalSwipedCards")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UserDefaults.standard.setValue(totalSwipedCards, forKey: "totalSwipedCards")
     }
     
     func connectionSucceeded() {
@@ -158,6 +165,10 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
             self.view.layoutIfNeeded()
             self.changedToPremium = true
             self.animateLeftOut(force: true)
+            
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
+            }
         }
     }
     
@@ -434,6 +445,8 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
     
     
     private func presentNextCard() {
+        totalSwipedCards += 1
+        
         //Fordere Karte weg
         frontCard.removeFromSuperview()
         //Karten tauschen

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import StoreKit
 
 
 class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, DetailDelegate {
@@ -22,6 +22,7 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
         searchTextField.delegate = self
         stocksTableView.delegate = self
         stocksTableView.dataSource = self
+        print(UserDefaults.standard.integer(forKey: "totalSwipedCards"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +32,18 @@ class WatchlistViewController: UIViewController, UITextFieldDelegate, UITableVie
         stocksTableView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async {
+            if UserDefaults.standard.integer(forKey: "totalSwipedCards") >= 50 {
+                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                    SKStoreReviewController.requestReview(in: scene)
+                    UserDefaults.standard.setValue(0, forKey: "totalSwipedCards")
+                }
+            }
+        }
+        
+    }
     func didDeleteStock() {
         watchedStocks = stockManager.getWatchedStocks()
         filteredStocks = watchedStocks
