@@ -19,6 +19,7 @@ class StockCard: UIView, CardView {
     
     var isInitialLayout = true
     var currentPage = 0
+    var pageCount = 3
     var currentCard: BackgroundColorAdjustable?
     var stock: Stock?
     
@@ -63,6 +64,11 @@ class StockCard: UIView, CardView {
         firstCard.setStock(stock)
         secondCard.setStock(stock)
         thirdCard.setStock(stock)
+        
+        if stock.getDescription().count < 100 {
+            pageCount = 2
+            pageControl.numberOfPages = 2
+        }
     }
     
     func setStockDelegate(_ delegate: StockCardDelegate) {
@@ -97,7 +103,7 @@ class StockCard: UIView, CardView {
     
     @objc
     func handleTap() {
-        currentPage = (currentPage+1)%3
+        currentPage = (currentPage+1)%pageCount
         
         
         pageControl.currentPage = currentPage

@@ -962,7 +962,7 @@ Benjamin Kostrzewa</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1g-VX-LiN" customClass="Information" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="533.66666666666663" width="366" height="67"/>
+                                                <rect key="frame" x="31" y="533.66666666666663" width="355.33333333333331" height="67"/>
                                                 <string key="text">Die Weltkugel-Grafiken wurden von Wikimedia vom Autor "TUBS" zur Verfügung gestellt und eigenständig verfremdet. Die Dateien sind als "Creative Commons Attribution-ShareAlike 3.0 Unported" lizensiert. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -971,7 +971,7 @@ Benjamin Kostrzewa</string>
                                         </subviews>
                                         <color key="backgroundColor" name="background"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="u1g-VX-LiN" secondAttribute="trailing" constant="31" id="1zO-g0-fl9"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u1g-VX-LiN" secondAttribute="trailing" constant="31" id="1zO-g0-fl9"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H91-Qf-tet" secondAttribute="trailing" constant="20" symbolic="YES" id="28X-bq-ODT"/>
                                             <constraint firstItem="u1g-VX-LiN" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="Cao-KH-hlU"/>
                                             <constraint firstAttribute="bottom" secondItem="u1g-VX-LiN" secondAttribute="bottom" constant="40" id="EWs-5K-qK9"/>
