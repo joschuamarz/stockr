@@ -58,7 +58,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         setValuesToLabels()
         
         constraint = descriptionHeightConstraint
-        extendDescriptionButton.isHidden = !descriptionLabel.isTruncated
+        extendDescriptionButton.isHidden = !descriptionLabel.isTruncated()
     }
     
     var givenStock: Stock?

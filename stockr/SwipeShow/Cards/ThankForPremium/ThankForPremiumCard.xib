@@ -31,10 +31,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzs-2j-YHX" customClass="Information" customModule="stockr" customModuleProvider="target">
-                    <rect key="frame" x="31" y="586.5" width="352" height="81.5"/>
-                    <string key="text">Danke, dass Du Dich für stockr Premium entschieden hast.
-Damit hilfst Du uns, stockr ständig weiterzuentwickeln!</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danke, dass Du Dich für stockr Premium entschieden hast. Damit hilfst Du uns, stockr ständig weiterzuentwickeln!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzs-2j-YHX" customClass="Information" customModule="stockr" customModuleProvider="target">
+                    <rect key="frame" x="31" y="596.5" width="352" height="61"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

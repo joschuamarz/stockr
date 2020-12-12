@@ -897,7 +897,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfy-7i-b0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="548.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="640.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-aW-lW3" customClass="Headline" customModule="stockr" customModuleProvider="target">
                                                 <rect key="frame" x="171.66666666666666" y="25" width="84.999999999999972" height="21"/>
@@ -961,22 +961,32 @@ Benjamin Kostrzewa</string>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="url" value="https://stories.freepik.com/finance"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1g-VX-LiN" customClass="Information" customModule="stockr" customModuleProvider="target">
+                                                <rect key="frame" x="31" y="533.66666666666663" width="366" height="67"/>
+                                                <string key="text">Die Weltkugel-Grafiken wurden von Wikimedia vom Autor "TUBS" zur Verfügung gestellt und eigenständig verfremdet. Die Dateien sind als "Creative Commons Attribution-ShareAlike 3.0 Unported" lizensiert. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="background"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="u1g-VX-LiN" secondAttribute="trailing" constant="31" id="1zO-g0-fl9"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H91-Qf-tet" secondAttribute="trailing" constant="20" symbolic="YES" id="28X-bq-ODT"/>
+                                            <constraint firstItem="u1g-VX-LiN" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="Cao-KH-hlU"/>
+                                            <constraint firstAttribute="bottom" secondItem="u1g-VX-LiN" secondAttribute="bottom" constant="40" id="EWs-5K-qK9"/>
                                             <constraint firstItem="c2m-7P-DmF" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="GUT-dO-Eq4"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tLA-V1-P31" secondAttribute="trailing" constant="20" symbolic="YES" id="ITL-ea-Wkv"/>
                                             <constraint firstItem="OnR-D7-Ndt" firstAttribute="top" secondItem="QBr-DP-Ud4" secondAttribute="bottom" id="JJw-os-o8k"/>
                                             <constraint firstItem="QBr-DP-Ud4" firstAttribute="top" secondItem="wXU-aW-lW3" secondAttribute="bottom" constant="40" id="KfJ-cW-Aif"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c2m-7P-DmF" secondAttribute="trailing" constant="20" symbolic="YES" id="MoC-q4-Qya"/>
-                                            <constraint firstAttribute="bottom" secondItem="c2m-7P-DmF" secondAttribute="bottom" constant="40" id="RL9-jQ-xCe"/>
                                             <constraint firstItem="tLA-V1-P31" firstAttribute="leading" secondItem="OnR-D7-Ndt" secondAttribute="trailing" constant="12" id="Swm-fe-JBD"/>
                                             <constraint firstItem="H91-Qf-tet" firstAttribute="top" secondItem="J3V-Cw-crT" secondAttribute="bottom" constant="40" id="SyT-zw-b0x"/>
                                             <constraint firstItem="OnR-D7-Ndt" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="Zo9-XB-wR0"/>
                                             <constraint firstItem="QBr-DP-Ud4" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="ZuD-ow-8qq"/>
                                             <constraint firstItem="wXU-aW-lW3" firstAttribute="centerX" secondItem="Hfy-7i-b0a" secondAttribute="centerX" id="d1s-gh-h34"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J3V-Cw-crT" secondAttribute="trailing" constant="31" id="f21-DW-cj3"/>
+                                            <constraint firstItem="u1g-VX-LiN" firstAttribute="top" secondItem="c2m-7P-DmF" secondAttribute="bottom" constant="25" id="gNb-zO-Icu"/>
                                             <constraint firstItem="J3V-Cw-crT" firstAttribute="top" secondItem="OnR-D7-Ndt" secondAttribute="bottom" constant="40" id="hW8-x9-cMb"/>
                                             <constraint firstItem="J3V-Cw-crT" firstAttribute="leading" secondItem="Hfy-7i-b0a" secondAttribute="leading" constant="31" id="jZM-Ei-gNN"/>
                                             <constraint firstItem="wXU-aW-lW3" firstAttribute="top" secondItem="Hfy-7i-b0a" secondAttribute="top" constant="25" id="kMK-AJ-hrH"/>
