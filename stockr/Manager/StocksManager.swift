@@ -79,8 +79,10 @@ class StocksManager {
     func getUnswipedStock() -> [LoadedStock] {
         var stocks = [LoadedStock]()
         for stock in loadedStocks {
-            if !SwipedStocksManager().contains(symbol: stock.symbol) {
+            if !SwipedStocksManager().contains(symbol: stock.symbol) && !stock.isEmpty {
                 stocks.append(stock)
+            } else if stock.isEmpty {
+                print("empty stock: \(stock.getName())")
             }
         }
         

@@ -131,6 +131,13 @@ public class LoadedStock: NSManagedObject, Stock {
     }
     
     
+    var isEmpty: Bool {
+        return getPrice() == 0
+            || (getAvg50Day() == 0 && getAvg200Day() == 0)
+            || (getYearHigh() == 0 && getYearLow() == 0)
+            || (getEbitda() == 0 && getMarketCapitalization() == 0)
+    }
+    
     //MARK: -Save
     
     func save() {
