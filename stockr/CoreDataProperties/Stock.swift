@@ -12,6 +12,7 @@ protocol Stock {
     func getSymbol() -> String
     func getName() -> String
     func getIsin() -> String
+    func getWkn() -> String
     func getPrice() -> Double
     
     func getDescription() -> String

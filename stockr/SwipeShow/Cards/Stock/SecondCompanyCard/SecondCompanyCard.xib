@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -68,34 +68,34 @@
                     </state>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qvz-If-l3N">
-                    <rect key="frame" x="31" y="548.5" width="352" height="113"/>
+                    <rect key="frame" x="31" y="565" width="352" height="80"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-BB-gMF">
-                            <rect key="frame" x="0.0" y="0.0" width="352" height="14"/>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-BB-gMF">
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="0.0"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8x-nf-HA5" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="176" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nordamerika" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-Jk-dSN" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
-                                    <rect key="frame" x="176" y="0.0" width="176" height="14"/>
+                                    <rect key="frame" x="176" y="0.0" width="176" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="12"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
-                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-RY-38f">
-                            <rect key="frame" x="0.0" y="23" width="352" height="1"/>
+                        <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-RY-38f">
+                            <rect key="frame" x="0.0" y="-1" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="bhZ-8Q-kDn"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-Gk-xgc">
-                            <rect key="frame" x="0.0" y="33" width="352" height="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Land" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-5d-VFT" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
@@ -112,14 +112,14 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-gu-uqS">
-                            <rect key="frame" x="0.0" y="56" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="23" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="aSQ-jM-ani"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="luI-Cu-VXE">
-                            <rect key="frame" x="0.0" y="66" width="352" height="14"/>
+                            <rect key="frame" x="0.0" y="33" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Index" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAY-Fc-epY" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
@@ -136,14 +136,14 @@
                             </subviews>
                         </stackView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14g-WC-Dtt">
-                            <rect key="frame" x="0.0" y="89" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="56" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="T2s-OI-sKH"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iIF-tW-1DZ">
-                            <rect key="frame" x="0.0" y="99" width="352" height="14"/>
+                            <rect key="frame" x="0.0" y="66" width="352" height="14"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sektor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBI-8D-1vA" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="14"/>
@@ -160,14 +160,14 @@
                             </subviews>
                         </stackView>
                         <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-j0-tB6">
-                            <rect key="frame" x="0.0" y="113" width="352" height="1"/>
+                            <rect key="frame" x="0.0" y="80" width="352" height="1"/>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="DGo-gI-erA"/>
                             </constraints>
                         </view>
                         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kfa-eo-wna">
-                            <rect key="frame" x="0.0" y="113" width="352" height="0.0"/>
+                            <rect key="frame" x="0.0" y="80" width="352" height="0.0"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Branche" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-l1-tQK" customClass="CompanyInformation" customModule="stockr" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="0.0"/>
@@ -233,7 +233,7 @@
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="green">
-            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36470588235294116" green="0.77254901960784317" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
             <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

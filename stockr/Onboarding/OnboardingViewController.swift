@@ -16,14 +16,15 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     var scrollHeight: CGFloat = 0.0
     var scrollWidth: CGFloat = 0.0
     
-    var titles = ["Willkommen bei stockr", "Swipe Game", "stockr Watchlist"]
+    var titles = ["Willkommen bei stockr", "Swipe Game", "stockr Watchlist", "Wir sind nicht perfekt"]
     
     var descriptions = [
         "Mit der stockr App kannst Du ganz einfach neue Werte für Deine Watchlist entdecken und so noch bessere Investmententscheidungen treffen!",
-        "Erhalte Informationen zu einem Unternehmen und entscheide durch Swipen, ob Du den Wert zu Deiner Watchlist hinzufügen möchtest",
-        "Auf der Watchlist kannst Du ganz einfach alle Unternehmen einsehen. die Du über das Swipe Game nach Rechts gewischt hast."]
+        "Erhalte Informationen zu einem Unternehmen und entscheide durch Swipen, ob Du den Wert zu Deiner Watchlist hinzufügen möchtest.",
+        "Auf der Watchlist kannst Du ganz einfach alle Unternehmen einsehen. die Du über das Swipe Game nach Rechts gewischt hast.",
+        "Das ist die erste Version von stockr, daher kann es hier und da noch zu kleineren Fehlern in den angezeigten Werten kommen. Wir arbeiten hart daran, die Qualität unserer Werte zu verbessern."]
     
-    var assetNames = ["Make it rain-bro", "Charts-bro", "Checklist-bro"]
+    var assetNames = ["Make it rain-bro", "Charts-bro", "Checklist-bro", "Co-workers-bro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        
-        
-        
+           
     }
 
     override func viewDidLayoutSubviews() {
@@ -85,7 +84,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func nextButtonTapped(_ sender: Any) {
         let page = pageControl.currentPage
         
-        if page == 2 {
+        if page == titles.count-1 {
             let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "root") as! UITabBarController
             rootVC.tabBar.backgroundImage = UIImage()
             rootVC.tabBar.shadowImage = UIImage()
@@ -94,7 +93,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
             present(rootVC, animated: true, completion: nil)
             UserDefaults.standard.setValue(true, forKey: "Onboarded")
         } else {
-            pageControl.currentPage = (page+1)%3
+            pageControl.currentPage = (page+1)%4
             pageChanged(self)
         }
     }
@@ -118,7 +117,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate {
     
     private func updateButton() {
         
-        if pageControl.currentPage == 2 {
+        if pageControl.currentPage == titles.count-1 {
             nextButton.backgroundColor = UIColor(named: "green")
             nextButton.setTitle("Los geht's", for: .normal)
         } else {

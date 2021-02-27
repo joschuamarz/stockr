@@ -66,7 +66,7 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()
-        isinLabel.text = stock.getIsin()
+        isinLabel.text = "WKN: \(stock.getWkn())"
         
        
         priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"

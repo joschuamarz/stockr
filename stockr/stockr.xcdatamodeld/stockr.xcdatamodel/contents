@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="LoadedStock" representedClassName="LoadedStock" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="descriptionText" optional="YES" attributeType="String"/>
@@ -20,6 +20,7 @@
         <attribute name="sector" optional="YES" attributeType="String"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="String"/>
+        <attribute name="wkn" optional="YES" attributeType="String"/>
         <attribute name="year_high" optional="YES" attributeType="String"/>
         <attribute name="year_low" optional="YES" attributeType="String"/>
     </entity>
@@ -44,11 +45,12 @@
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="String"/>
         <attribute name="watched" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wkn" optional="YES" attributeType="String"/>
         <attribute name="year_high" optional="YES" attributeType="String"/>
         <attribute name="year_low" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="LoadedStock" positionX="-54" positionY="-9" width="128" height="358"/>
-        <element name="SwipedStock" positionX="-63" positionY="-18" width="128" height="373"/>
+        <element name="LoadedStock" positionX="-54" positionY="-9" width="128" height="359"/>
+        <element name="SwipedStock" positionX="-63" positionY="-18" width="128" height="374"/>
     </elements>
 </model>

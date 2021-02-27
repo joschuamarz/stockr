@@ -74,7 +74,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         nameLabel.text = stock.getName()
-        isinLabel.text = stock.getIsin()
+        isinLabel.text = "WKN: \(stock.getWkn())"
         
         
         priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"
@@ -96,7 +96,8 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         ebitdaLabel.text = stock.getEbitda().formattedReadable() + " €"
         marktCapitalizationLabel.text = stock.getMarketCapitalization().formattedReadable() + " €"
         
-        countryLabel.text = stock.getCountry()
+        let countryID = stock.getIsin().prefix(2).uppercased()
+        countryLabel.text =  countryID//stock.getCountry()
         exchangeLabel.text = stock.getExchange()
         sectorLabel.text = stock.getSector()
         //BRANCHE?

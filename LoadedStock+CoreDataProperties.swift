@@ -27,6 +27,7 @@ extension LoadedStock {
     @NSManaged public var exchange: String?
     @NSManaged public var industry: String?
     @NSManaged public var isin: String
+    @NSManaged public var wkn: String
     @NSManaged public var last_api_sync_at: String?
     @NSManaged public var market_capitalization: String?
     @NSManaged public var moving_avg_50_day: String?

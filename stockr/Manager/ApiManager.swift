@@ -11,6 +11,7 @@ struct RawStock: Codable {
     public let id: Int
     public let symbol: String
     public let isin: String
+    public let wkn: String
     public let price: String?
     public let name: String?
     public let descriptionText: String?
@@ -112,6 +113,7 @@ class ApiManager {
                 let _ = LoadedStock(
                     symbol: rawStock.symbol,
                     isin: rawStock.isin,
+                    wkn: rawStock.wkn,
                     name: rawStock.name,
                     price: rawStock.price,
                     description: rawStock.descriptionText,

@@ -55,7 +55,7 @@ class ThirdCompanyCard: UIView, BackgroundColorAdjustable {
     func setStock(_ stock: Stock) {
         self.stock = stock
         nameLabel.text = stock.getName()
-        isinLabel.text = stock.getIsin()
+        isinLabel.text = "WKN: \(stock.getWkn())"
         
         descriptionLabel.text = stock.getDescription()
     }

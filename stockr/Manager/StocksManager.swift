@@ -44,6 +44,7 @@ class StocksManager {
             if let swipedStock = SwipedStock(
                 symbol: rawStock.symbol,
                 isin: rawStock.isin,
+                wkn: rawStock.wkn,
                 name: rawStock.name,
                 price: rawStock.price,
                 description: rawStock.descriptionText,

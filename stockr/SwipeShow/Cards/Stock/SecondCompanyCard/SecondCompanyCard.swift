@@ -46,12 +46,12 @@ class SecondCompanyCard: UIView, BackgroundColorAdjustable {
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()
-        isinLabel.text = stock.getIsin()
+        isinLabel.text = "WKN: \(stock.getWkn())"
         
         let countryID = stock.getIsin().prefix(2).lowercased()
         regionImageView.image = UIImage(named: "globe_\(countryID)")
         
-        countryLabel.text = stock.getCountry()
+        countryLabel.text = countryID.uppercased() //stock.getCountry()
         exchangeLabel.text = stock.getExchange()
         sectorLabel.text = stock.getSector()
         //BRANCHE?
