@@ -49,6 +49,7 @@ class StocksManager {
                 price: rawStock.price,
                 description: rawStock.descriptionText,
                 country: rawStock.country,
+                region: rawStock.region,
                 sector: rawStock.sector,
                 industry: rawStock.industry,
                 exchange: rawStock.exchange,

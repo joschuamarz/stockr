@@ -16,6 +16,7 @@ struct RawStock: Codable {
     public let name: String?
     public let descriptionText: String?
     public let country: String?
+    public let region: String?
     public let sector: String?
     public let industry: String?
     public let exchange: String?
@@ -118,6 +119,7 @@ class ApiManager {
                     price: rawStock.price,
                     description: rawStock.descriptionText,
                     country: rawStock.country,
+                    region: rawStock.region,
                     sector: rawStock.sector,
                     industry: rawStock.industry,
                     exchange: rawStock.exchange,

@@ -15,7 +15,7 @@ public class SwipedStock: NSManagedObject, Stock {
     
     
 
-    convenience init? (symbol: String, isin: String, wkn: String, name: String?, price: String?, description: String?, country: String?, sector: String?, industry: String?, exchange: String?, employees: String?, ebitda: String?, market_capitalization: String?, year_high: String?, year_low: String?, dividend_yield: String?, pe_ratio: String?, moving_avg_200_day: String?, moving_avg_50_day: String?, enabled: Bool?, last_api_sync_at: String?, updated_at: String?, watched: Bool ) {
+    convenience init? (symbol: String, isin: String, wkn: String, name: String?, price: String?, description: String?, country: String?, region: String?, sector: String?, industry: String?, exchange: String?, employees: String?, ebitda: String?, market_capitalization: String?, year_high: String?, year_low: String?, dividend_yield: String?, pe_ratio: String?, moving_avg_200_day: String?, moving_avg_50_day: String?, enabled: Bool?, last_api_sync_at: String?, updated_at: String?, watched: Bool ) {
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -31,6 +31,7 @@ public class SwipedStock: NSManagedObject, Stock {
         self.name = name
         self.descriptionText = description
         self.country = country
+        self.region = region
         self.sector = sector
         self.industry = industry
         self.exchange = exchange
