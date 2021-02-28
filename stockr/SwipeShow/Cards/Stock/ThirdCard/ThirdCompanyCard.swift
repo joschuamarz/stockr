@@ -13,7 +13,7 @@ class ThirdCompanyCard: UIView, BackgroundColorAdjustable {
     @IBOutlet weak var disclaimerBoxView: UIView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var isinLabel: PriceInformation!
+    @IBOutlet weak var wknLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var extendButton: UIButton!
     
@@ -55,7 +55,7 @@ class ThirdCompanyCard: UIView, BackgroundColorAdjustable {
     func setStock(_ stock: Stock) {
         self.stock = stock
         nameLabel.text = stock.getName()
-        isinLabel.text = "WKN: \(stock.getWkn())"
+        wknLabel.text = "WKN: \(stock.getWkn())"
         
         descriptionLabel.text = stock.getDescription()
     }

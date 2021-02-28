@@ -15,7 +15,9 @@ protocol Stock {
     func getWkn() -> String
     func getPrice() -> Double
     
+    
     func getDescription() -> String
+    func getRegion() -> String
     func getCountry() -> String
     func getSector() -> String
     func getIndustry() -> String

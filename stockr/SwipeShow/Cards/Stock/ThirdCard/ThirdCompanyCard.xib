@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,8 +23,8 @@
                 <outlet property="descriptionLabel" destination="7at-8E-J7a" id="uGG-Sx-fwR"/>
                 <outlet property="disclaimerBoxView" destination="p34-Fq-U8d" id="UZX-uc-IEe"/>
                 <outlet property="extendButton" destination="2MM-dH-8o1" id="E3A-uc-How"/>
-                <outlet property="isinLabel" destination="jxT-IC-NHj" id="ogk-Eo-Yrq"/>
                 <outlet property="nameLabel" destination="rQy-Y4-LgT" id="VFL-mb-3Bg"/>
+                <outlet property="wknLabel" destination="jxT-IC-NHj" id="ogk-Eo-Yrq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -148,7 +148,7 @@
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="green">
-            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36500000953674316" green="0.77300000190734863" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
             <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

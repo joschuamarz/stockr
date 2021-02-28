@@ -12,11 +12,11 @@ class SecondCompanyCard: UIView, BackgroundColorAdjustable {
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var isinLabel: UILabel!
+    @IBOutlet weak var wknLabel: UILabel!
     @IBOutlet weak var regionImageView: UIImageView!
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var exchangeLabel: UILabel!
+    @IBOutlet weak var isinLabel: UILabel!
     @IBOutlet weak var sectorLabel: UILabel!
     @IBOutlet weak var branchLabel: UILabel!
     
@@ -46,14 +46,15 @@ class SecondCompanyCard: UIView, BackgroundColorAdjustable {
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()
-        isinLabel.text = "WKN: \(stock.getWkn())"
+        wknLabel.text = "WKN: \(stock.getWkn())"
         
         let countryID = stock.getIsin().prefix(2).lowercased()
         regionImageView.image = UIImage(named: "globe_\(countryID)")
         
-        countryLabel.text = countryID.uppercased() //stock.getCountry()
-        exchangeLabel.text = stock.getExchange()
+        regionLabel.text = stock.getRegion()
+        countryLabel.text = stock.getCountry()
+        isinLabel.text = stock.getIsin()
         sectorLabel.text = stock.getSector()
-        //BRANCHE?
+        
     }
 }

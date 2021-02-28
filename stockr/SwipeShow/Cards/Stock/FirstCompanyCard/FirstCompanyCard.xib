@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,13 +28,13 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="7Yj-Na-Bgf"/>
                 <outlet property="dividendYieldLabel" destination="Wud-u8-RVk" id="v4a-Eh-pXC"/>
                 <outlet property="ebitdaLabel" destination="rU3-9H-eDX" id="6aG-2m-nuW"/>
-                <outlet property="isinLabel" destination="Lt2-l5-rT3" id="LuS-OD-5ik"/>
                 <outlet property="kgvLabel" destination="fYr-5C-87a" id="FeG-Ty-Ix5"/>
                 <outlet property="marktCapitalizationLabel" destination="bdv-MX-FUp" id="i1m-vw-wqa"/>
                 <outlet property="nameLabel" destination="IPd-XN-IVL" id="Ix2-07-oie"/>
                 <outlet property="netProfitLabel" destination="p6C-Tq-FLM" id="MPg-ea-vOK"/>
                 <outlet property="priceLabel" destination="d4R-MT-4al" id="XC1-CS-D61"/>
                 <outlet property="trashButton" destination="4RI-qi-fzq" id="CG0-0M-85v"/>
+                <outlet property="wknLabel" destination="Lt2-l5-rT3" id="LuS-OD-5ik"/>
                 <outlet property="yearHighLabel" destination="e3k-dr-vOk" id="EmO-kh-YlW"/>
                 <outlet property="yearLowLabel" destination="t0K-hk-FuB" id="5ho-jo-jar"/>
                 <outlet property="yearRange" destination="MSY-p4-lRg" id="vlk-5P-UlN"/>
@@ -340,7 +340,7 @@
             <color red="0.043000001460313797" green="0.043000001460313797" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="green">
-            <color red="0.36399999260902405" green="0.77399998903274536" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36500000953674316" green="0.77300000190734863" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
             <color red="0.76099997758865356" green="0.20600000023841858" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -20,7 +20,7 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
     @IBOutlet weak var addButton: UIButton!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var isinLabel: UILabel!
+    @IBOutlet weak var wknLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var yearLowLabel: UILabel!
     @IBOutlet weak var yearHighLabel: UILabel!
@@ -66,7 +66,7 @@ class FirstCompanyCard: UIView, BackgroundColorAdjustable {
     
     func setStock(_ stock: Stock) {
         nameLabel.text = stock.getName()
-        isinLabel.text = "WKN: \(stock.getWkn())"
+        wknLabel.text = "WKN: \(stock.getWkn())"
         
        
         priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"

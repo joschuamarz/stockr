@@ -22,7 +22,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var indicatorView: UIView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var isinLabel: UILabel!
+    @IBOutlet weak var wknLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var yearLowLabel: UILabel!
     @IBOutlet weak var yearHighLabel: UILabel!
@@ -42,7 +42,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var marktCapitalizationLabel: UILabel!
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var exchangeLabel: UILabel!
+    @IBOutlet weak var isinLabel: UILabel!
     @IBOutlet weak var sectorLabel: UILabel!
     @IBOutlet weak var branchLabel: UILabel!
     @IBOutlet weak var employeesLabel: UILabel!
@@ -74,7 +74,7 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         nameLabel.text = stock.getName()
-        isinLabel.text = "WKN: \(stock.getWkn())"
+        wknLabel.text = "WKN: \(stock.getWkn())"
         
         
         priceLabel.text = stock.getPrice().withTwoDecimalsString() + "€"
@@ -96,9 +96,9 @@ class DetailViewController: UIViewController, UIGestureRecognizerDelegate {
         ebitdaLabel.text = stock.getEbitda().formattedReadable() + " €"
         marktCapitalizationLabel.text = stock.getMarketCapitalization().formattedReadable() + " €"
         
-        let countryID = stock.getIsin().prefix(2).uppercased()
-        countryLabel.text =  countryID//stock.getCountry()
-        exchangeLabel.text = stock.getExchange()
+        countryLabel.text =  stock.getCountry()
+        regionLabel.text = stock.getRegion()
+        isinLabel.text = stock.getIsin()
         sectorLabel.text = stock.getSector()
         //BRANCHE?
         

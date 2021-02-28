@@ -79,13 +79,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier werden all Deine gespeicherten Unternehmen aufgelistet. Schau sie Dir in Ruhe nochmal an." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfk-F7-XMW">
-                                <rect key="frame" x="31" y="119.33333333333331" width="366" height="35"/>
+                                <rect key="frame" x="31" y="119.33333333333331" width="366" height="41"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Suchen" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="agW-OP-Oz8" customClass="SearchTextField" customModule="stockr" customModuleProvider="target">
-                                <rect key="frame" x="31" y="174.33333333333334" width="366" height="40"/>
+                                <rect key="frame" x="31" y="180.33333333333334" width="366" height="40"/>
                                 <color key="backgroundColor" red="0.1589555144" green="0.1677114069" blue="0.16778776049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LZa-0N-5QY"/>
@@ -100,7 +100,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-jx-ReJ">
-                                <rect key="frame" x="31" y="229.33333333333331" width="366" height="603.66666666666674"/>
+                                <rect key="frame" x="31" y="235.33333333333331" width="366" height="597.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -747,12 +747,11 @@
                         <outlet property="dividendYieldLabel" destination="NFb-88-AIV" id="qU7-Ou-LGY"/>
                         <outlet property="ebitdaLabel" destination="dm8-6r-y5f" id="Z70-ir-sOR"/>
                         <outlet property="employeesLabel" destination="417-cl-F7Y" id="CZZ-al-rzW"/>
-                        <outlet property="exchangeLabel" destination="huo-0E-I5y" id="u0c-mf-dqP"/>
                         <outlet property="extendDescriptionButton" destination="Css-J6-cZ9" id="vgB-8J-Fqh"/>
                         <outlet property="foundedLabel" destination="LFZ-M4-ygL" id="5LH-Sd-e5D"/>
                         <outlet property="heightConstraint" destination="gR4-nG-uYI" id="2AT-8f-XhL"/>
                         <outlet property="indicatorView" destination="jKu-by-Yed" id="ty3-EO-feA"/>
-                        <outlet property="isinLabel" destination="Xnf-vh-K7Z" id="Q52-WG-NhN"/>
+                        <outlet property="isinLabel" destination="huo-0E-I5y" id="u0c-mf-dqP"/>
                         <outlet property="kgvLabel" destination="yl2-uN-XX1" id="C6L-sD-Tlp"/>
                         <outlet property="marktCapitalizationLabel" destination="PLi-pF-Jgt" id="maP-39-zjx"/>
                         <outlet property="nameLabel" destination="dLh-w3-uJG" id="uUH-X4-tGy"/>
@@ -761,6 +760,7 @@
                         <outlet property="regionLabel" destination="w3B-dS-Pad" id="NMk-zD-cUQ"/>
                         <outlet property="scrollView" destination="BSd-4h-r2u" id="ZUc-R0-fIh"/>
                         <outlet property="sectorLabel" destination="Ev7-iD-gTX" id="2aG-VN-EGf"/>
+                        <outlet property="wknLabel" destination="Xnf-vh-K7Z" id="Q52-WG-NhN"/>
                         <outlet property="yearHighLabel" destination="UVA-wU-5m4" id="H4L-53-wCN"/>
                         <outlet property="yearLowLabel" destination="U7z-10-MiP" id="g2K-Ye-vQv"/>
                         <outlet property="yearRange" destination="EAA-ky-wV3" id="hlK-eB-ZY9"/>
@@ -788,13 +788,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier findest Du alles, was Du zu unseren rechtlichen Aspekten wissen musst." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-bE-LFb">
-                                <rect key="frame" x="31" y="119" width="366" height="35"/>
+                                <rect key="frame" x="31" y="119" width="366" height="41"/>
                                 <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8k-8f-tMM">
-                                <rect key="frame" x="31" y="179" width="366" height="36"/>
+                                <rect key="frame" x="31" y="185" width="366" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-sB-j1R">
                                         <rect key="frame" x="346" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -806,7 +806,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-tg-JOc">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.666666666666671" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -824,7 +824,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcP-JR-E0h">
-                                <rect key="frame" x="31" y="220" width="366" height="36"/>
+                                <rect key="frame" x="31" y="226" width="366" height="36"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diN-l0-rtU">
                                         <rect key="frame" x="346" y="11.666666666666664" width="20" height="13.333333333333334"/>
@@ -836,7 +836,7 @@
                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK1-8a-8vJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="36"/>
                                         <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -897,7 +897,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfy-7i-b0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="640.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="643.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-aW-lW3" customClass="Headline" customModule="stockr" customModuleProvider="target">
                                                 <rect key="frame" x="171.66666666666666" y="25" width="84.999999999999972" height="21"/>
@@ -923,7 +923,7 @@ FrankfurterLandstraße 168
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-V1-P31" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="81.666666666666686" y="169.66666666666666" width="119.33333333333331" height="16.333333333333343"/>
+                                                <rect key="frame" x="81.666666666666686" y="169.66666666666666" width="129" height="19.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -953,7 +953,7 @@ Benjamin Kostrzewa</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustration by Freepik Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-7P-DmF" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="492.33333333333331" width="181.66666666666666" height="16.333333333333314"/>
+                                                <rect key="frame" x="31" y="492.33333333333331" width="189.66666666666666" height="19.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -962,7 +962,7 @@ Benjamin Kostrzewa</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1g-VX-LiN" customClass="Information" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="533.66666666666663" width="355.33333333333331" height="67"/>
+                                                <rect key="frame" x="31" y="536.66666666666663" width="355.33333333333331" height="67"/>
                                                 <string key="text">Die Weltkugel-Grafiken wurden von Wikimedia vom Autor "TUBS" zur Verfügung gestellt und eigenständig verfremdet. Die Dateien sind als "Creative Commons Attribution-ShareAlike 3.0 Unported" lizensiert. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1056,7 +1056,7 @@ Benjamin Kostrzewa</string>
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-FE-qO4">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1004.6666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1007.6666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-dd-K3q" customClass="Headline" customModule="stockr" customModuleProvider="target">
                                                 <rect key="frame" x="165.66666666666666" y="25" width="96.666666666666657" height="21"/>
@@ -1109,7 +1109,7 @@ Vertretungsberechtigter: Associate General Counsel, EMEA</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aws.amazon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-g8-DcE" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="667.33333333333337" width="110" height="16.333333333333371"/>
+                                                <rect key="frame" x="31" y="667.33333333333337" width="113" height="19.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1118,7 +1118,7 @@ Vertretungsberechtigter: Associate General Counsel, EMEA</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avn-ZL-BeZ" customClass="Information" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="723.66666666666663" width="366" height="67"/>
+                                                <rect key="frame" x="31" y="726.66666666666663" width="366" height="67"/>
                                                 <string key="text">Plattformdienste und Hosting
 
 Google Play Store und Apple App Store Personenbezogene Daten: Nutzungsdaten</string>
@@ -1127,7 +1127,7 @@ Google Play Store und Apple App Store Personenbezogene Daten: Nutzungsdaten</str
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-9L-nct" customClass="Information" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="830.66666666666663" width="366" height="117"/>
+                                                <rect key="frame" x="31" y="833.66666666666663" width="366" height="117"/>
                                                 <string key="text">Kontaktdaten
 
 Anbieter und Verantwortlicher
@@ -1140,13 +1140,13 @@ Geschäftsführer: Patrick Julius und Benjamin Kostrzewa</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd9-4Q-Jzm" customClass="Information" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="30.999999999999996" y="947.66666666666663" width="38.666666666666657" height="17"/>
+                                                <rect key="frame" x="30.999999999999996" y="950.66666666666663" width="38.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@finevisuals.de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBU-8P-9mN" customClass="LinkUILabel" customModule="stockr" customModuleProvider="target">
-                                                <rect key="frame" x="81.666666666666686" y="948" width="119.33333333333331" height="16.333333333333371"/>
+                                                <rect key="frame" x="81.666666666666686" y="949.66666666666663" width="129" height="19.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="Manrope-Medium" family="Manrope" pointSize="14"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>

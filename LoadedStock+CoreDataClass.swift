@@ -78,6 +78,10 @@ public class LoadedStock: NSManagedObject, Stock {
         return self.country ?? "err"
     }
     
+    func getRegion() -> String {
+        return self.region ?? "USA"
+    }
+    
     func getSector() -> String {
         return self.sector ?? "err"
     }
