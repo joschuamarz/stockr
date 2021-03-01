@@ -31,6 +31,14 @@ class PurchaseManager: NSObject, SKProductsRequestDelegate, SKPaymentTransaction
         }
     }
     
+    func restorePurchase() {
+        if SKPaymentQueue.canMakePayments() {
+            SKPaymentQueue.default().add(self)
+            SKPaymentQueue.default().restoreCompletedTransactions()
+            
+        }
+    }
+    
     func fetchProducts() {
         let request = SKProductsRequest(productIdentifiers: ["com.finevisuals.stockr.premium"])
         request.delegate = self
@@ -44,6 +52,13 @@ class PurchaseManager: NSObject, SKProductsRequestDelegate, SKPaymentTransaction
             print(product.productIdentifier)
             print(product.price)
             print(product.description)
+        }
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        if (queue.transactions.count == 0)
+        {
+            delegate?.nothingToRestore()
         }
     }
     

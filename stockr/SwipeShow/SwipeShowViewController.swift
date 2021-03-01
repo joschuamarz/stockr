@@ -25,6 +25,7 @@ protocol FinishCardDelegate {
 
 protocol PremiumDelegate {
     func subsripted()
+    func nothingToRestore()
 }
 enum GameMode {
     case downloading, adMob, afterAdMob, lastStock, finished, stocks, afterPremium
@@ -170,6 +171,10 @@ class SwipeShowViewController: UIViewController, StockCardDelegate, NetworkDeleg
                 SKStoreReviewController.requestReview(in: scene)
             }
         }
+    }
+    
+    func nothingToRestore() {
+        //
     }
     
     //MARK: - Game Mode

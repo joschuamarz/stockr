@@ -11,6 +11,7 @@ class LegalViewController: UIViewController {
 
     @IBOutlet weak var impressumBoxView: UIView!
     @IBOutlet weak var dataProtectionBoxView: UIView!
+    @IBOutlet weak var premiumBoxView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,9 @@ class LegalViewController: UIViewController {
         
         let dataTap = UITapGestureRecognizer(target: self, action: #selector(handleDataTap))
         dataProtectionBoxView.addGestureRecognizer(dataTap)
+        
+        let premiumTap = UITapGestureRecognizer(target: self, action: #selector(handlePremiumTap))
+        premiumBoxView.addGestureRecognizer(premiumTap)
     }
     
     @objc
@@ -39,5 +43,11 @@ class LegalViewController: UIViewController {
     func handleDataTap() {
         performSegue(withIdentifier: "datenschutz", sender: self)
     }
+    
+    @objc
+    func handlePremiumTap() {
+        performSegue(withIdentifier: "premium", sender: self)
+    }
+    
     
 }

@@ -45,6 +45,7 @@
 		FF2E75392573AE7B00236A79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75382573AE7A00236A79 /* Extensions.swift */; };
 		FF2E753E2573B40D00236A79 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */; };
 		FF2E75422573B45700236A79 /* WatchlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */; };
+		FF91590125EC0CB20042B5BA /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91590025EC0CB20042B5BA /* PremiumViewController.swift */; };
 		FFCE985A257BA452000B03A4 /* Splash Screen-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCE9859257BA452000B03A4 /* Splash Screen-2x.png */; };
 		FFCE985E257D2623000B03A4 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCE985D257D2623000B03A4 /* PurchaseManager.swift */; };
 		FFCE9861257D294E000B03A4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCE9860257D294E000B03A4 /* StoreKit.framework */; };
@@ -114,6 +115,7 @@
 		FF2E75382573AE7A00236A79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF2E753D2573B40D00236A79 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		FF2E75412573B45700236A79 /* WatchlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewCell.swift; sourceTree = "<group>"; };
+		FF91590025EC0CB20042B5BA /* PremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumViewController.swift; sourceTree = "<group>"; };
 		FFCE9859257BA452000B03A4 /* Splash Screen-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen-2x.png"; sourceTree = "<group>"; };
 		FFCE985D257D2623000B03A4 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		FFCE9860257D294E000B03A4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDD30B42573C843005CFC50 /* LegalViewController.swift */,
+				FF91590025EC0CB20042B5BA /* PremiumViewController.swift */,
 			);
 			path = Legal;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				FF2E75202572F95B00236A79 /* StockCard.swift in Sources */,
 				FF2E750A2572CBB200236A79 /* SwipedStock+CoreDataClass.swift in Sources */,
 				FFDD30D225776746005CFC50 /* CardView.swift in Sources */,
+				FF91590125EC0CB20042B5BA /* PremiumViewController.swift in Sources */,
 				FFDD30CA2576C935005CFC50 /* DetailViewController.swift in Sources */,
 				FF2E74DA257291A400236A79 /* Styles.swift in Sources */,
 				FF2E75142572D34900236A79 /* SwipedStocksManager.swift in Sources */,
@@ -762,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -770,7 +774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finevisuals.stockr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -785,7 +789,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = HQ5Q695DG9;
 				INFOPLIST_FILE = stockr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -793,7 +797,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finevisuals.stockr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
