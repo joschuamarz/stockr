@@ -8,8 +8,6 @@
 import UIKit
 import GoogleMobileAds
 
-
-
 class AdMobNativCard: UIView, CardView {
     func adjustBackgroundColor(with faktor: CGFloat) {
         //
@@ -54,7 +52,7 @@ class AdMobNativCard: UIView, CardView {
     var adLoader: GADAdLoader!
 
     /// The native ad view that is being presented.
-    var nativeAdView: GADUnifiedNativeAdView!
+    var nativeAdView: GADNativeAdView!
 
     /// The ad unit ID.
     //let adUnitID = "ca-app-pub-3940256099942544/3986624511" //Test
@@ -91,7 +89,7 @@ class AdMobNativCard: UIView, CardView {
         purchaseManager.delegate = delegate
     }
     
-    @IBOutlet weak var adView: GADUnifiedNativeAdView!
+    @IBOutlet weak var adView: GADNativeAdView!
     func start() {
         /*
         guard let nibObjects = Bundle.main.loadNibNamed("UnifiedNativeAdView", owner: nil, options: nil),
@@ -103,7 +101,7 @@ class AdMobNativCard: UIView, CardView {
         //setAdView(secondAdView.contentView)
     }
     
-    func setAdView(_ view: GADUnifiedNativeAdView) {
+    func setAdView(_ view: GADNativeAdView) {
       // Remove the previous ad view.
         nativeAdView = view
         
@@ -124,7 +122,7 @@ class AdMobNativCard: UIView, CardView {
        
  
         adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: root!,
-                               adTypes: [ .unifiedNative ], options: nil)
+                               adTypes: [ .native ], options: nil)
         adLoader.delegate = self
         adLoader.load(GADRequest())
         
@@ -143,16 +141,14 @@ extension AdMobNativCard : GADVideoControllerDelegate {
 }
 
 extension AdMobNativCard : GADAdLoaderDelegate {
-
-  func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
-    print("\(adLoader) failed with error: \(error.localizedDescription)")
-    //refreshAdButton.isEnabled = true
-  }
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+        print("\(adLoader) failed with error: \(error.localizedDescription)")
+    }
 }
 
-extension AdMobNativCard : GADUnifiedNativeAdLoaderDelegate {
+extension AdMobNativCard : GADNativeAdLoaderDelegate {
 
-  func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+  func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
     //refreshAdButton.isEnabled = true
     noAdView.isHidden = true
     nativeAdView.nativeAd = nativeAd
@@ -224,29 +220,29 @@ extension AdMobNativCard : GADUnifiedNativeAdLoaderDelegate {
 }
 
 // MARK: - GADUnifiedNativeAdDelegate implementation
-extension AdMobNativCard : GADUnifiedNativeAdDelegate {
+extension AdMobNativCard : GADNativeAdDelegate {
 
-  func nativeAdDidRecordClick(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 
-  func nativeAdDidRecordImpression(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 
-  func nativeAdWillPresentScreen(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdWillPresentScreen(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 
-  func nativeAdWillDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdWillDismissScreen(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 
-  func nativeAdDidDismissScreen(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdDidDismissScreen(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 
-  func nativeAdWillLeaveApplication(_ nativeAd: GADUnifiedNativeAd) {
+  func nativeAdWillLeaveApplication(_ nativeAd: GADNativeAd) {
     print("\(#function) called")
   }
 }
