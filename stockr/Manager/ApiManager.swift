@@ -38,7 +38,7 @@ struct RawStock: Codable {
 class ApiManager {
     
     
-    let urlString = "http://18.184.18.218/api/stocks"
+    let urlString = "https://monetaz.finevisuals.com/api/stocks"
     
    
 

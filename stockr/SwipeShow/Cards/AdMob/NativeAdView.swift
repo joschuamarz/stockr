@@ -10,7 +10,7 @@ import GoogleMobileAds
 
 class NativeAdView: UIView {
 
-    @IBOutlet var contentView: GADUnifiedNativeAdView!
+    @IBOutlet var contentView: GADNativeAdView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
